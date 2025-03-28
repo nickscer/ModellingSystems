@@ -12,3 +12,6 @@ To ease typestting for others, I separated any packages and report-specific sett
 All packages and custom commands have been included in the `macros.sty` file within the same directory.
 
 Contributors are advised to edit the `macros.sty` file if additonal packages must be imported.
+
+# The compiled pdf file
+At any time you can acces the pdf file directly from github by opening the `main.pdf` file.
