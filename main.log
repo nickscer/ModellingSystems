@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.2.28)  28 MAR 2025 14:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.2.28)  28 MAR 2025 15:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/Eccentric User/Documents/New folder/main.tex"
-(c:/Users/Eccentric User/Documents/New folder/main.tex
+**"c:/Users/Eccentric User/Documents/New folder (2)/ModellingSystems/main.tex"
+(c:/Users/Eccentric User/Documents/New folder (2)/ModellingSystems/main.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
 (c:/texlive/2023/texmf-dist/tex/latex/base/article.cls
@@ -837,14 +837,14 @@ L3 programming layer <2024-02-20>
  ) 
 Here is how much of TeX's memory you used:
  37032 strings out of 474136
- 842759 string characters out of 5748496
+ 842822 string characters out of 5748496
  1931190 words of memory out of 5000000
  58736 multiletter control sequences out of 15000+600000
  570711 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 114i,11n,121p,796b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 114i,11n,121p,817b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on main.pdf (3 pages, 72755 bytes).
+Output written on main.pdf (3 pages, 72762 bytes).
 PDF statistics:
  73 PDF objects out of 1000 (max. 8388607)
  57 compressed objects within 1 object stream
