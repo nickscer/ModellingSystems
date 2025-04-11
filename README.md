@@ -14,4 +14,4 @@ All packages and custom commands have been included in the `macros.sty` file wit
 Contributors are advised to edit the `macros.sty` file if additonal packages must be imported.
 
 # The compiled pdf file
-At any time you can acces the pdf file directly from github by opening the `main.pdf` file.
+At any time you can acces the pdf file directly from github by opening the `main.pdf` file $e^{5i}$.
