@@ -47,10 +47,10 @@ where $K_{G} = 3×10^{6}$ and $K_{R} = 2.5×10^{6}$
 
 Calculating the Jacobian:
 
-$$ J = \begin{matrix}
+$$ J = \begin{bmatrix}
 \frac{\partial{F}}{\partial{R}} & \frac{\partial{F}}{\partial{G}} \\
 \frac{\partial{E}}{\partial{R}} & \frac{\partial{E}}{\partial{G}}
-\end{matrix} $$
+\end{bmatrix} $$
 
 Where $F(R,G) = \frac{\mathrm{d}R}{\mathrm{d}t}$ and $E(R,G) = \frac{\mathrm{d}G}{\mathrm{d}t}$
 
