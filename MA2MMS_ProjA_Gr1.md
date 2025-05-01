@@ -43,8 +43,16 @@ and finally $\alpha_{RG}$ and $\alpha_{GR}$ represent the competition coefients 
 
 $$ \frac{\mathrm{d}R}{\mathrm{d}t} = 0.61R(1-\frac{R-0.8G}{K_{R}}) $$
 $$ \frac{\mathrm{d}G}{\mathrm{d}t} = 0.82G(1-\frac{G-0.09R}{K_{G}}) $$
-
 where $K_{G} = 3×10^{6}$ and $K_{R} = 2.5×10^{6}$
+
+Calculating the Jacobian:
+
+$$ J = \begin{matrix}
+\frac{\partial{F}}{\partial{R}} & \frac{\partial{F}}{\partial{G}} \\
+\frac{\partial{E}}{\partial{R}} & \frac{\partial{E}}{\partial{G}}
+\end{matrix} $$
+
+Where $F(R,G) = \frac{\mathrm{d}R}{\mathrm{d}t}$ and $E(R,G) = \frac{\mathrm{d}G}{\mathrm{d}t}$
 
 
 
