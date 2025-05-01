@@ -15,7 +15,9 @@ Add a brief abstract with a description and conclusion here ...
 ## Table of Contents
 
 1. [Description of the Biological/Ecological System](#description-of-the-biologicalecological-system)  
-   1.1. [Introduction](#introduction)  
+   1.1. [Introduction](#introduction)
+   1.2  [Model selection](#introduction)
+2. [Stability of the model](#stability-of-the-model)
 3. [Appendix](#appendix)  
 
 
@@ -24,16 +26,26 @@ Add a brief abstract with a description and conclusion here ...
 Add some description 
 
 ## Introduction
- 
 
-$$
-\boxed{
-\begin{aligned}
-&1.& \quad \text{Any entity is identical to itself}: &&P\equiv P && (ID) \\
-&2.& \quad \text{A statement cannot be true AND false}: &&\neg(P\land \neg P) && (LNC) \\
-&3.& \quad \text{A statement must be either TRUE or FALSE}: &&P\lor \neg P && (LEM)
-\end{aligned} }
-$$
+## Model selection
+ 
+We are looking at ... red and grey squirrel populations over time using the Lotka-Volterra Competitive model. 
+
+$$ \frac{\mathrm{d}R}{\mathrm{d}t} = r_{R}R(1-\frac{R-G\alpha_{RG}}{K_{R}}) $$
+$$ \frac{\mathrm{d}G}{\mathrm{d}t} = r_{G}G(1-\frac{G-R\alpha_{GR}}{K_{G}}) $$
+
+where $R(t)$ and $G(t)$ represent the population of red and grey squirrels at a given time $t$,
+$r_{R}$ and $r_{G}$ represent the intrinsic growth rates of red and grey squirrels respectively,
+$K_{R}$ and $K_{G}$ represent the carrying capcity of red and grey squirrels,
+and finally $\alpha_{RG}$ and $\alpha_{GR}$ represent the competition coefients - the effect of grey squirrels on red squirrels and the effect of red squirrels on grey squirrels respectively.
+
+## Stability of the model
+
+$$ \frac{\mathrm{d}R}{\mathrm{d}t} = 0.61R(1-\frac{R-0.8G}{K_{R}}) $$
+$$ \frac{\mathrm{d}G}{\mathrm{d}t} = 0.82G(1-\frac{G-0.09R}{K_{G}}) $$
+
+where $K_{G} = 3×10^{6}$ and $K_{R} = 2.5×10^{6}$
+
 
 
 # Appendix
