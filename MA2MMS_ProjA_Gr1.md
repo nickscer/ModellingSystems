@@ -16,8 +16,6 @@ Add a brief abstract with a description and conclusion here ...
 
 1. [Description of the Biological/Ecological System](#description-of-the-biologicalecological-system)  
    1.1. [Introduction](#introduction)  
-2. [Testing (to be removed)](#testing-to-be-removed)  
-   2.1. [Test Subsection 1](#test-subsection-1)  
 3. [Appendix](#appendix)  
 
 
@@ -25,26 +23,8 @@ Add a brief abstract with a description and conclusion here ...
 
 Add some description 
 
-# Intro1
-
-$e^{ix}$
-
 ## Introduction
-
-Choose two species of populations $x(t)$ and $y(t)$ that are either competing for the same resources 
-or in a mutualistic relation.
-
-
-## Testing (to be removed)
-
-```python
-print('test')
-```
-
-
-### Test Subsection 1
-
-Gödel's Incompleteness theorem hints that Turing machines have limits ...
+ 
 
 $$
 \boxed{
