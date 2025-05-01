@@ -55,7 +55,7 @@ Where $F(R,G) = \frac{\mathrm{d}R}{\mathrm{d}t}$ and $E(R,G) = \frac{\mathrm{d}G
 Substituting in the partial derivatives we have:
 
 $$ J(R,G) = \begin{bmatrix} 0.61 - \frac{1.22}{K_{R}}R - \frac{0.488}{K_{R}}G & -\frac{0.488}{K_{R}} \\
-\frac{\partial{E}}{\partial{R}} & \frac{\partial{E}}{\partial{G}}
+-\frac{0.0738}{K_{G}}G & 0.82 - \frac{0.18}{K_{G}}G - \frac{0.0738}{K_{G}}R
 \end{bmatrix} $$
 
 
