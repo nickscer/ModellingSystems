@@ -68,7 +68,8 @@ At the equilibrium point $(0,0)$, we have the Jacobian matrix
 $$ J(0,0) = \begin{bmatrix} 0.61 & 0 \\
 0 & 0.82 \end{bmatrix} $$
 
-Since $J(0,0)$ is a diagonal matrix, it has two eigenvalues which are $\lambda_{1} = 0.61$ and $\lambda_{2} = 0.82$. Since these eigenvalues are non-positive real numbers, the corresponding fixed point is an unstable source;
+Since $J(0,0)$ is a diagonal matrix, it has two eigenvalues which are $\lambda_{1} = 0.61$ and $\lambda_{2} = 0.82$. Since these eigenvalues are non-positive real numbers, the corresponding fixed point is an unstable source.
+this means....
 
 At the equilibrium point $(K_{R},0)$, we have the Jacobian matrix
 
@@ -76,6 +77,7 @@ $$ J(K_{R},0) = \begin{bmatrix} -0.61 & -0.488 \\
 0 & 0.82 - \frac{0.073K_{R}}{K_{G}}\end{bmatrix} $$
 
 Since $J(K_{R},0)$ is an upper triangular matrix, it has two eigenvalues which are $\lambda_{1} = -0.61$ and $\lambda_{2} = 0.82 - \frac{0.073K_{R}}{K_{G}}$. Since these eignevalues are real numbers with $\lambda_{1} < 0 < \lambda_{2}$, the corresponding fixed point is an unstable saddlepoint.
+This means...
 
 At the equilibrium point $(0,K_{G})$, we have the Jacobian matrix
 
@@ -83,6 +85,7 @@ $$ J(0,K_{G}) = \begin{bmatrix} 0.61 - \frac{0.488K_{G}}{K_{R}} & 0 \\
 -0.0738 & -0.82 \end{bmatrix} $$
 
 Since $J(0,K_{G})$ is a lower triangular matrix, it has two eigenvalues which are $\lambda_{1} = 0.61 - \frac{0.488K_{G}}{K_{R}}$ and $\lambda_{2} = -0.82$. Since these eignevalues are real numbers with $\lambda_{2} < 0 < \lambda_{1}$, the corresponding fixed point is an unstable saddlepoint.
+This means...
 
 Finally at the equilibrium point $(\frac{K_{R}-0.8K_{G}}{0.928},\frac{K_{G}-0.09K_{R}}{0.928})$, we have the Jacobian matrix
 
@@ -93,7 +96,7 @@ $J(\frac{K_{R}-0.8K_{G}}{0.928},\frac{K_{G}-0.09K_{R}}{0.928})$ has two eigenval
 \frac{0.488 K_{G}^2 + 0.738 K_{R}^2 - 1.43 K_{R} K_{G}}{0.928 K_{R} K_{G}} \pm \sqrt{ \left( \frac{0.488 K_{G}^2 + 0.738 K_{R}^2 - 1.43 K_{R} K_{G}}{0.928 K_{R} K_{G}} \right)^2 -4\frac{(0.488 K_{G} - 0.61 K_{R})(0.738 K_{R} - 0.82 K_{G})-(0.3904 K_{G} - 0.488 K_{R})(0.006642 K_{R} - 0.0738 K_{G})}{(0.928)^2 K_{R} K_{G}}}\right]$
 
 Since these eignevalues are real, negative numbers, ($\lambda_{1} \approx -0.0186$ and $\lambda_{2} \approx -0.2287$) the corresponding fixed point is an asymptotically stable sink point.
-
+This means...
 
 # Appendix
 
