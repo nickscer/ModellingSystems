@@ -69,6 +69,7 @@ $ J(0,0) = \begin{bmatrix} 0.61 & 0 \\
 
 $$J(K_{R},0) = \begin{bmatrix} -0.61 & -0.488 \\
 0 & 0.82 - \frac{0.073K_{R}}{K_{G}}\end{bmatrix} $$
+
 .Examining the stability by calculating the eigenvalues. Since $J(K_{R},0)$ is an upper triangular matrix, $\lambda_{1} = -0.61$ and $\lambda_{2} = 0.82 - \frac{0.073K_{R}}{K_{G}}$. Therefore this point is a saddle point;
 
 
