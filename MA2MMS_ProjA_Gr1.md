@@ -63,10 +63,12 @@ we calculated the nullclines by setting $F(R,G) = 0$ and $E(R,G) = 0$ (.. link t
 Now looking at the Jacobian at the equilibria points:
 
 $J(0,0) = \begin{bmatrix} 0.61 & 0 \\
-0 & 0.82 \end{bmatrix}$. Examining the stability by calculating the eigenvalues. Since $J(0,0)$ is a diagonal matrix, $\lambda_{1} = 0.61 and \lambda_{2} = 0.82$. Therefore this point is a unstable source;
+0 & 0.82 \end{bmatrix}$
+.Examining the stability by calculating the eigenvalues. Since $J(0,0)$ is a diagonal matrix, $\lambda_{1} = 0.61$ and $\lambda_{2} = 0.82$. Therefore this point is a unstable source;
 
 $J(K_{R},0) = \begin{bmatrix} -0.61 & -0.488 \\
-0 & 0.82 - \frac{0.073K_{R}}{K_{G}}\end{bmatrix}$. Examining the stability by calculating the eigenvalues. Since $J(K_{R},0)$ is an upper triangular matrix, $\lambda_{1} = -0.61 and \lambda_{2} = 0.82 - \frac{0.073K_{R}}{K_{G}}$. Therefore this point is a saddle point;
+0 & 0.82 - \frac{0.073K_{R}}{K_{G}}\end{bmatrix}$
+.Examining the stability by calculating the eigenvalues. Since $J(K_{R},0)$ is an upper triangular matrix, $\lambda_{1} = -0.61$ and $\lambda_{2} = 0.82 - \frac{0.073K_{R}}{K_{G}}$. Therefore this point is a saddle point;
 
 
 # Appendix
