@@ -58,12 +58,12 @@ Substituting in the partial derivatives we have:
 $$ J(R,G) = \begin{bmatrix} 0.61 - \frac{1.22}{K_{R}}R - \frac{0.488}{K_{R}}G & -\frac{0.488}{K_{R}} \\
 -\frac{0.0738}{K_{G}}G & 0.82 - \frac{0.18}{K_{G}}G - \frac{0.0738}{K_{G}}R \end{bmatrix} $$
 
-we calculated the nullclines by setting $F(R,G) = 0$ and $E(R,G) = 0$ (.. link to working out in appendix) and got the equilibria points to be.. $(0,0), (K_{R},0), (K_{G},0) and (\frac{K_{R}-0.8K_{G}}{0.928},\frac{K_{G}-0.09K_{R}{0.928})$.
+we calculated the nullclines by setting $F(R,G) = 0$ and $E(R,G) = 0$ (.. link to working out in appendix) and got the equilibria points to be.. $(0,0), (K_{R},0), (K_{G},0) and (\frac{K_{R}-0.8K_{G}}{0.928},\frac{K_{G}-0.09K_{R}}{0.928})$.
 
 Now looking at the Jacobian at the equilibria points:
 
-$J(0,0) = \begin{bmatrix} 0.61 & 0 \\
-0 & 0.82 \end{bmatrix}$
+$ J(0,0) = \begin{bmatrix} 0.61 & 0 \\
+0 & 0.82 \end{bmatrix} $
 .Examining the stability by calculating the eigenvalues. Since $J(0,0)$ is a diagonal matrix, $\lambda_{1} = 0.61$ and $\lambda_{2} = 0.82$. Therefore this point is a unstable source;
 
 $J(K_{R},0) = \begin{bmatrix} -0.61 & -0.488 \\
