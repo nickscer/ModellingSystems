@@ -90,22 +90,22 @@ $$ J(\frac{K_{R}-0.8K_{G}}{0.928},\frac{K_{G}-0.09K_{R}}{0.928}) = \begin{bmatri
 \frac{0.006642K_{R} - 0.0738K_{G}}{0.928K_{G}} & \frac{0.738K_{R} - 0.82K_{G}}{0.928K_{G}} \end{bmatrix} $$
 
 $$
-\lambda = \frac{1}{2} \left[
-\frac{0.488 K_G^2 + 0.738 K_R^2 - 1.43 K_R K_G}{0.928 K_R K_G}
+\lambda_{1,2} = \frac{1}{2} \left[
+\frac{0.488 K_{G}^2 + 0.738 K_{R}^2 - 1.43 K_{R} K_{G}}{0.928 K_{R} K_{G}}
 \pm
 \sqrt{
 \left(
-\frac{0.488 K_G^2 + 0.738 K_R^2 - 1.43 K_R K_G}{0.928 K_R K_G}
+\frac{0.488 K_{G}^2 + 0.738 K_{R}^2 - 1.43 K_{R} K_{G}}{0.928 K_{R} K_{G}}
 \right)^2
 - 4
 \frac{
-(0.488 K_G - 0.61 K_R)(0.738 K_R - 0.82 K_G)
-- (0.3904 K_G - 0.488 K_R)(0.006642 K_R - 0.0738 K_G)
-}
-{(0.928)^2 K_R K_G}
+(0.488 K_{G} - 0.61 K_{R})(0.738 K_{R} - 0.82 K_{G})
+- (0.3904 K_{G} - 0.488 K_R)(0.006642 K_{R} - 0.0738 K_{G})}
+{(0.928)^2 K_{R} K_{G}}
 }
 \right]
 $$
+
 Since these eignevalues are real numbers with $\lambda_{2} < 0 < \lambda_{1}$, the corresponding fixed point is an unstable saddlepoint.
 
 
