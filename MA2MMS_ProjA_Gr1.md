@@ -61,10 +61,10 @@ The Jacobian matrix of the system is given by:
 $$ J(R,G) = \begin{bmatrix} 0.61 - \frac{1.22}{K_{R}}R - \frac{0.488}{K_{R}}G & -\frac{0.488}{K_{R}} \\
 -\frac{0.0738}{K_{G}}G & 0.82 - \frac{0.18}{K_{G}}G - \frac{0.0738}{K_{G}}R \end{bmatrix} $$
 
-Where we have used the formula $J(R,G) = \begin{bsmallmatrix}
-\frac{\partial{F}}{\partial{R}} & \frac{\partial{F}}{\partial{G}}\\
+Where we have used the formula $J(R,G) =$ $\begin{bsmallmatrix}
+\frac{\partial{F}}{\partial{R}} & \frac{\partial{F}}{\partial{G}} \\
 \frac{\partial{E}}{\partial{R}} & \frac{\partial{E}}{\partial{G}}
-\end{bsmallmatrix}$. Where $F(R,G) = \frac{\mathrm{d}R}{\mathrm{d}t}$ and $E(R,G) = \frac{\mathrm{d}G}{\mathrm{d}t}$
+\end{bsmallmatrix}$ . Where $F(R,G) = \frac{\mathrm{d}R}{\mathrm{d}t}$ and $E(R,G) = \frac{\mathrm{d}G}{\mathrm{d}t}$
 
 Now looking at the Jacobian at the equilibria points:
 
