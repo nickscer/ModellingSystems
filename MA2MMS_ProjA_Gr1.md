@@ -61,31 +61,46 @@ The Jacobian matrix of the system is given by:
 $$ J(R,G) = \begin{bmatrix} 0.61 - \frac{1.22}{K_{R}}R - \frac{0.488}{K_{R}}G & -\frac{0.488}{K_{R}} \\
 -\frac{0.0738}{K_{G}}G & 0.82 - \frac{0.18}{K_{G}}G - \frac{0.0738}{K_{G}}R \end{bmatrix} $$
 
-Where we have used the formula $J(R,G) =$ $\begin{bsmallmatrix}
-\frac{\partial{F}}{\partial{R}} & \frac{\partial{F}}{\partial{G}} \\
-\frac{\partial{E}}{\partial{R}} & \frac{\partial{E}}{\partial{G}}
-\end{bsmallmatrix}$ . Where $F(R,G) = \frac{\mathrm{d}R}{\mathrm{d}t}$ and $E(R,G) = \frac{\mathrm{d}G}{\mathrm{d}t}$
-
 Now looking at the Jacobian at the equilibria points:
+
+At the equilibrium point $(0,0)$, we have the Jacobian matrix
 
 $$ J(0,0) = \begin{bmatrix} 0.61 & 0 \\
 0 & 0.82 \end{bmatrix} $$
 
-Examining the stability by calculating the eigenvalues. Since $J(0,0)$ is a diagonal matrix, $\lambda_{1} = 0.61$ and $\lambda_{2} = 0.82$. Therefore this point is a unstable source;
+Since $J(0,0)$ is a diagonal matrix, it has two eigenvalues which are $\lambda_{1} = 0.61$ and $\lambda_{2} = 0.82$. Since these eigenvalues are non-positive real numbers, the corresponding fixed point is an unstable source;
+
+At the equilibrium point $(K_{R},0)$, we have the Jacobian matrix
 
 $$ J(K_{R},0) = \begin{bmatrix} -0.61 & -0.488 \\
 0 & 0.82 - \frac{0.073K_{R}}{K_{G}}\end{bmatrix} $$
 
-Examining the stability by calculating the eigenvalues. Since $J(K_{R},0)$ is an upper triangular matrix, $\lambda_{1} = -0.61$ and $\lambda_{2} = 0.82 - \frac{0.073K_{R}}{K_{G}}$. Therefore this point is a saddle point;
+Since $J(K_{R},0)$ is an upper triangular matrix, it has two eigenvalues which are $\lambda_{1} = -0.61$ and $\lambda_{2} = 0.82 - \frac{0.073K_{R}}{K_{G}}$. Since these eignevalues are real numbers with $\lambda_{1} < 0 < \lambda_{2}$, the corresponding fixed point is an unstable saddlepoint.
+
+At the equilibrium point $(0,K_{G})$, we have the Jacobian matrix
 
 $$ J(0,K_{G}) = \begin{bmatrix} 0.61 - \frac{0.488K_{G}}{K_{R}} & 0 \\
 -0.0738 & -0.82 \end{bmatrix} $$
 
-Examining the stability by calculating the eigenvalues. Since $J(0,K_{G})$ is a lower triangular matrix, $\lambda_{1} = 0.61 - \frac{0.488K_{G}}{K_{R}}$ and $\lambda_{2} = -0.82$. Therefore this point is a saddle point;
+Since $J(0,K_{G})$ is a lower triangular matrix, it has two eigenvalues which are $\lambda_{1} = 0.61 - \frac{0.488K_{G}}{K_{R}}$ and $\lambda_{2} = -0.82$. Since these eignevalues are real numbers with $\lambda_{2} < 0 < \lambda_{1}$, the corresponding fixed point is an unstable saddlepoint.
+
+Finally at the equilibrium point $(\frac{K_{R}-0.8K_{G}}{0.928},\frac{K_{G}-0.09K_{R}}{0.928})$, we have the Jacobian matrix
 
 $$ J(\frac{K_{R}-0.8K_{G}}{0.928},\frac{K_{G}-0.09K_{R}}{0.928}) = \begin{bmatrix} \frac{0.488K_{G} - 0.61K_{R}}{0.928K_{R}} & \frac{0.3904K_{G} - 0.488K_{R}}{0.928K_{R}} \\
 \frac{0.006642K_{R} - 0.0738K_{G}}{0.928K_{G}} & \frac{0.738K_{R} - 0.82K_{G}}{0.928K_{G}} \end{bmatrix} $$
 
+$J(0,K_{G})$ has two eigenvalues which are $\lambda_{1,2} = \frac{. Since these eignevalues are real numbers with $\lambda_{2} < 0 < \lambda_{1}$, the corresponding fixed point is an unstable saddlepoint.
+
+
 # Appendix
 
 *Add any ideas/manuscripts, links and references below, treat this as a draft for now*
+
+Jacobian formula
+
+$$J(R,G) =\begin{bmatrix}
+\frac{\partial{F}}{\partial{R}} & \frac{\partial{F}}{\partial{G}} \\
+\frac{\partial{E}}{\partial{R}} & \frac{\partial{E}}{\partial{G}}
+\end{bmatrix}$$
+
+Where $F(R,G) = \frac{\mathrm{d}R}{\mathrm{d}t}$ and $E(R,G) = \frac{\mathrm{d}G}{\mathrm{d}t}$
