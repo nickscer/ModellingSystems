@@ -39,6 +39,8 @@ $r_{R}$ and $r_{G}$ represent the intrinsic growth rates of red and grey squirre
 $K_{R}$ and $K_{G}$ represent the carrying capcity of red and grey squirrels,
 and finally $\alpha_{RG}$ and $\alpha_{GR}$ represent the competition coefients - the effect of grey squirrels on red squirrels and the effect of red squirrels on grey squirrels respectively.
 
+This model is based on the logistic growth model ($\frac{\mathrm{d}x}{\mathrm{d}t} = rx ( 1 - \frac{x}{K} )$ ), with the addition of competition between the two species as they compete for the same natural resources. 
+
 ## Stability of the model
 
 We have the coupled differential equations
