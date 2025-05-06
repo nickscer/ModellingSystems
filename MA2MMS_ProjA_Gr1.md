@@ -25,15 +25,23 @@ Add a brief abstract with a description and conclusion here ...
 	1. [Local Truncation Error](#local-truncation-error)
 	2. [Potential Bifurcation](#potential-bifurcation)
 6. [Appendix](#appendix)  
-	1. ...
+	1. [References](#references) 
 
 # Description of the Ecological System
 
-Add some description 
+ This report outlines the relationship between the red squirrel and the grey squirrel in the UK. The two species have a very tense relationship due to competition and displacement which has affected their individual populations. We will look at the different numbers of each and format solvable equations for the each of the populations of the two species. As time has gone on, the population of grey squirrels has increased while the population of red squirrels has decreased. First, we need to look at the kind of relationship that the pair have and the varied biotic and abiotic factors that affect their population sizes. While red and grey squirrels do not directly compete against each other, they compete in terms of food resources and habitats. 
 
 ## Introduction
 
-Add a comprehensive intro
+Grey squirrels were introduced to the UK in 19th century and over time have outcompeted red squirrels in their habitats. This is due to their larger builds, their adaptability, and immunity from certain diseases, meaning that the grey squirrel can outcompete the red squirrel without direct harm. The grey squirrel primarily outcompetes the red squirrel through the monopolisation of food resources (Wildlife Online, n.d.), leaving the red squirrel with a limited supply. It is undoubtable that the grey squirrel has populated much of the urban environment while the red squirrel tends to reside in more rural areas. This is a good representation of the grey squirrels’ adaptability, their ability to fit into the environment that they find and even go to the extent of consuming the different foods available there (Wildlife Online, n.d.), including that of a more urban area. 
+
+Grey squirrels currently populate the UK in many places, carrying diseases such as squirrel pox, which although is not very harmful to them, it is fatal if passed on to a red squirrel (Red Squirrel Survival Trust, n.d.). This, in turn, decreases the number of red squirrels while the population of the grey squirrels is only marginally decreased. Alongside this, they are significantly larger than the red squirrel, making them the more likely survivor when in combat with competitors or predators, such as the pine marten. Due to the red squirrel's sensitive immune system, they have on average a lower life expectancy than that of the red squirrel. The red squirrel typically lives up to three years (Red Squirrel Survival Trust, n.d.), while the grey squirrel usually lives up to nine years in the wild (Wytham Woods, n.d.). Both species have been known to live up to ten or even fifteen years old, however, the contributions of the outside world, especially the different diseases they face, lowers this significantly. 
+
+Currently, the grey squirrel is the dominant species, while the red squirrel population is declining. However, the population of the red squirrel is slowly rising as the population of the pine marten increases. The pine marten is the natural predator to the grey squirrel, which has a “strong negative” (British Red Squirrel, n.d.) impact on their numbers, allowing the red squirrel to benefit and thrive as there is less competition for the red squirrel. After being pushed to near extinction, the red squirrel finds peaceful habitat in places less abundant with grey squirrels, meaning their numbers can slowly increase. Evidence was found to suggest that rather than the grey squirrel being hunted by the pine marten to decrease their numbers, the grey squirrel started to migrate to areas less populated with the pine marten. The red squirrel, in turn, benefitted from this, as they were given more land and area to populate without being disturbed by the grey squirrel and their numbers stared to increase. Furthermore, the culling of grey squirrels in legal in the UK as a way of controlling their population size and allowing the population of the red squirrel to increase (British Red Squirrel, n.d.). This includes trapping, shooting, fertility control and more. 
+
+Looking into the history of the introduction of both of the species, we can start to compare the numbers and substitute them into the Lotka-Volterra Competition model. The introduction of the grey squirrel in England was in 1876 and continued to be released until the 1920’s when the destruction of the red squirrel population was noticed and it soon became illegal to release a grey squirrel into the wild (British Red Squirrel, n.d.). Red squirrels, however, are native to the UK and lived in the UK prior to the grey squirrel for around 10,000 years (The Wildlife Trusts, 2020). It is estimated that at the time of the introduction of grey squirrels, the red squirrel population stood at roughly 3,500,000 and has decreased to 140,000 in the past years, while the grey squirrel population has increased to approximately 2,520,000 recorded in 2009 (Aebischer, Davey and Kingdon, 2011). We have taken the carrying capacity of grey squirrels to be 2,500,000 and used this to find that the carrying capacity for red squirrels is 3,000,000 (The Wildlife Trusts, 2020).
+
+
 
 ## Model Selection 
 
@@ -230,6 +238,17 @@ add some on bifurcation [^1]
 
 
 # Appendix
+
+##references
+-	Red Squirrel Survival Trust. (n.d.). Red and Grey Squirrels – The differences. Available at: https://www.rsst.org.uk/red-and-grey-squirrels-the-differences/
+-	WildlifeOnline (n.d.). Squirrels Interaction with Other Species – Decline of the Red | Wildlife Online. Available at: https://www.wildlifeonline.me.uk/animals/article/squirrels-interaction-with-other-species-decline-of-the-red#:~:text=Initially%2C%20it%20was%20thought%20that,i.e.%20they%20monopolise%20food%20resources
+-	British Red Squirrel (n.d.).  Pine Marten. Available at: http://www.britishredsquirrel.org/grey-squirrels/pine-martin/#:~:text=“Our%20study%20has%20confirmed%20that,martens”%2C%20says%20Dr%20Sheehy
+-	Wytham Woods (n.d.). Grey squirrel (Sciurus carolinensis). Available at: https://www.wythamwoods.ox.ac.uk/article/grey-squirrel-sciurus-carolinensis#:~:text=Whilst%20Grey%20squirrels%20are%20mostly,lifespan%20is%20approximately%209%20years
+-	British Red Squirrel (n.d.). Grey Management. Available at: http://www.britishredsquirrel.org/grey-squirrels/grey-control/
+-	British Red Squirrel (n.d.). Grey Squirrels. Available at: http://www.britishredsquirrel.org/grey-squirrels/#:~:text=Grey%20squirrels%20were%20first%20introduced,grey%20squirrel%20to%20the%20wild
+-	The Wildlife Trusts (2020). Red Squirrels | The Wildlife Trusts. Available at: https://www.wildlifetrusts.org/red-squirrels#:~:text=Red%20squirrels%20are%20our%20native,a%20wild%20population%20is%201876
+-	Aebischer, N.J., Davey, P.D. and Kingdon, N.G. (2011) Grey squirrel – Game and Wildlife Conservation Trust. Available at: https://www.gwct.org.uk/research/long-term-monitoring/national-gamebag-census/mammal-bags-comprehensive-overviews/grey-squirrel/
+
 
 *Add any ideas/manuscripts, links and references below, treat this as a draft for now*
 
