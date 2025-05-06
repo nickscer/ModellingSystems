@@ -6,7 +6,7 @@ r1 = 0.61      # idealistic growth rate of red squirrel
 r2 = 0.82      # idealistic growth rate of grey squirrel (higher cuz greys breed faster)
 '''(a11 higher cuz native habitat and ability to avoid predators like pine martens)'''
 a11 = -2.44 * 10 ** -7   # limitation for red squirrel  i.e. yields carrying capacity along with r1  
-a12 = -1.952 * 10 ** -6   # competition towards red squirrel  i.e. how much grey squirrel hurts red squirrel (higher cuz SQPV and size)
+a12 = -1.952 * 10 ** -7   # competition towards red squirrel  i.e. how much grey squirrel hurts red squirrel (higher cuz SQPV and size)
 a21 = -2.46 * 10 ** -8   # competition towards grey squirrel i.e. how much red squirrel hurts grey squirrel 
 a22 = -2.73333333 * 10 ** -7   # limitation for grey squirrel i.e. yields carrying capacity along with r2 
 u0 = [100000, 280000] # ICs
