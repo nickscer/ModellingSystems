@@ -83,11 +83,10 @@ $$
 \overset{\text{Generic Model - Refined form}}{
 \boxed{
 \begin{aligned}
-\frac{\mathrm{d}R}{\mathrm{d}t} &= r_{R}R\left(1-\frac{R-G\alpha_{RG}}{K_{R}}\right) \\[2mm]
-\frac{\mathrm{d}G}{\mathrm{d}t} &= r_{G}G\left(1-\frac{G-R\alpha_{GR}}{K_{G}}\right) 
+\frac{\mathrm{d}R}{\mathrm{d}t} &= r_{R}R\left(1-\frac{R+\alpha_{RG}G}{K_{R}}\right) \\
+\frac{\mathrm{d}G}{\mathrm{d}t} &= r_{G}G\left(1-\frac{G+\alpha_{GR}R}{K_{G}}\right) 
 \end{aligned}
-}
-}
+}}
 $$
 
 where $R(t)$ and $G(t)$ represent the population of red and grey squirrels at a given time $t$,
@@ -104,10 +103,10 @@ ${N}\mkern -8.2mu\textcolor{red}{{B}}$ This model is based on the logistic growt
 We have the coupled differential equations
 
 $$ 
-\frac{\mathrm{d}R}{\mathrm{d}t} = 0.61R(1-\frac{R-0.8G}{K_{R}}) 
+\frac{\mathrm{d}R}{\mathrm{d}t} = 0.61R(1-\frac{R+0.8G}{K_{R}}) 
 $$
 $$ 
-\frac{\mathrm{d}G}{\mathrm{d}t} = 0.82G(1-\frac{G-0.09R}{K_{G}}) 
+\frac{\mathrm{d}G}{\mathrm{d}t} = 0.82G(1-\frac{G+0.09R}{K_{G}}) 
 $$
 
 where $K_{G} = 3×10^{6}$ and $K_{R} = 2.5×10^{6}$
@@ -184,8 +183,8 @@ For the purposes of constructing our numerical algorithm, we return to our gener
 
 $$
 \begin{aligned}
-\frac{\mathrm{d}R}{\mathrm{d}t} &= r_{R}R\left(1-\frac{R-G\alpha_{RG}}{K_{R}}\right) \\[2mm]
-\frac{\mathrm{d}G}{\mathrm{d}t} &= r_{G}G\left(1-\frac{G-R\alpha_{GR}}{K_{G}}\right) 
+\frac{\mathrm{d}R}{\mathrm{d}t} &= r_{R}R\left(1-\frac{R+\alpha_{RG}G}{K_{R}}\right) \\[2mm]
+\frac{\mathrm{d}G}{\mathrm{d}t} &= r_{G}G\left(1-\frac{G+\alpha_{GR}R}{K_{G}}\right) 
 \end{aligned} \qquad \longrightarrow \qquad
 \begin{aligned}
 \frac{\mathrm{d}x}{\mathrm{d}t} &= x(r_1 + a_{11}x + a_{12}y), \\
@@ -197,8 +196,8 @@ We expand the equations and compare coefficients for $x = R$ and $y=R$ s.t.
 
 $$
 \begin{aligned}
-\frac{\mathrm{d}R}{\mathrm{d}t} &= r_R R \left(1 - \frac{R}{K_R} + \frac{G \alpha_{RG}}{K_R}\right) = \underbrace{r_R}_{r_1} R + \underbrace{\left(-\frac{r_R}{K_R}\right)}_{a_{11}} R^2 + \underbrace{\left(\frac{r_R \alpha_{RG}}{K_R}\right)}_{a_{12}} RG \\[4mm]
-\frac{\mathrm{d}G}{\mathrm{d}t} &= r_G G \left(1 - \frac{G}{K_G} + \frac{R \alpha_{GR}}{K_G}\right) = \underbrace{r_G}_{r_2} G + \underbrace{\left(\frac{r_G \alpha_{GR}}{K_G}\right)}_{a_{21}} RG + \underbrace{\left(-\frac{r_G}{K_G}\right)}_{a_{22}} G^2
+\frac{\mathrm{d}R}{\mathrm{d}t} &= r_R R \left(1 - \frac{R}{K_R} - \frac{G \alpha_{RG}}{K_R}\right) = \underbrace{r_R}_{r_1} R + \underbrace{\left(-\frac{r_R}{K_R}\right)}_{a_{11}} R^2 + \underbrace{\left(-\frac{r_R \alpha_{RG}}{K_R}\right)}_{a_{12}} RG \\
+\frac{\mathrm{d}G}{\mathrm{d}t} &= r_G G \left(1 - \frac{G}{K_G} - \frac{R \alpha_{GR}}{K_G}\right) = \underbrace{r_G}_{r_2} G + \underbrace{\left(-\frac{r_G \alpha_{GR}}{K_G}\right)}_{a_{21}} RG + \underbrace{\left(-\frac{r_G}{K_G}\right)}_{a_{22}} G^2
 \end{aligned}
 $$
 
@@ -210,17 +209,17 @@ $$
 r_1 &= r_R \\
 r_2 &= r_G \\
 a_{11} &= -\frac{r_R}{K_R} \\
-a_{12} &= \frac{r_R \alpha_{RG}}{K_R} \\
-a_{21} &= \frac{r_G \alpha_{GR}}{K_G} \\
+a_{12} &= -\frac{r_R \alpha_{RG}}{K_R} \\
+a_{21} &= -\frac{r_G \alpha_{GR}}{K_G} \\
 a_{22} &= -\frac{r_G}{K_G}
 \end{aligned}
-} \,\, \longrightarrow \,\, \boxed{
+} \quad \longrightarrow \quad \boxed{
 \begin{aligned}
 r_{1} &= 0.61 \\
 r_{2} &= 0.82 \\
 a_{11} &= -2.44\cdot10^{-7} \\
-a_{12} &= 1.952\cdot10^{-6} \\
-a_{21} &= 2.46 \cdot 10^{-8} \\
+a_{12} &= -1.952\cdot10^{-6} \\
+a_{21} &= -2.46 \cdot 10^{-8} \\
 a_{22} &= -2.7\dot{3} \cdot 10^{-7} 
 \end{aligned}
 }
