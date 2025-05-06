@@ -183,7 +183,7 @@ For the purposes of constructing our numerical algorithm, we return to our gener
 
 $$
 \begin{aligned}
-\frac{\mathrm{d}R}{\mathrm{d}t} &= r_{R}R\left(1-\frac{R+\alpha_{RG}G}{K_{R}}\right) \\[2mm]
+\frac{\mathrm{d}R}{\mathrm{d}t} &= r_{R}R\left(1-\frac{R+\alpha_{RG}G}{K_{R}}\right) \\
 \frac{\mathrm{d}G}{\mathrm{d}t} &= r_{G}G\left(1-\frac{G+\alpha_{GR}R}{K_{G}}\right) 
 \end{aligned} \qquad \longrightarrow \qquad
 \begin{aligned}
@@ -255,7 +255,7 @@ add some on bifurcation [^99]
 
 $$
 \begin{aligned}
-\text{num1} &= 0.488 K_{G}^2 + 0.738 K_{R}^2 - 1.43 K_{R} K_{G} \\[4mm]
+\text{num1} &= 0.488 K_{G}^2 + 0.738 K_{R}^2 - 1.43 K_{R} K_{G} \\
 \text{num2} &= (0.488 K_{G} - 0.61 K_{R})(0.738 K_{R}  - 0.82 K_{G}) \\
 & -(0.3904 K_{G} - 0.488 K_{R})(0.006642 K_{R} - 0.0738 K_{G})
 \end{aligned}
