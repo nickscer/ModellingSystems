@@ -5,11 +5,13 @@ import matplotlib.pyplot as plt
 r1 = 0.61      # idealistic growth rate of red squirrel 
 r2 = 0.82      # idealistic growth rate of grey squirrel (higher cuz greys breed faster)
 '''(a11 higher cuz native habitat and ability to avoid predators like pine martens)'''
-a11 = -0.0170   # limitation for red squirrel  i.e. yields carrying capacity along with r1  
-a12 = -0.8000   # competition towards red squirrel  i.e. how much grey squirrel hurts red squirrel (higher cuz SQPV and size)
-a21 = -0.0800   # competition towards grey squirrel i.e. how much red squirrel hurts grey squirrel 
-a22 = -0.0300   # limitation for grey squirrel i.e. yields carrying capacity along with r2 
-u0 = [100, 50] # ICs
+a11 = -2.44 * 10 ** -7   # limitation for red squirrel  i.e. yields carrying capacity along with r1  
+a12 = - 1.952 * 10 ** -6   # competition towards red squirrel  i.e. how much grey squirrel hurts red squirrel (higher cuz SQPV and size)
+a21 = - 2.46 * 10 ** -8   # competition towards grey squirrel i.e. how much red squirrel hurts grey squirrel 
+a22 = -2.73333333 * 10 ** -7   # limitation for grey squirrel i.e. yields carrying capacity along with r2 
+u0 = [100000, 280000] # ICs
+# Equilibria at [107758.6207, 2990301.724]
+
 
 # Functions setup
 '''xdot = x(r1 + a11*x + a12*y)'''
@@ -35,7 +37,7 @@ def squirrely(t0, u):
     return np.array(udot)
 
 # Computing values 
-h = 0.01
+h = 0.001
 T_max = 25
 t_values = np.arange(0, T_max + h, h)
 u = np.zeros([2, len(t_values)])
