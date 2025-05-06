@@ -234,7 +234,7 @@ add discussion on error inherited by the numerical method
 
 ## Potential Bifurcation
 
-add some on bifurcation [^1]
+add some on bifurcation [^99]
 
 
 # Appendix
@@ -294,7 +294,7 @@ to be added
 
 ## Bibliography
 
-[^1]: Bifurcation theory: https://en.wikipedia.org/wiki/Bifurcation_theory
+[^99]: Bifurcation theory: https://en.wikipedia.org/wiki/Bifurcation_theory
 
 ---
 #### Draft (to be removed)
