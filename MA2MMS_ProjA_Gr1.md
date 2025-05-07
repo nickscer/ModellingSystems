@@ -6,7 +6,7 @@ geometry: margin=2cm
 
 # MA2MMS Project A. Modelling Ecological Systems 
 
-*Nick Scerbacenco, Keisha M. Patel and Henry Davis*
+*Nick Scerbacenco, Keisha Markey Patel and Henry Davis*
 
 *University of Reading*  
 
@@ -25,11 +25,11 @@ Add a brief abstract with a description and conclusion here ...
 	1. [Local Truncation Error](#local-truncation-error)
 	2. [Potential Bifurcation](#potential-bifurcation)
 6. [Appendix](#appendix)  
-	1. [References](#references) 
+	1. [Bibliography](#bibliography) 
 
 # Description of the Ecological System
 
- This report outlines the relationship between the red squirrel and the grey squirrel in the UK. The two species have a very tense relationship due to competition and displacement which has affected their individual populations. We will look at the different numbers of each and format solvable equations for the each of the populations of the two species. As time has gone on, the population of grey squirrels has increased while the population of red squirrels has decreased. First, we need to look at the kind of relationship that the pair have and the varied biotic and abiotic factors that affect their population sizes. While red and grey squirrels do not directly compete against each other, they compete in terms of food resources and habitats. 
+This report outlines the relationship between the red squirrel and the grey squirrel in the UK. The two species have a very tense relationship due to competition and displacement which has affected their individual populations. We will look at the different numbers of each and format solvable equations for the each of the populations of the two species. As time has gone on, the population of grey squirrels has increased while the population of red squirrels has decreased. First, we need to look at the kind of relationship that the pair have and the varied biotic and abiotic factors that affect their population sizes. While red and grey squirrels do not directly compete against each other, they compete in terms of food resources and habitats. 
 
 ## Introduction
 
@@ -238,7 +238,8 @@ add some on bifurcation [^99]
 
 # Appendix
 
-##references
+## Bibliography
+
 -	Red Squirrel Survival Trust. (n.d.). Red and Grey Squirrels – The differences. Available at: https://www.rsst.org.uk/red-and-grey-squirrels-the-differences/
 -	WildlifeOnline (n.d.). Squirrels Interaction with Other Species – Decline of the Red | Wildlife Online. Available at: https://www.wildlifeonline.me.uk/animals/article/squirrels-interaction-with-other-species-decline-of-the-red#:~:text=Initially%2C%20it%20was%20thought%20that,i.e.%20they%20monopolise%20food%20resources
 -	British Red Squirrel (n.d.).  Pine Marten. Available at: http://www.britishredsquirrel.org/grey-squirrels/pine-martin/#:~:text=“Our%20study%20has%20confirmed%20that,martens”%2C%20says%20Dr%20Sheehy
