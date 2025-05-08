@@ -269,6 +269,8 @@ We also plotted a phase portrait with vectors visualising the flow towards the s
 
 ${N}\mkern -8.2mu\textcolor{red}{{B}}$ Changing the ICs would implicitly change all following approximations, however as we have shown analytically, the system would eventually settle to a steady state for *all* realistic ICs .
 
+\pagebreak
+
 # Possible improvements and sustainability 
 
 The model presented above is quite good and predicts that the populations of red and grey squirrels today would stand at roughly 110 thousand and 3 million which is surprisingly close to the empirical estimations of 140 thousand and 2.5 million. The model slightly overestimated the population of grey squirrels and underestimated that of red squirrels.
