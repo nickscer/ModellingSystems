@@ -4,11 +4,13 @@ geometry: margin=2cm
 [comment]: # (This is how you can make comments without affecting the output file or preview, the above section is the YAML btw, it is not rendered either but rather sets custom global markdown formatting for pdf/html output)
 [comment]: # (Use `pandoc test.txt -o test.pdf` in the zsh terminal for compilation)
 
-# MA2MMS Project A. Modelling Ecological Systems 
+# MA2MMS Project A. Modelling Squirrel Population Dynamics 
 
 *Nick Scerbacenco, Keisha Markey Patel and Henry Davis*
 
 *University of Reading*  
+
+![Red squirrel attacking a grey squirrel](attachments/going_nuts.jpg)
 
 ## Abstract
 
@@ -103,10 +105,10 @@ ${N}\mkern -8.2mu\textcolor{red}{{B}}$ This model is based on the logistic growt
 We have the coupled differential equations
 
 $$ 
-\frac{\mathrm{d}R}{\mathrm{d}t} = 0.61R(1-\frac{R+0.8G}{K_{R}}) 
+\frac{\mathrm{d}R}{\mathrm{d}t} = 0.61R\left(1-\frac{R+0.8G}{K_{R}}\right) 
 $$
 $$ 
-\frac{\mathrm{d}G}{\mathrm{d}t} = 0.82G(1-\frac{G+0.09R}{K_{G}}) 
+\frac{\mathrm{d}G}{\mathrm{d}t} = 0.82G\left(1-\frac{G+0.09R}{K_{G}}\right) 
 $$
 
 where $K_{G} = 3×10^{6}$ and $K_{R} = 2.5×10^{6}$
@@ -161,7 +163,7 @@ This means...
 Finally at the equilibrium point $(\frac{K_{R}-0.8K_{G}}{0.928},\frac{K_{G}-0.09K_{R}}{0.928})$, we have the Jacobian matrix
 
 $$ 
-J(\frac{K_{R}-0.8K_{G}}{0.928},\frac{K_{G}-0.09K_{R}}{0.928}) = \begin{bmatrix} \frac{0.488K_{G} - 0.61K_{R}}{0.928K_{R}} & \frac{0.3904K_{G} - 0.488K_{R}}{0.928K_{R}} \\
+J\left(\frac{K_{R}-0.8K_{G}}{0.928},\frac{K_{G}-0.09K_{R}}{0.928}\right) = \begin{bmatrix} \frac{0.488K_{G} - 0.61K_{R}}{0.928K_{R}} & \frac{0.3904K_{G} - 0.488K_{R}}{0.928K_{R}} \\
 \frac{0.006642K_{R} - 0.0738K_{G}}{0.928K_{G}} & \frac{0.738K_{R} - 0.82K_{G}}{0.928K_{G}} \end{bmatrix} 
 $$
 
@@ -227,13 +229,33 @@ $$
 
 $\textcolor{red}{!}$ The $a_{22}$ is a recurring decimal marked $\dot{3}$. In the actual implementation, 8 decimal points will be used to minimise the *roundoff error*.  
 
-## Local Truncation Error
+We proceeded to plot the populations of red and grey squirrels in discrete time using the *4th order Runge-Kutta method* (RK4) which is a robust general-purpose numerical method with a $\mathcal{O}(h^5)$ local truncation error.
+${N}\mkern -8.2mu\textcolor{red}{{B}}$ We chose RK4 as it is the most optimal explicit method for its number of $k$ *stages*.
 
-add discussion on error inherited by the numerical method
+We avoided the use of "*black boxes*" and fully implemented the RK4 method in python, please refer to the *appendix*[^100] for the whole code but the general logic behind it is storing ...
 
-## Potential Bifurcation
+```python
+u[:, 0] = u0
+for i in range(1, len(t_values)):
+    u_out = rk4(squirrely, h, t_values[i - 1], u[:, i - 1])
+    u[:, i] = u_out
+print(u)
+```
+
+### Bifurcation
 
 add some on bifurcation [^99]
+
+# Predictions
+
+
+
+# Possible improvements and sustainability 
+
+
+
+# Testing the improved models
+
 
 
 # Appendix
