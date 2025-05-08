@@ -80,7 +80,7 @@ For now we introduce a new form of our model with the carrying capacities $K_{R}
 
 ### Choosing Coefficients
  
-Using the *generic* *Lotka-Volterra* Competitive model in a *refined form* [^11]
+Using the *generic* *Lotka-Volterra* Competitive model in a *refined form* [^11](2022)
 
 $$
 \overset{\text{Generic Model - Refined form}}{
@@ -99,7 +99,7 @@ and finally $\alpha_{RG}$ and $\alpha_{GR}$ represent the competition coefients.
 
 ${N}\mkern -8.2mu\textcolor{red}{{B}}$ This model is based on the logistic growth model ($\frac{\mathrm{d}x}{\mathrm{d}t} = rx ( 1 - \frac{x}{K} )$ ), with the addition of competition between the two species as they compete for the same natural resources. 
 
-We have selected $r_{R}=0.61$, $r_{G}=0.82$ directly from [^10](Spatial spread of the grey squirrel in Britain, 1989). We have additionally selected $\alpha_{RG}$ and $\alpha_{GR}$ with refrence to [^10](Spatial spread of the grey squirrel in Britain, 1989) 'We expect that the competition c1, i.e. red against grey should have a small value' thus choosing $\alpha_{GR}=0.09$ and $\alpha_{RG}=0.8$. We also chose $K_{G} = 3×10^{6}$ and $K_{R} = 2.5×10^{6}$ - using the carrying capacities discussed earlier. 
+We have selected $r_{R}=0.61$, $r_{G}=0.82$ directly from [^10](Spatial spread of the grey squirrel in Britain, 1989). We have also estimated $\alpha_{RG}$ and $\alpha_{GR}$ with refrence to [^10](Spatial spread of the grey squirrel in Britain, 1989) 'We expect that the competition c1, i.e. red against grey should have a small value' thus we chose $\alpha_{GR}=0.09$ and $\alpha_{RG}=0.8$. We also chose $K_{G} = 3×10^{6}$ and $K_{R} = 2.5×10^{6}$ - using the carrying capacities discussed earlier. 
 
 ## Stability of the model
 
@@ -138,7 +138,7 @@ J(0,0) = \begin{bmatrix} 0.61 & 0 \\
 0 & 0.82 \end{bmatrix} 
 $$
 
-Since $J(0,0)$ is a diagonal matrix, it has two eigenvalues which are $\lambda_{1} = 0.61$ and $\lambda_{2} = 0.82$. Since these eigenvalues are non-positive real numbers, the corresponding fixed point is an unstable source.
+Since $J(0,0)$ is a diagonal matrix, the eigenvalues are directly the diagonal elements $\lambda_{1} = 0.61$ and $\lambda_{2} = 0.82$. Since these eigenvalues are non-positive real numbers, the corresponding fixed point is an unstable source.
 this means....
 
 At the equilibrium point $(K_{R},0)$, we have the Jacobian matrix
@@ -148,7 +148,7 @@ J(K_{R},0) = \begin{bmatrix} -0.61 & -0.488 \\
 0 & 0.82 - \frac{0.073K_{R}}{K_{G}}\end{bmatrix} 
 $$
 
-Since $J(K_{R},0)$ is an upper triangular matrix, it has two eigenvalues which are $\lambda_{1} = -0.61$ and $\lambda_{2} = 0.82 - \frac{0.073K_{R}}{K_{G}}$. Since these eignevalues are real numbers with $\lambda_{1} < 0 < \lambda_{2}$, the corresponding fixed point is an unstable saddlepoint.
+Since $J(K_{R},0)$ is an upper triangular matrix, the eigenvalues are directly the diagonal elements $\lambda_{1} = -0.61$ and $\lambda_{2} = 0.82 - \frac{0.073K_{R}}{K_{G}}$. Since these eignevalues are real numbers with $\lambda_{1} < 0 < \lambda_{2}$, the corresponding fixed point is an unstable saddlepoint.
 This means...
 
 At the equilibrium point $(0,K_{G})$, we have the Jacobian matrix
@@ -158,7 +158,7 @@ J(0,K_{G}) = \begin{bmatrix} 0.61 - \frac{0.488K_{G}}{K_{R}} & 0 \\
 -0.0738 & -0.82 \end{bmatrix} 
 $$
 
-Since $J(0,K_{G})$ is a lower triangular matrix, it has two eigenvalues which are $\lambda_{1} = 0.61 - \frac{0.488K_{G}}{K_{R}}$ and $\lambda_{2} = -0.82$. Since these eignevalues are real numbers with $\lambda_{2} < 0 < \lambda_{1}$, the corresponding fixed point is an unstable saddlepoint.
+Since $J(0,K_{G})$ is a lower triangular matrix, the eigenvalues are directly the diagonal elements $\lambda_{1} = 0.61 - \frac{0.488K_{G}}{K_{R}}$ and $\lambda_{2} = -0.82$. Since these eignevalues are real numbers with $\lambda_{2} < 0 < \lambda_{1}$, the corresponding fixed point is an unstable saddlepoint.
 This means...
 
 Finally at the equilibrium point $(\frac{K_{R}-0.8K_{G}}{0.928},\frac{K_{G}-0.09K_{R}}{0.928}) \approx (107759, 2990302)$, we have the Jacobian matrix
