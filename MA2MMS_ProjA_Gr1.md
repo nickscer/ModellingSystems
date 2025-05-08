@@ -45,6 +45,7 @@ Looking into the history of the introduction of both of the species, we can star
 
 
 
+
 ## Model Selection 
 
 Our aim is modelling *global* populations of red and grey squirrels over time. We begin by considering the *generic* *Lotka-Volterra* system s.t. 
@@ -252,7 +253,9 @@ add some on bifurcation [^99]
 
 # Possible improvements and sustainability 
 
+To enable us to have a more exact system for the populations of both species, we would need to take into consideration the decline in populations as much as the increase in them. For example, the culling of grey squirrels and the death rate of red squirrels from diseases. As mentioned before, it is legal to cull grey squirrels in the UK by means of trapping, shooting and more. It is estimated that “tens of thousands” of grey squirrels are killed each year through culling [^9] (Viva!, 2023). The decline of the squirrel population is due to many varied reasons, trauma, road accidents, disease, and predation. However, the decline in numbers of the red squirrel is smaller than the grey squirrel. We can use these facts in an adapted model that also incorporates a harvesting coefficient. Here, the coefficient of the red squirrel harvesting is smaller than that of the grey squirrel. This creates a more accurate model for the populations of both of the animals.
 
+Looking into the future of the populations of grey and red squirrels, the control of the grey squirrel numbers alongside the conservation of red squirrels could mean that the red squirrel can thrive once more. Many routes are currently being taken to allow this to happen, making the populations of both more sustainable for the environment. If the combination of culling, habitat control and fertilisation can proceed with the protection and conservation of red squirrels, an equilibrium of both population sizes can be reached. It is very unlikely that both types of animals will ever be able to coesxist in the same habitat as each other, however, this could enstore a more stable population size for both. 
 
 # Testing the improved models
 
@@ -313,6 +316,7 @@ to be added
 -	[^6]: British Red Squirrel (n.d.). Grey Squirrels. Available at: http://www.britishredsquirrel.org/grey-squirrels/#:~:text=Grey%20squirrels%20were%20first%20introduced,grey%20squirrel%20to%20the%20wild
 -	[^7]: The Wildlife Trusts (2020). Red Squirrels | The Wildlife Trusts. Available at: https://www.wildlifetrusts.org/red-squirrels#:~:text=Red%20squirrels%20are%20our%20native,a%20wild%20population%20is%201876
 -	[^8]: Aebischer, N.J., Davey, P.D. and Kingdon, N.G. (2011) Grey squirrel – Game and Wildlife Conservation Trust. Available at: https://www.gwct.org.uk/research/long-term-monitoring/national-gamebag-census/mammal-bags-comprehensive-overviews/grey-squirrel/
+-	[^9]: Viva! (2023). Viva! – Squirrel Culling in the UK. Available at: https://viva.org.uk/animals/other-animals/squirrels/#:~:text=There%20are%20no%20public%20records,like%20the%20culling%20of%20badgers
 
 ---
 #### Draft (to be removed)
