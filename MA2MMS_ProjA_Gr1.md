@@ -77,7 +77,7 @@ For now we introduce a new form of our model with the carrying capacities $K_{R}
 
 ### Choosing Coefficients
  
-Using the *generic* *Lotka-Volterra* Competitive model in a *refined form* [^11](2022)
+Using the *generic* *Lotka-Volterra* Competitive model in a *refined form*$^{[11]}$(2022)
 
 $$
 \overset{\text{Generic Model - Refined form}}{
