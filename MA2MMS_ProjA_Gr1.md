@@ -256,7 +256,11 @@ We set the ICs to be 3500000 red squirrels and 10000 grey squirrels which should
 
 The stable squirrel populations found analytically are $(\frac{K_{R}-0.8K_{G}}{0.928},\frac{K_{G}-0.09K_{R}}{0.928})=(107758, 2990301)$ which can be seen in the plot below. 
 
+>
+
 ![Evolving populations of red and grey squirrels over time from 1930 to 2050](attachments/Figure_1.png)
+
+>
 
 We can see that the grey squirrel population steeply increased in size between 1940 and 1960 which reflects how grey squirrels completely outcompeted red squirrels in most regions in England and established a permanent population. 
 
@@ -265,7 +269,11 @@ We can see that the grey squirrel population steeply increased in size between 1
 The phase space plot displays the trajectory ending at our sink point as expected. 
 We also plotted a phase portrait with vectors visualising the flow towards the sink point as we start with different ICs close to it. 
 
+>
+
 ![Phase space portraits with marked stable sink point](attachments/Figure_2.png)
+
+>
 
 ${N}\mkern -8.2mu\textcolor{red}{{B}}$ Changing the ICs would implicitly change all following approximations, however as we have shown analytically, the system would eventually settle to a steady state for *all* realistic ICs .
 
@@ -293,6 +301,7 @@ $$
 $$
 
 where $H$ is a negative constant and represents the overall effect of culling and uneven survival odds compared to red squirrels in regions populated with pine martens. 
+
 ${N}\mkern -8.2mu\textcolor{red}{{B}}$ Red squirrels are much better at avoiding pine martens relative to grey squirrels.
 
 ## Testing improved models
@@ -300,7 +309,11 @@ ${N}\mkern -8.2mu\textcolor{red}{{B}}$ Red squirrels are much better at avoiding
 We proceed by choosing a value of $H$ that would result in populations of 140 thousand red squirrels and 2.5 million greys squirrels in 2020s.
 We do so through a *heuristic approach* where we plot the trajectories for the populations over time for different values of $H$. We try out values $-0.2, -0.1, -0.05, -0.03, -0.01$ for $H$ and examine the resulting trajectories. We also plot the empirically estimated populations as a target line. 
 
+>
+
 ![Visualising harvesting effects](attachments/Figure_3.png)
+
+>
 
 ${N}\mkern -8.2mu\textcolor{red}{{B}}$ The code for the script that plots multiple trajectories for different values for harvesting shown above can be found in the *[appendix](#visualising-harvesting-effects)*.
 
