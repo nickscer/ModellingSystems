@@ -1,8 +1,8 @@
-PWD c:/Users/Eccentric User/Documents/New folder (2)/ModellingSystems
+PWD c:/Users/Eccentric User/Documents/New folder (2)/ModellingSystems/LaTeX_Archive
 INPUT c:/texlive/2023/texmf.cnf
 INPUT c:/texlive/2023/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/Eccentric User/Documents/New folder (2)/ModellingSystems/main.tex
+INPUT c:/Users/Eccentric User/Documents/New folder (2)/ModellingSystems/LaTeX_Archive/main.tex
 OUTPUT main.log
 INPUT c:/texlive/2023/texmf-dist/tex/latex/base/article.cls
 INPUT c:/texlive/2023/texmf-dist/tex/latex/base/article.cls
@@ -209,6 +209,16 @@ INPUT c:/texlive/2023/texmf-dist/tex/latex/amsmath/amsgen.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/amsmath/amsbsy.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/amsmath/amsbsy.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT c:/texlive/2023/texmf-dist/tex/latex/mathtools/mathtools.sty
+INPUT c:/texlive/2023/texmf-dist/tex/latex/mathtools/mathtools.sty
+INPUT c:/texlive/2023/texmf-dist/tex/latex/tools/calc.sty
+INPUT c:/texlive/2023/texmf-dist/tex/latex/tools/calc.sty
+INPUT c:/texlive/2023/texmf-dist/tex/latex/mathtools/mhsetup.sty
+INPUT c:/texlive/2023/texmf-dist/tex/latex/mathtools/mhsetup.sty
+INPUT c:/texlive/2023/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INPUT c:/texlive/2023/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INPUT c:/texlive/2023/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+INPUT c:/texlive/2023/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/standalone/standalone.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/standalone/standalone.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/tools/shellesc.sty
@@ -332,12 +342,6 @@ INPUT c:/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT c:/texlive/2023/texmf-dist/tex/latex/lettrine/lettrine.cfg
 INPUT c:/texlive/2023/texmf-dist/tex/latex/lettrine/lettrine.cfg
 INPUT c:/texlive/2023/texmf-dist/tex/latex/lettrine/lettrine.cfg
-INPUT c:/texlive/2023/texmf-dist/tex/latex/mathtools/mathtools.sty
-INPUT c:/texlive/2023/texmf-dist/tex/latex/mathtools/mathtools.sty
-INPUT c:/texlive/2023/texmf-dist/tex/latex/tools/calc.sty
-INPUT c:/texlive/2023/texmf-dist/tex/latex/tools/calc.sty
-INPUT c:/texlive/2023/texmf-dist/tex/latex/mathtools/mhsetup.sty
-INPUT c:/texlive/2023/texmf-dist/tex/latex/mathtools/mhsetup.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/lipsum/lipsum.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/lipsum/lipsum.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
@@ -350,10 +354,6 @@ INPUT c:/texlive/2023/texmf-dist/tex/generic/iftex/ifvtex.sty
 INPUT c:/texlive/2023/texmf-dist/tex/generic/iftex/ifvtex.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/amscls/amsthm.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/amscls/amsthm.sty
-INPUT c:/texlive/2023/texmf-dist/tex/latex/amsfonts/amssymb.sty
-INPUT c:/texlive/2023/texmf-dist/tex/latex/amsfonts/amssymb.sty
-INPUT c:/texlive/2023/texmf-dist/tex/latex/amsfonts/amsfonts.sty
-INPUT c:/texlive/2023/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/enumitem/enumitem.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/enumitem/enumitem.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/graphics/dvipsnam.def
