@@ -334,11 +334,11 @@ With the addition of havesting we have:
 $$
 \begin{aligned}
 \frac{\mathrm{d}x}{\mathrm{d}t} &= r_{R}x\left(1-\frac{x+\alpha_{RG}y}{K_{R}}\right) \\
-\frac{\mathrm{d}y}{\mathrm{d}t} &= r_{G}y\left(1-\frac{y+\alpha_{GR}x}{K_{G}}\right + Hy) 
+\frac{\mathrm{d}y}{\mathrm{d}t} &= r_{G}y\left(1-\frac{y+\alpha_{GR}x}{K_{G}}\right) + Hy 
 \end{aligned} \qquad \longrightarrow \qquad
 \begin{aligned}
 \frac{\mathrm{d}x}{\mathrm{d}t} &= r_{R}x\left(1-\frac{x+\alpha_{RG}y}{K_{R}}\right) \\
-\frac{\mathrm{d}y}{\mathrm{d}t} &= r_{G}y\left(1 + \frac{H}{0.82} - \frac{y+\alpha_{GR}x}{K_{G}}\right)
+\frac{\mathrm{d}y}{\mathrm{d}t} &= r_{G}y\left(1 + \frac{H}{r_{G}} - \frac{y+\alpha_{GR}x}{K_{G}}\right)
 \end{aligned} \qquad \longrightarrow \qquad
 \begin{aligned}
 \frac{\mathrm{d}x}{\mathrm{d}t} &= 0.61x\left(1-\frac{x+0.8y}{K_{R}}\right) \\
