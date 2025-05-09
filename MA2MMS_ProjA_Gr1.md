@@ -115,16 +115,19 @@ The R-nullclines are found to be $x = 0$ or $x = K_{R} - 0.8y$ by setting $\frac
 
 The G-nullclines are found to be $y = 0$ or $y = K_{G} - 0.09x$ by setting $\frac{\mathrm{d}y}{\mathrm{d}t} = 0$.
 
-The equilibrium points are found from the intersections of the R and G nullclines, and are given to be: $(0,0)$, $(K_{R},0)$, $(K_{G},0)$ and $(\frac{K_{R}-0.8K_{G}}{0.928},\frac{K_{G}-0.09K_{R}}{0.928})$.
+The equilibrium points are found from the intersections of the R and G nullclines, and are given to be: 
+- $(0,0)$, the origin point where both populations are extinct;
+- $(K_{R},0)$, the red squirrel population is at their carrying capacity while the grey squirrel population is extinct
+- $(K_{G},0)$, the grey squirrel population is at their carrying capacity while the red squirrel population is extinct
+- $(\frac{K_{R}-0.8K_{G}}{0.928},\frac{K_{G}-0.09K_{R}}{0.928})$, both populations can co-exist.
 
-The Jacobian matrix of the system is given by:
+Now we calculate the Jacobian matrix of the system to linearize the system of equations around each equilibrium point to find the behaviour and tradjectories of nearby points.
+The Jacobian matrix is given by:
 
 $$ 
 J(x,y) = \begin{bmatrix} 0.61 - \frac{1.22}{K_{R}}x - \frac{0.488}{K_{R}}y & -\frac{0.488}{K_{R}} \\
 -\frac{0.0738}{K_{G}}y & 0.82 - \frac{0.18}{K_{G}}y - \frac{0.0738}{K_{G}}x \end{bmatrix} 
 $$
-
-Now looking at the Jacobian at the equilibria points:
 
 At the equilibrium point $(0,0)$, we have the Jacobian matrix
 
@@ -133,8 +136,7 @@ J(0,0) = \begin{bmatrix} 0.61 & 0 \\
 0 & 0.82 \end{bmatrix} 
 $$
 
-Since $J(0,0)$ is a diagonal matrix, the eigenvalues are directly the diagonal elements $\lambda_{1} = 0.61$ and $\lambda_{2} = 0.82$. Since these eigenvalues are non-positive real numbers, the corresponding fixed point is an unstable source.
-this means....
+Since $J(0,0)$ is a diagonal matrix, the eigenvalues are directly the diagonal elements $\lambda_{1} = 0.61$ and $\lambda_{2} = 0.82$. Since these eigenvalues are non-positive real numbers, the corresponding fixed point is an unstable source. This means that all nearby trajectories move away from the point - small introductions of either populations will cause the system to move away from extinction towards positive populations of squirrels.
 
 At the equilibrium point $(K_{R},0)$, we have the Jacobian matrix
 
@@ -143,18 +145,18 @@ J(K_{R},0) = \begin{bmatrix} -0.61 & -0.488 \\
 0 & 0.82 - \frac{0.0738K_{R}}{K_{G}}\end{bmatrix} 
 $$
 
-Since $J(K_{R},0)$ is an upper triangular matrix, the eigenvalues are directly the diagonal elements $\lambda_{1} = -0.61$ and $\lambda_{2} = 0.82 - \frac{0.0738K_{R}}{K_{G}}$. Since these eignevalues are real numbers with $\lambda_{1} < 0 < \lambda_{2}$, the corresponding fixed point is an unstable saddlepoint.
-This means...
+Since $J(K_{R},0)$ is an upper triangular matrix, the eigenvalues are directly the diagonal elements $\lambda_{1} = -0.61$ and $\lambda_{2} = 0.82 - \frac{0.0738K_{R}}{K_{G}} = 0.7585$. Since these eignevalues are real numbers with $\lambda_{1} < 0 < \lambda_{2}$, the corresponding fixed point is an unstable saddlepoint.
 
-At the equilibrium point $(0,K_{G})$, we have the Jacobian matrix
+Also, at the equilibrium point $(0,K_{G})$, we have the Jacobian matrix
 
 $$ 
 J(0,K_{G}) = \begin{bmatrix} 0.61 - \frac{0.488K_{G}}{K_{R}} & 0 \\
 -0.0738 & -0.82 \end{bmatrix} 
 $$
 
-Since $J(0,K_{G})$ is a lower triangular matrix, the eigenvalues are directly the diagonal elements $\lambda_{1} = 0.61 - \frac{0.488K_{G}}{K_{R}}$ and $\lambda_{2} = -0.82$. Since these eignevalues are real numbers with $\lambda_{2} < 0 < \lambda_{1}$, the corresponding fixed point is an unstable saddlepoint.
-This means...
+Since $J(0,K_{G})$ is a lower triangular matrix, the eigenvalues are directly the diagonal elements $\lambda_{1} = 0.61 - \frac{0.488K_{G}}{K_{R}} = 0.0244$ and $\lambda_{2} = -0.82$. Since these eignevalues are real numbers with $\lambda_{2} < 0 < \lambda_{1}$, the corresponding fixed point is an unstable saddlepoint.
+
+Therefore at each saddlepoint $(K_{R},0)$ and $(0,K_{G})$ populations lying on the stable manifold (an eigendirection tangent to the eigenvector formed from the negative eigenvalue in the linearized system) will approach red/grey squirrel dominace respectively. While all other points move away aproaching either coexistance or grey/red squirrel dominance respectively.
 
 Finally at the equilibrium point $\left(\frac{K_{R}-0.8K_{G}}{0.928}, \frac{K_{G}-0.09K_{R}}{0.928}\right) \approx (107758, 2990301)$ _taking the floor of these values since the populations of x and y are whole numbers_, we have the Jacobian matrix
 
@@ -172,8 +174,7 @@ $$
 
 ${N}\mkern -8.2mu\textcolor{red}{{B}}$ See *[Notes on Stability](#notes-on-stability)* for precise calculations of the numerators inside the square root.
 
-Since these eigenvalues are real, negative numbers, ($\lambda_{1} \approx -0.0186$ and $\lambda_{2} \approx -0.2287$) the corresponding fixed point is an asymptotically stable sink point.
-This means...
+Since these eigenvalues are real, negative numbers, ($\lambda_{1} \approx -0.0186$ and $\lambda_{2} \approx -0.2287$) the corresponding fixed point is an asymptotically stable sink point. This means all tradjectories starting from positive initial populations - that do not lie on the saddlepoints' stable manifolds, will converge to this equilibria point over time causing both squirrel populations to coexist with eachother.
 
 # Numerical Solution
 
@@ -344,15 +345,15 @@ $$
 \end{aligned}
 $$
 
-Calculating the nullclines as before, we have the equilibrium points $(0,0)$, $(K_{R}, 0)$, $(0, \frac{31}{41}K_{G})$ and $(\frac{K_{R}-\frac{124}{205}K_{G}}{0.928}, \frac{\frac{31}{41}K_{G}-0.09K_{R}}{0.928})$. We then calculate the Jacobians to analyse the stability - the results are highlighted below.
+Calculating the nullclines as before, we have the equilibrium points $(0,0)$, $(K_{R}, 0)$, $(0, \frac{31}{41}K_{G}) \approx (0, 2268292)$ and $(\frac{K_{R}-\frac{124}{205}K_{G}}{0.928}, \frac{\frac{31}{41}K_{G}-0.09K_{R}}{0.928}) \approx (738540, 2201824)$. We then calculate the Jacobians to analyse the stability - the results are highlighted below.
 
 
 | Equilibrium Points                          | Eigenvalues                        | Stability                     |
 |---------------------------------------------|------------------------------------|-------------------------------|
-| (0,0)                                       | λ₁ = 0.61, λ₂ = 0.62              | Unstable source               |
-| ($K_{R}$, 0)                                    | λ₁ = -0.61, λ₂ = 0.5585           | Unstable saddle point         |
-| (0, $\frac{31}{41}K_{G}$)                              | λ₁ = 0.0244, λ₂ = -1.03           | Unstable saddle point         |
-| ($K_{R} - \frac{124}{205}K_{G}$, $\frac{31}{41}K_{G} - 0.09K_{R})  | λ₁ = -0.162, λ₂ = -0.620          | Asymptotically stable sink point |
+| $(0,0)$                                       | λ₁ = 0.61, λ₂ = 0.62              | Unstable source               |
+| $(2500000, 0)$                                    | λ₁ = -0.61, λ₂ = 0.5585           | Unstable saddle point         |
+| $(0, \frac{31}{41}K_{G})$                              | λ₁ = 0.0244, λ₂ = -1.03           | Unstable saddle point         |
+| $(\frac{K_{R}-\frac{124}{205}K_{G}}{0.928}, \frac{\frac{31}{41}K_{G}-0.09K_{R}}{0.928})$  | λ₁ \approx -0.162, λ₂ \approx -0.620          | Asymptotically stable sink point |
 
 # Appendix
 
