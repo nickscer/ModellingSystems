@@ -10,8 +10,6 @@ geometry: margin=2cm
 
 *University of Reading*  
 
-![Red squirrel attacking a grey squirrel](attachments/going_nuts.jpg)
-
 ## Abstract
 
 Add a brief abstract with a description and conclusion here ...
@@ -41,7 +39,7 @@ Grey squirrels currently populate the UK in many places, carrying diseases such 
 
 Currently, the grey squirrel is the dominant species, while the red squirrel population is declining. However, the population of the red squirrel is slowly rising as the population of the pine marten increases. The pine marten is the natural predator to the grey squirrel, which has a “strong negative” $^{[3]}$ (British Red Squirrel, n.d.) impact on their numbers, allowing the red squirrel to benefit and thrive as there is less competition for the red squirrel. After being pushed to near extinction, the red squirrel finds peaceful habitat in places less abundant with grey squirrels, meaning their numbers can slowly increase. Evidence was found to suggest that rather than the grey squirrel being hunted by the pine marten to decrease their numbers, the grey squirrel started to migrate to areas less populated with the pine marten. The red squirrel, in turn, benefitted from this, as they were given more land and area to populate without being disturbed by the grey squirrel and their numbers stared to increase. Furthermore, the culling of grey squirrels in legal in the UK as a way of controlling their population size and allowing the population of the red squirrel to increase $^{[5]}$ (British Red Squirrel, n.d.). This includes trapping, shooting, fertility control and more. 
 
-Looking into the history of the introduction of both of the species, we can start to compare the numbers and substitute them into the Lotka-Volterra Competition model. The introduction of the grey squirrel in England was in 1876 and continued to be released until the 1920’s when the destruction of the red squirrel population was noticed and it soon became illegal to release a grey squirrel into the wild$^{[6]}$ (British Red Squirrel, n.d.). Red squirrels, however, are native to the UK and lived in the UK prior to the grey squirrel for around 10,000 years$^{[7]}$ (The Wildlife Trusts, 2020). It is estimated that at the time of the introduction of grey squirrels, the red squirrel population stood at roughly 3,500,000 and has decreased to 140,000 in the past years, while the grey squirrel population has increased to approximately 2,520,000 recorded in 2009$^{[8]}$ (Aebischer, Davey and Kingdon, 2011). We have taken the carrying capacity of grey squirrels to be 2,500,000 and used this to find that the carrying capacity for red squirrels is 3,000,000$^{[7]}$ (The Wildlife Trusts, 2020).
+Looking into the history of the introduction of both of the species, we can start to compare the numbers and substitute them into the Lotka-Volterra Competition model. The introduction of the grey squirrel in England was in 1876 and continued to be released until the 1920’s when the destruction of the red squirrel population was noticed and it soon became illegal to release a grey squirrel into the wild$^{[6]}$ (British Red Squirrel, n.d.). Red squirrels, however, are native to the UK and lived in the UK prior to the grey squirrel for around 10,000 years$^{[7]}$ (The Wildlife Trusts, 2020). It is estimated that at the time of the introduction of grey squirrels, the red squirrel population stood at roughly 3,500,000 and has decreased to 140,000 in the past years, while the grey squirrel population has increased to approximately 2,520,000 recorded in 2009$^{[8]}$ (Aebischer, Davey and Kingdon, 2011). We have taken the carrying capacity of grey squirrels to be 3,000,000 and used this to find that the carrying capacity for red squirrels is 2,500,000$^{[7]}$ (The Wildlife Trusts, 2020).
 
 ## Model Selection 
 
@@ -77,7 +75,7 @@ For now we introduce a new form of our model with the carrying capacities $K_{R}
 
 ### Choosing Coefficients
  
-Using the *generic* *Lotka-Volterra* Competitive model in a *refined form*$^{[11]}$(2022)
+Using the *generic* *Lotka-Volterra* Competitive model in a *refined form*$^{[12]}$(15.5: Quantifying Competition Using the Lotka-Volterra Model, 2022)
 
 $$
 \overset{\text{Generic Model - Refined form}}{
@@ -96,7 +94,7 @@ and finally $\alpha_{RG}$ and $\alpha_{GR}$ represent the competition coefients.
 
 ${N}\mkern -8.2mu\textcolor{red}{{B}}$ This model is based on the logistic growth model ($\frac{\mathrm{d}x}{\mathrm{d}t} = rx ( 1 - \frac{x}{K} )$ ), with the addition of competition between the two species as they compete for the same natural resources. 
 
-We have selected $r_{R}=0.61$, $r_{G}=0.82$ directly from [^10](Spatial spread of the grey squirrel in Britain, 1989). We have also estimated $\alpha_{RG}$ and $\alpha_{GR}$ with refrence to [^10](Spatial spread of the grey squirrel in Britain, 1989) 'We expect that the competition c1, i.e. red against grey should have a small value' thus we chose $\alpha_{GR}=0.09$ and $\alpha_{RG}=0.8$. We also chose $K_{G} = 3×10^{6}$ and $K_{R} = 2.5×10^{6}$ - using the carrying capacities discussed earlier. 
+We have selected $r_{R}=0.61$, $r_{G}=0.82$ directly from $^{[13]}$(Spatial spread of the grey squirrel in Britain, 1989). We have also estimated $\alpha_{RG}$ and $\alpha_{GR}$ with refrence to $^{[13]}$(Spatial spread of the grey squirrel in Britain, 1989) 'We expect that the competition $c_{1}$, i.e. red against grey should have a small value' thus we chose $\alpha_{GR}=0.09$. Additionally, we estimated $\alpha_{RG}=0.8$ because in sympatric populations grey squirrels have significantly 'greater energetic demands' $^{[14]}$(Competition between Eurasian Red and Introduced Eastern Grey Squirrels: The Energetic Significance of BodyMass Differences, 2001) thus $\alpha_{RG}$ >> $\alpha_{GR}$ as both species compete for similar resources and the grey squirrels' ability to consume resources at higher rates causes a much higher negative effect on the red squirrel population growth rate. We also chose $K_{G}=3\cdot10^6$, $K_{R}=2.5\cdot10^6$ using the carrying capacities discussed in the introduction. 
 
 ## Stability of the model
 
@@ -113,20 +111,23 @@ where $K_{G} = 3 \cdot 10^{6}$ and $K_{R} = 2.5 \cdot 10^{6}$
 
 To find the stability of the model, we have to find the equilibria of the system of equations and examine the stability of these points:
 
-The R-nullclines are found to be $x = 0$ or $x = K_{R} - 0.8y$ by setting $\frac{\mathrm{d}x}{\mathrm{d}t} = 0$.
+The x-nullclines are found to be $x = 0$ or $x = K_{R} - 0.8y$ by setting $\frac{\mathrm{d}x}{\mathrm{d}t} = 0$.
 
-The G-nullclines are found to be $y = 0$ or $y = K_{G} - 0.09x$ by setting $\frac{\mathrm{d}y}{\mathrm{d}t} = 0$.
+The y-nullclines are found to be $y = 0$ or $y = K_{G} - 0.09x$ by setting $\frac{\mathrm{d}y}{\mathrm{d}t} = 0$.
 
-The equilibrium points are found from the intersections of the R and G nullclines, and are given to be: $(0,0)$, $(K_{R},0)$, $(K_{G},0)$ and $(\frac{K_{R}-0.8K_{G}}{0.928},\frac{K_{G}-0.09K_{R}}{0.928})$.
+The equilibrium points are found from the intersections of the x and y nullclines, and are given to be: 
+- $(0,0)$, the origin point where both populations are extinct;
+- $(K_{R},0)$, the red squirrel population is at their carrying capacity while the grey squirrel population is extinct
+- $(K_{G},0)$, the grey squirrel population is at their carrying capacity while the red squirrel population is extinct
+- $(\frac{K_{R}-0.8K_{G}}{0.928},\frac{K_{G}-0.09K_{R}}{0.928})$, both populations can co-exist.
 
-The Jacobian matrix of the system is given by:
+Now we calculate the Jacobian matrix of the system to linearize the system of equations around each equilibrium point to find the behaviour and tradjectories of nearby points.
+The Jacobian matrix is given by:
 
 $$ 
 J(x,y) = \begin{bmatrix} 0.61 - \frac{1.22}{K_{R}}x - \frac{0.488}{K_{R}}y & -\frac{0.488}{K_{R}} \\
 -\frac{0.0738}{K_{G}}y & 0.82 - \frac{0.18}{K_{G}}y - \frac{0.0738}{K_{G}}x \end{bmatrix} 
 $$
-
-Now looking at the Jacobian at the equilibria points:
 
 At the equilibrium point $(0,0)$, we have the Jacobian matrix
 
@@ -135,30 +136,29 @@ J(0,0) = \begin{bmatrix} 0.61 & 0 \\
 0 & 0.82 \end{bmatrix} 
 $$
 
-Since $J(0,0)$ is a diagonal matrix, the eigenvalues are directly the diagonal elements $\lambda_{1} = 0.61$ and $\lambda_{2} = 0.82$. Since these eigenvalues are non-positive real numbers, the corresponding fixed point is an unstable source.
-this means....
+Since $J(0,0)$ is a diagonal matrix, the eigenvalues are directly the diagonal elements $\lambda_{1} = 0.61$ and $\lambda_{2} = 0.82$. Since these eigenvalues are non-positive real numbers, the corresponding fixed point is an unstable source. This means that all nearby trajectories move away from the point - small introductions of either populations will cause the system to move away from extinction towards positive populations of squirrels.
 
 At the equilibrium point $(K_{R},0)$, we have the Jacobian matrix
 
 $$ 
 J(K_{R},0) = \begin{bmatrix} -0.61 & -0.488 \\
-0 & 0.82 - \frac{0.073K_{R}}{K_{G}}\end{bmatrix} 
+0 & 0.82 - \frac{0.0738K_{R}}{K_{G}}\end{bmatrix} 
 $$
 
-Since $J(K_{R},0)$ is an upper triangular matrix, the eigenvalues are directly the diagonal elements $\lambda_{1} = -0.61$ and $\lambda_{2} = 0.82 - \frac{0.073K_{R}}{K_{G}}$. Since these eignevalues are real numbers with $\lambda_{1} < 0 < \lambda_{2}$, the corresponding fixed point is an unstable saddlepoint.
-This means...
+Since $J(K_{R},0)$ is an upper triangular matrix, the eigenvalues are directly the diagonal elements $\lambda_{1} = -0.61$ and $\lambda_{2} = 0.82 - \frac{0.0738K_{R}}{K_{G}} = 0.7585$. Since these eignevalues are real numbers with $\lambda_{1} < 0 < \lambda_{2}$, the corresponding fixed point is an unstable saddlepoint.
 
-At the equilibrium point $(0,K_{G})$, we have the Jacobian matrix
+Also, at the equilibrium point $(0,K_{G})$, we have the Jacobian matrix
 
 $$ 
 J(0,K_{G}) = \begin{bmatrix} 0.61 - \frac{0.488K_{G}}{K_{R}} & 0 \\
 -0.0738 & -0.82 \end{bmatrix} 
 $$
 
-Since $J(0,K_{G})$ is a lower triangular matrix, the eigenvalues are directly the diagonal elements $\lambda_{1} = 0.61 - \frac{0.488K_{G}}{K_{R}}$ and $\lambda_{2} = -0.82$. Since these eignevalues are real numbers with $\lambda_{2} < 0 < \lambda_{1}$, the corresponding fixed point is an unstable saddlepoint.
-This means...
+Since $J(0,K_{G})$ is a lower triangular matrix, the eigenvalues are directly the diagonal elements $\lambda_{1} = 0.61 - \frac{0.488K_{G}}{K_{R}} = 0.0244$ and $\lambda_{2} = -0.82$. Since these eignevalues are real numbers with $\lambda_{2} < 0 < \lambda_{1}$, the corresponding fixed point is an unstable saddlepoint.
 
-Finally at the equilibrium point $\left(\frac{K_{R}-0.8K_{G}}{0.928},\frac{K_{G}-0.09K_{R}}{0.928}\right)$, we have the Jacobian matrix
+Therefore at each saddlepoint $(K_{R},0)$ and $(0,K_{G})$ populations lying on the stable manifold (an eigendirection tangent to the eigenvector formed from the negative eigenvalue in the linearized system) will approach red/grey squirrel dominace respectively. While all other points move away aproaching either coexistance or grey/red squirrel dominance respectively.
+
+Finally at the equilibrium point $\left(\frac{K_{R}-0.8K_{G}}{0.928}, \frac{K_{G}-0.09K_{R}}{0.928}\right) \approx (107758, 2990301)$ _taking the floor of these values since the populations of x and y are whole numbers_, we have the Jacobian matrix
 
 $$ 
 J\left(\frac{K_{R}-0.8K_{G}}{0.928},\frac{K_{G}-0.09K_{R}}{0.928}\right) = \begin{bmatrix} \frac{0.488K_{G} - 0.61K_{R}}{0.928K_{R}} & \frac{0.3904K_{G} - 0.488K_{R}}{0.928K_{R}} \\
@@ -174,8 +174,7 @@ $$
 
 ${N}\mkern -8.2mu\textcolor{red}{{B}}$ See *[Notes on Stability](#notes-on-stability)* for precise calculations of the numerators inside the square root.
 
-Since these eigenvalues are real, negative numbers, ($\lambda_{1} \approx -0.0186$ and $\lambda_{2} \approx -0.2287$) the corresponding fixed point is an asymptotically stable sink point.
-This means...
+Since these eigenvalues are real, negative numbers, ($\lambda_{1} \approx -0.0186$ and $\lambda_{2} \approx -0.2287$) the corresponding fixed point is an asymptotically stable sink point. This means all tradjectories starting from positive initial populations - that do not lie on the saddlepoints' stable manifolds, will converge to this equilibria point over time causing both squirrel populations to coexist with eachother.
 
 # Numerical Solution
 
@@ -183,8 +182,8 @@ For the purposes of constructing our numerical algorithm, we return to our gener
 
 $$
 \begin{aligned}
-\frac{\mathrm{d}R}{\mathrm{d}t} &= r_{R}R\left(1-\frac{R+\alpha_{RG}G}{K_{R}}\right) \\
-\frac{\mathrm{d}G}{\mathrm{d}t} &= r_{G}G\left(1-\frac{G+\alpha_{GR}R}{K_{G}}\right) 
+\frac{\mathrm{d}x}{\mathrm{d}t} &= r_{R}x\left(1-\frac{x+\alpha_{RG}y}{K_{R}}\right) \\
+\frac{\mathrm{d}y}{\mathrm{d}t} &= r_{G}y\left(1-\frac{y+\alpha_{GR}x}{K_{G}}\right) 
 \end{aligned} \qquad \longrightarrow \qquad
 \begin{aligned}
 \frac{\mathrm{d}x}{\mathrm{d}t} &= x(r_1 + a_{11}x + a_{12}y), \\
@@ -196,8 +195,8 @@ We expand the equations and compare coefficients for $x = R$ and $y=R$ s.t.
 
 $$
 \begin{aligned}
-\frac{\mathrm{d}R}{\mathrm{d}t} &= r_R R \left(1 - \frac{R}{K_R} - \frac{G \alpha_{RG}}{K_R}\right) = \underbrace{r_R}_{r_1} R + \underbrace{\left(-\frac{r_R}{K_R}\right)}_{a_{11}} R^2 + \underbrace{\left(-\frac{r_R \alpha_{RG}}{K_R}\right)}_{a_{12}} RG \\
-\frac{\mathrm{d}G}{\mathrm{d}t} &= r_G G \left(1 - \frac{G}{K_G} - \frac{R \alpha_{GR}}{K_G}\right) = \underbrace{r_G}_{r_2} G + \underbrace{\left(-\frac{r_G \alpha_{GR}}{K_G}\right)}_{a_{21}} RG + \underbrace{\left(-\frac{r_G}{K_G}\right)}_{a_{22}} G^2
+\frac{\mathrm{d}x}{\mathrm{d}t} &= r_R x \left(1 - \frac{x}{K_R} - \frac{y \alpha_{RG}}{K_R}\right) = \underbrace{r_R}_{r_1} x + \underbrace{\left(-\frac{r_R}{K_R}\right)}_{a_{11}} x^2 + \underbrace{\left(-\frac{r_R \alpha_{RG}}{K_R}\right)}_{a_{12}} xy \\
+\frac{\mathrm{d}y}{\mathrm{d}t} &= r_G y \left(1 - \frac{G}{K_G} - \frac{x \alpha_{GR}}{K_G}\right) = \underbrace{r_G}_{r_2} y + \underbrace{\left(-\frac{r_G \alpha_{GR}}{K_G}\right)}_{a_{21}} xy + \underbrace{\left(-\frac{r_G}{K_G}\right)}_{a_{22}} y^2
 \end{aligned}
 $$
 
@@ -254,7 +253,7 @@ We set the ICs to be 3500000 red squirrels and 10000 grey squirrels which should
 - The 3.5 million red squirrel population IC is reasonable as that was the rough estimate of the red squirrels prior to competition with grey squirrels as described in the introduction. 
 - The 10 thousand grey squirrel population in 1930 is a rough estimate of how the population increased from marginal imports throughout the UK from 1870s to 1930.
 
-The stable squirrel populations found analytically are $(\frac{K_{R}-0.8K_{G}}{0.928},\frac{K_{G}-0.09K_{R}}{0.928})=(107758, 2990301)$ which can be seen in the plot below. 
+The stable squirrel populations found analytically are $(\frac{K_{R}-0.8K_{G}}{0.928},\frac{K_{G}-0.09K_{R}}{0.928}) \approx (107758, 2990301)$ which can be seen in the plot below. 
 
 >
 
@@ -329,7 +328,32 @@ We thereby choose the value of $H$ to be $-0.2$ because that would result in a s
 
 ## Stability of the improved model
 
-add analysis on stability of the model with H=-0.2
+With the addition of havesting we have:
+
+$$
+\begin{aligned}
+\frac{\mathrm{d}x}{\mathrm{d}t} &= r_{R}x\left(1-\frac{x+\alpha_{RG}y}{K_{R}}\right) \\
+\frac{\mathrm{d}y}{\mathrm{d}t} &= r_{G}y\left(1-\frac{y+\alpha_{GR}x}{K_{G}}\right) + Hy 
+\end{aligned} \qquad \longrightarrow \qquad
+\begin{aligned}
+\frac{\mathrm{d}x}{\mathrm{d}t} &= r_{R}x\left(1-\frac{x+\alpha_{RG}y}{K_{R}}\right) \\
+\frac{\mathrm{d}y}{\mathrm{d}t} &= r_{G}y\left(1 + \frac{H}{r_{G}} - \frac{y+\alpha_{GR}x}{K_{G}}\right)
+\end{aligned} \qquad \longrightarrow \qquad
+\begin{aligned}
+\frac{\mathrm{d}x}{\mathrm{d}t} &= 0.61x\left(1-\frac{x+0.8y}{K_{R}}\right) \\
+\frac{\mathrm{d}y}{\mathrm{d}t} &= 0.82y\left(\frac{31}{41} - \frac{y+0.09x}{K_{G}}\right)
+\end{aligned}
+$$
+
+Calculating the nullclines as before, we have the equilibrium points $(0,0)$, $(K_{R}, 0)$, $(0, \frac{31}{41}K_{G}) \approx (0, 2268292)$ and $(\frac{K_{R}-\frac{124}{205}K_{G}}{0.928}, \frac{\frac{31}{41}K_{G}-0.09K_{R}}{0.928}) \approx (738540, 2201824)$. We then calculate the Jacobians to analyse the stability - the results are highlighted below.
+
+
+| Equilibrium Points                          | Eigenvalues                        | Stability                     |
+|---------------------------------------------|------------------------------------|-------------------------------|
+| $(0,0)$                                       | λ₁ = 0.61, λ₂ = 0.62              | Unstable source               |
+| $(2500000, 0)$                                    | λ₁ = -0.61, λ₂ = 0.5585           | Unstable saddle point         |
+| $(0, \frac{31}{41}K_{G})$                              | λ₁ = 0.0244, λ₂ = -1.03           | Unstable saddle point         |
+| $(\frac{K_{R}-\frac{124}{205}K_{G}}{0.928}, \frac{\frac{31}{41}K_{G}-0.09K_{R}}{0.928})$  | λ₁ $\approx$ -0.162, λ₂ $\approx$ -0.620          | Asymptotically stable sink point |
 
 # Appendix
 
@@ -567,6 +591,12 @@ plt.show()
 10. Bifurcation theory. Available at: https://en.wikipedia.org/wiki/Bifurcation_theory
 
 11. Recognition of damage by grey squirrels and ban in 1930. Available at: https://www.britishredsquirrel.org/grey-squirrels/
+
+12. Brouwer, N., Connuck, H., Dubniczki, H., Gownaris, N., Howard, A., Olmsted, C., Wetzel, D., Whittinghill, K., Wilson, A. and Zallek, T. (2022). 15.5: Quantifying Competition Using the Lotka-Volterra Model. [online] Biology LibreTexts. Available at: https://bio.libretexts.org/Courses/Gettysburg_College/01%3A_Ecology_for_All/15%3A_Competition/15.05%3A_Quantifying_Competition_Using_the_Lotka-Volterra_Model.
+
+13. Okubo, A., Maini, P.K., Williamson, H. and Murray, J.D. (n.d.). Proceedings of the Royal Society of London. Series B, Biological Sciences. [online] The Royal Society, pp.115–117. Available at: https://people.maths.ox.ac.uk/maini/PKM%20publications/14.pdf.
+
+14. Bryce, J.M., Speakman, J.R., Johnson, P.J. and Macdonald, D.W. (2001). Competition between Eurasian Red and Introduced Eastern Grey Squirrels: The Energetic Significance of BodyMass Differences. Proceedings: Biological Sciences, [online] 268(1477), pp.1731–1736. doi:https://doi.org/10.2307/3068105.
 
 
 
