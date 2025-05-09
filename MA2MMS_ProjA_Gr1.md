@@ -111,11 +111,11 @@ where $K_{G} = 3 \cdot 10^{6}$ and $K_{R} = 2.5 \cdot 10^{6}$
 
 To find the stability of the model, we have to find the equilibria of the system of equations and examine the stability of these points:
 
-The R-nullclines are found to be $x = 0$ or $x = K_{R} - 0.8y$ by setting $\frac{\mathrm{d}x}{\mathrm{d}t} = 0$.
+The x-nullclines are found to be $x = 0$ or $x = K_{R} - 0.8y$ by setting $\frac{\mathrm{d}x}{\mathrm{d}t} = 0$.
 
-The G-nullclines are found to be $y = 0$ or $y = K_{G} - 0.09x$ by setting $\frac{\mathrm{d}y}{\mathrm{d}t} = 0$.
+The y-nullclines are found to be $y = 0$ or $y = K_{G} - 0.09x$ by setting $\frac{\mathrm{d}y}{\mathrm{d}t} = 0$.
 
-The equilibrium points are found from the intersections of the R and G nullclines, and are given to be: 
+The equilibrium points are found from the intersections of the x and y nullclines, and are given to be: 
 - $(0,0)$, the origin point where both populations are extinct;
 - $(K_{R},0)$, the red squirrel population is at their carrying capacity while the grey squirrel population is extinct
 - $(K_{G},0)$, the grey squirrel population is at their carrying capacity while the red squirrel population is extinct
@@ -353,7 +353,7 @@ Calculating the nullclines as before, we have the equilibrium points $(0,0)$, $(
 | $(0,0)$                                       | λ₁ = 0.61, λ₂ = 0.62              | Unstable source               |
 | $(2500000, 0)$                                    | λ₁ = -0.61, λ₂ = 0.5585           | Unstable saddle point         |
 | $(0, \frac{31}{41}K_{G})$                              | λ₁ = 0.0244, λ₂ = -1.03           | Unstable saddle point         |
-| $(\frac{K_{R}-\frac{124}{205}K_{G}}{0.928}, \frac{\frac{31}{41}K_{G}-0.09K_{R}}{0.928})$  | λ₁ \approx -0.162, λ₂ \approx -0.620          | Asymptotically stable sink point |
+| $(\frac{K_{R}-\frac{124}{205}K_{G}}{0.928}, \frac{\frac{31}{41}K_{G}-0.09K_{R}}{0.928})$  | λ₁ $\approx$ -0.162, λ₂ $\approx$ -0.620          | Asymptotically stable sink point |
 
 # Appendix
 
