@@ -77,7 +77,7 @@ For now we introduce a new form of our model with the carrying capacities $K_{R}
 
 ### Choosing Coefficients
  
-Using the *generic* *Lotka-Volterra* Competitive model in a *refined form*$^{[12]}$(2022)
+Using the *generic* *Lotka-Volterra* Competitive model in a *refined form*$^{[12]}$(15.5: Quantifying Competition Using the Lotka-Volterra Model, 2022)
 
 $$
 \overset{\text{Generic Model - Refined form}}{
@@ -96,7 +96,7 @@ and finally $\alpha_{RG}$ and $\alpha_{GR}$ represent the competition coefients.
 
 ${N}\mkern -8.2mu\textcolor{red}{{B}}$ This model is based on the logistic growth model ($\frac{\mathrm{d}x}{\mathrm{d}t} = rx ( 1 - \frac{x}{K} )$ ), with the addition of competition between the two species as they compete for the same natural resources. 
 
-We have selected $r_{R}=0.61$, $r_{G}=0.82$ directly from ${[^13]}$(Spatial spread of the grey squirrel in Britain, 1989). We have also estimated $\alpha_{RG}$ and $\alpha_{GR}$ with refrence to ${[^13]}$(Spatial spread of the grey squirrel in Britain, 1989) 'We expect that the competition $c_{1}$, i.e. red against grey should have a small value' thus we chose $\alpha_{GR}=0.09$. Additionally, we estimated $\alpha_{RG}=0.8$ because in sympatric populations grey squirrels have significantly 'greater energetic demands' %^{[14]}%(Competition between Eurasian Red and Introduced Eastern Grey Squirrels: The Energetic Significance of BodyMass Differences, 2001) thus $\alpha_{RG}$ >> $\alpha_{GR}$ as both species compete for similar resources and the grey squirrels' ability to consume resources at higher rates causes a much higher negative effect on the red squirrel population growth rate. We also chose $K_{G}=3\cdot10^6$, $K_{R}=2.5\cdot10^6$ using the carrying capacities discussed in the introduction. 
+We have selected $r_{R}=0.61$, $r_{G}=0.82$ directly from $^{[13]}$(Spatial spread of the grey squirrel in Britain, 1989). We have also estimated $\alpha_{RG}$ and $\alpha_{GR}$ with refrence to $^{[13]}$(Spatial spread of the grey squirrel in Britain, 1989) 'We expect that the competition $c_{1}$, i.e. red against grey should have a small value' thus we chose $\alpha_{GR}=0.09$. Additionally, we estimated $\alpha_{RG}=0.8$ because in sympatric populations grey squirrels have significantly 'greater energetic demands' $^{[14]}$(Competition between Eurasian Red and Introduced Eastern Grey Squirrels: The Energetic Significance of BodyMass Differences, 2001) thus $\alpha_{RG}$ >> $\alpha_{GR}$ as both species compete for similar resources and the grey squirrels' ability to consume resources at higher rates causes a much higher negative effect on the red squirrel population growth rate. We also chose $K_{G}=3\cdot10^6$, $K_{R}=2.5\cdot10^6$ using the carrying capacities discussed in the introduction. 
 
 ## Stability of the model
 
