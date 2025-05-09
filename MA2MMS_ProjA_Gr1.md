@@ -346,16 +346,13 @@ $$
 
 Calculating the nullclines as before, we have the equilibrium points $(0,0)$, $(K_{R}, 0)$, $(0, \frac{31}{41}K_{G})$ and $(\frac{K_{R}-\frac{124}{205}K_{G}}{0.928}, \frac{\frac{31}{41}K_{G}-0.09K_{R}}{0.928})$. We then calculate the Jacobians to analyse the stability - the results are highlighted below.
 
-\begin{table}[]
-\begin{tabular}{lll}
-\hline
-\multicolumn{1}{|l|}{equilibrium points}                                                 & \multicolumn{1}{l|}{eigenvalues}                               & \multicolumn{1}{l|}{stability}            \\ \hline
-\multicolumn{1}{|l|}{$(0,0)$}                                                            & \multicolumn{1}{l|}{$\lambda_{1} = 0.61, \lambda_{2}=0.62$}    & \multicolumn{1}{l|}{unstable source}      \\ \hline
-\multicolumn{1}{|l|}{$(K_{R}, 0)$}                                                       & \multicolumn{1}{l|}{$\lambda_{1} = -0.61, \lambda_{2}=0.5585$} & \multicolumn{1}{l|}{unstable saddlepoint} \\ \hline
-\multicolumn{1}{|l|}{$(0, \frac{31}{41}K_{G}$}                                           & \multicolumn{1}{l|}{$\lambda_{1} = 0.0244, \lambda_{2}=-1.03$} & \multicolumn{1}{l|}{unstable saddlepoint} \\ \hline
-$(\frac{K_{R}-\frac{124}{205}K_{G}}{0.928}, \frac{\frac{31}{41}K_{G}-0.09K_{R}}{0.928})$ & $\lambda_{1} = -0.162, \lambda_{2}=-0.620$                     & asymptotically stable sink point         
-\end{tabular}
-\end{table}
+
+| Equilibrium Points                          | Eigenvalues                        | Stability                     |
+|---------------------------------------------|------------------------------------|-------------------------------|
+| (0,0)                                       | λ₁ = 0.61, λ₂ = 0.62              | Unstable source               |
+| ($K_{R}$, 0)                                    | λ₁ = -0.61, λ₂ = 0.5585           | Unstable saddle point         |
+| (0, $\frac{31}{41}K_{G}$)                              | λ₁ = 0.0244, λ₂ = -1.03           | Unstable saddle point         |
+| ($K_{R} - \frac{124}{205}K_{G}$, $\frac{31}{41}K_{G} - 0.09K_{R})  | λ₁ = -0.162, λ₂ = -0.620          | Asymptotically stable sink point |
 
 # Appendix
 
