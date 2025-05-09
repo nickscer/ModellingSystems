@@ -41,7 +41,7 @@ Grey squirrels currently populate the UK in many places, carrying diseases such 
 
 Currently, the grey squirrel is the dominant species, while the red squirrel population is declining. However, the population of the red squirrel is slowly rising as the population of the pine marten increases. The pine marten is the natural predator to the grey squirrel, which has a “strong negative” $^{[3]}$ (British Red Squirrel, n.d.) impact on their numbers, allowing the red squirrel to benefit and thrive as there is less competition for the red squirrel. After being pushed to near extinction, the red squirrel finds peaceful habitat in places less abundant with grey squirrels, meaning their numbers can slowly increase. Evidence was found to suggest that rather than the grey squirrel being hunted by the pine marten to decrease their numbers, the grey squirrel started to migrate to areas less populated with the pine marten. The red squirrel, in turn, benefitted from this, as they were given more land and area to populate without being disturbed by the grey squirrel and their numbers stared to increase. Furthermore, the culling of grey squirrels in legal in the UK as a way of controlling their population size and allowing the population of the red squirrel to increase $^{[5]}$ (British Red Squirrel, n.d.). This includes trapping, shooting, fertility control and more. 
 
-Looking into the history of the introduction of both of the species, we can start to compare the numbers and substitute them into the Lotka-Volterra Competition model. The introduction of the grey squirrel in England was in 1876 and continued to be released until the 1920’s when the destruction of the red squirrel population was noticed and it soon became illegal to release a grey squirrel into the wild$^{[6]}$ (British Red Squirrel, n.d.). Red squirrels, however, are native to the UK and lived in the UK prior to the grey squirrel for around 10,000 years$^{[7]}$ (The Wildlife Trusts, 2020). It is estimated that at the time of the introduction of grey squirrels, the red squirrel population stood at roughly 3,500,000 and has decreased to 140,000 in the past years, while the grey squirrel population has increased to approximately 2,520,000 recorded in 2009$^{[8]}$ (Aebischer, Davey and Kingdon, 2011). We have taken the carrying capacity of grey squirrels to be 2,500,000 and used this to find that the carrying capacity for red squirrels is 3,000,000$^{[7]}$ (The Wildlife Trusts, 2020).
+Looking into the history of the introduction of both of the species, we can start to compare the numbers and substitute them into the Lotka-Volterra Competition model. The introduction of the grey squirrel in England was in 1876 and continued to be released until the 1920’s when the destruction of the red squirrel population was noticed and it soon became illegal to release a grey squirrel into the wild$^{[6]}$ (British Red Squirrel, n.d.). Red squirrels, however, are native to the UK and lived in the UK prior to the grey squirrel for around 10,000 years$^{[7]}$ (The Wildlife Trusts, 2020). It is estimated that at the time of the introduction of grey squirrels, the red squirrel population stood at roughly 3,500,000 and has decreased to 140,000 in the past years, while the grey squirrel population has increased to approximately 2,520,000 recorded in 2009$^{[8]}$ (Aebischer, Davey and Kingdon, 2011). We have taken the carrying capacity of grey squirrels to be 3,000,000 and used this to find that the carrying capacity for red squirrels is 2,500,000$^{[7]}$ (The Wildlife Trusts, 2020).
 
 ## Model Selection 
 
@@ -77,7 +77,7 @@ For now we introduce a new form of our model with the carrying capacities $K_{R}
 
 ### Choosing Coefficients
  
-Using the *generic* *Lotka-Volterra* Competitive model in a *refined form*$^{[11]}$(2022)
+Using the *generic* *Lotka-Volterra* Competitive model in a *refined form*$^{[12]}$(2022)
 
 $$
 \overset{\text{Generic Model - Refined form}}{
@@ -96,7 +96,7 @@ and finally $\alpha_{RG}$ and $\alpha_{GR}$ represent the competition coefients.
 
 ${N}\mkern -8.2mu\textcolor{red}{{B}}$ This model is based on the logistic growth model ($\frac{\mathrm{d}x}{\mathrm{d}t} = rx ( 1 - \frac{x}{K} )$ ), with the addition of competition between the two species as they compete for the same natural resources. 
 
-We have selected $r_{R}=0.61$, $r_{G}=0.82$ directly from [^10](Spatial spread of the grey squirrel in Britain, 1989). We have also estimated $\alpha_{RG}$ and $\alpha_{GR}$ with refrence to [^10](Spatial spread of the grey squirrel in Britain, 1989) 'We expect that the competition c1, i.e. red against grey should have a small value' thus we chose $\alpha_{GR}=0.09$ and $\alpha_{RG}=0.8$. We also chose $K_{G} = 3×10^{6}$ and $K_{R} = 2.5×10^{6}$ - using the carrying capacities discussed earlier. 
+We have selected $r_{R}=0.61$, $r_{G}=0.82$ directly from [^13](Spatial spread of the grey squirrel in Britain, 1989). We have also estimated $\alpha_{RG}$ and $\alpha_{GR}$ with refrence to [^10](Spatial spread of the grey squirrel in Britain, 1989) 'We expect that the competition c1, i.e. red against grey should have a small value' thus we chose $\alpha_{GR}=0.09$ and $\alpha_{RG}=0.8$. We also chose $K_{G}=3\cdot10^6$, $K_{R}=2.5\cdot10^6$ - using the carrying capacities discussed earlier. 
 
 ## Stability of the model
 
@@ -158,7 +158,7 @@ $$
 Since $J(0,K_{G})$ is a lower triangular matrix, the eigenvalues are directly the diagonal elements $\lambda_{1} = 0.61 - \frac{0.488K_{G}}{K_{R}}$ and $\lambda_{2} = -0.82$. Since these eignevalues are real numbers with $\lambda_{2} < 0 < \lambda_{1}$, the corresponding fixed point is an unstable saddlepoint.
 This means...
 
-Finally at the equilibrium point $\left(\frac{K_{R}-0.8K_{G}}{0.928},\frac{K_{G}-0.09K_{R}}{0.928}\right)$, we have the Jacobian matrix
+Finally at the equilibrium point $\left(\frac{K_{R}-0.8K_{G}}{0.928}, \frac{K_{G}-0.09K_{R}}{0.928}\right) \ approx (107758, 2990301)$ \textit{taking the floor of these values since the populations of x and y are whole numbers}, we have the Jacobian matrix
 
 $$ 
 J\left(\frac{K_{R}-0.8K_{G}}{0.928},\frac{K_{G}-0.09K_{R}}{0.928}\right) = \begin{bmatrix} \frac{0.488K_{G} - 0.61K_{R}}{0.928K_{R}} & \frac{0.3904K_{G} - 0.488K_{R}}{0.928K_{R}} \\
@@ -183,8 +183,8 @@ For the purposes of constructing our numerical algorithm, we return to our gener
 
 $$
 \begin{aligned}
-\frac{\mathrm{d}R}{\mathrm{d}t} &= r_{R}R\left(1-\frac{R+\alpha_{RG}G}{K_{R}}\right) \\
-\frac{\mathrm{d}G}{\mathrm{d}t} &= r_{G}G\left(1-\frac{G+\alpha_{GR}R}{K_{G}}\right) 
+\frac{\mathrm{d}x}{\mathrm{d}t} &= r_{R}x\left(1-\frac{x+\alpha_{RG}y}{K_{R}}\right) \\
+\frac{\mathrm{d}y}{\mathrm{d}t} &= r_{G}G\left(1-\frac{y+\alpha_{GR}x}{K_{G}}\right) 
 \end{aligned} \qquad \longrightarrow \qquad
 \begin{aligned}
 \frac{\mathrm{d}x}{\mathrm{d}t} &= x(r_1 + a_{11}x + a_{12}y), \\
@@ -196,8 +196,8 @@ We expand the equations and compare coefficients for $x = R$ and $y=R$ s.t.
 
 $$
 \begin{aligned}
-\frac{\mathrm{d}R}{\mathrm{d}t} &= r_R R \left(1 - \frac{R}{K_R} - \frac{G \alpha_{RG}}{K_R}\right) = \underbrace{r_R}_{r_1} R + \underbrace{\left(-\frac{r_R}{K_R}\right)}_{a_{11}} R^2 + \underbrace{\left(-\frac{r_R \alpha_{RG}}{K_R}\right)}_{a_{12}} RG \\
-\frac{\mathrm{d}G}{\mathrm{d}t} &= r_G G \left(1 - \frac{G}{K_G} - \frac{R \alpha_{GR}}{K_G}\right) = \underbrace{r_G}_{r_2} G + \underbrace{\left(-\frac{r_G \alpha_{GR}}{K_G}\right)}_{a_{21}} RG + \underbrace{\left(-\frac{r_G}{K_G}\right)}_{a_{22}} G^2
+\frac{\mathrm{d}x}{\mathrm{d}t} &= r_R x \left(1 - \frac{x}{K_R} - \frac{y \alpha_{RG}}{K_R}\right) = \underbrace{r_R}_{r_1} x + \underbrace{\left(-\frac{r_R}{K_R}\right)}_{a_{11}} x^2 + \underbrace{\left(-\frac{r_R \alpha_{RG}}{K_R}\right)}_{a_{12}} xy \\
+\frac{\mathrm{d}y}{\mathrm{d}t} &= r_G y \left(1 - \frac{G}{K_G} - \frac{x \alpha_{GR}}{K_G}\right) = \underbrace{r_G}_{r_2} y + \underbrace{\left(-\frac{r_G \alpha_{GR}}{K_G}\right)}_{a_{21}} xy + \underbrace{\left(-\frac{r_G}{K_G}\right)}_{a_{22}} y^2
 \end{aligned}
 $$
 
@@ -254,7 +254,7 @@ We set the ICs to be 3500000 red squirrels and 10000 grey squirrels which should
 - The 3.5 million red squirrel population IC is reasonable as that was the rough estimate of the red squirrels prior to competition with grey squirrels as described in the introduction. 
 - The 10 thousand grey squirrel population in 1930 is a rough estimate of how the population increased from marginal imports throughout the UK from 1870s to 1930.
 
-The stable squirrel populations found analytically are $(\frac{K_{R}-0.8K_{G}}{0.928},\frac{K_{G}-0.09K_{R}}{0.928})=(107758, 2990301)$ which can be seen in the plot below. 
+The stable squirrel populations found analytically are $(\frac{K_{R}-0.8K_{G}}{0.928},\frac{K_{G}-0.09K_{R}}{0.928}) \approx (107758, 2990301)$ which can be seen in the plot below. 
 
 >
 
@@ -567,6 +567,10 @@ plt.show()
 10. Bifurcation theory. Available at: https://en.wikipedia.org/wiki/Bifurcation_theory
 
 11. Recognition of damage by grey squirrels and ban in 1930. Available at: https://www.britishredsquirrel.org/grey-squirrels/
+
+12. Biology LibreTexts. (2022). 15.5: Quantifying Competition Using the Lotka-Volterra Model. [online] Available at: https://bio.libretexts.org/Courses/Gettysburg_College/01%3A_Ecology_for_All/15%3A_Competition/15.05%3A_Quantifying_Competition_Using_the_Lotka-Volterra_Model.
+
+13. Okubo, A., Maini, P.K., Williamson, H. and Murray, J.D. (n.d.). Proceedings of the Royal Society of London. Series B, Biological Sciences. [online] The Royal Society, pp.115–117. Available at: https://people.maths.ox.ac.uk/maini/PKM%20publications/14.pdf.
 
 
 
