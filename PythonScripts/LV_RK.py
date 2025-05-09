@@ -73,8 +73,8 @@ V = Y * (r2 + a21 * X + a22 * Y)  # dy/dt
 
 # Add a new subplot for the phase portrait with vectors using quiver
 # Define a grid covering the entire trajectory range
-x_min, x_max = 0, 4e6  # Adjust based on trajectory data
-y_min, y_max = -0.1e6, 3.5e6
+x_min, x_max = -0.14e6, 4e6  # Adjust based on trajectory data
+y_min, y_max = -0.14e6, 3.5e6
 x_vals = np.linspace(x_min, x_max, 25)
 y_vals = np.linspace(y_min, y_max, 25)
 X, Y = np.meshgrid(x_vals, y_vals)
@@ -91,6 +91,9 @@ ax2.plot(u[0, :], u[1, :], label='Trajectory', color='black', alpha=0.7)
 ax2.set_xlabel('Red Squirrels')
 ax2.set_ylabel('Grey Squirrels')
 ax2.set_title('Phase Space of Red and Grey Squirrels')
+ax2.plot(0, 0 , 'rx', markersize=10, label='Unstable Source $(0, 0)$')
+ax2.plot(2.5*10**6, 0 , 'r^', markersize=7, label='Unstable saddle point $(2.5*10^6, 0)$')
+ax2.plot(0, 3.0*10**6 , 'rs', markersize=7, label='Unstable saddle point $(0, 3.0*10^6)$')
 ax2.plot(107758, 2990301, 'go', markersize=10, label='Stable sink point $(107758, 2990301)$')
 ax2.legend()
 ax2.set_xlim(x_min, x_max)  # Synchronize x-axis
@@ -104,6 +107,9 @@ ax3.quiver(X, Y, U, V, color='blue', angles='xy',
 ax3.set_xlabel('Red Squirrels')
 ax3.set_ylabel('Grey Squirrels')
 ax3.set_title('Phase Portrait with Vector Field')
+ax3.plot(0, 0 , 'rx', markersize=10, label='Unstable Source $(0, 0)$')
+ax3.plot(2.5*10**6, 0 , 'r^', markersize=7, label='Unstable saddle point $(2.5*10^6, 0)$')
+ax3.plot(0, 3.0*10**6 , 'rs', markersize=7, label='Unstable saddle point $(0, 3.0*10^6)$')
 ax3.plot(107758, 2990301, 'go', markersize=10, label='Stable sink point')
 ax3.set_xlim(x_min, x_max)  # Synchronize x-axis
 ax3.set_ylim(y_min, y_max)  # Synchronize y-axis
