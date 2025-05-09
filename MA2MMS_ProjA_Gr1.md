@@ -184,7 +184,7 @@ For the purposes of constructing our numerical algorithm, we return to our gener
 $$
 \begin{aligned}
 \frac{\mathrm{d}x}{\mathrm{d}t} &= r_{R}x\left(1-\frac{x+\alpha_{RG}y}{K_{R}}\right) \\
-\frac{\mathrm{d}y}{\mathrm{d}t} &= r_{G}G\left(1-\frac{y+\alpha_{GR}x}{K_{G}}\right) 
+\frac{\mathrm{d}y}{\mathrm{d}t} &= r_{G}y\left(1-\frac{y+\alpha_{GR}x}{K_{G}}\right) 
 \end{aligned} \qquad \longrightarrow \qquad
 \begin{aligned}
 \frac{\mathrm{d}x}{\mathrm{d}t} &= x(r_1 + a_{11}x + a_{12}y), \\
@@ -329,7 +329,23 @@ We thereby choose the value of $H$ to be $-0.2$ because that would result in a s
 
 ## Stability of the improved model
 
-add analysis on stability of the model with H=-0.2
+With the addition of havesting we have:
+
+$$
+\begin{aligned}
+\frac{\mathrm{d}x}{\mathrm{d}t} &= r_{R}x\left(1-\frac{x+\alpha_{RG}y}{K_{R}}\right) \\
+\frac{\mathrm{d}y}{\mathrm{d}t} &= r_{G}y\left(1-\frac{y+\alpha_{GR}x}{K_{G}}\right + Hy) 
+\end{aligned} \qquad \longrightarrow \qquad
+\begin{aligned}
+\frac{\mathrm{d}x}{\mathrm{d}t} &= r_{R}x\left(1-\frac{x+\alpha_{RG}y}{K_{R}}\right) \\
+\frac{\mathrm{d}y}{\mathrm{d}t} &= r_{G}y\left(1 + \frac{H}{0.82} - \frac{y+\alpha_{GR}x}{K_{G}}\right)
+\end{aligned} \qquad \longrightarrow \qquad
+\begin{aligned}
+\frac{\mathrm{d}x}{\mathrm{d}t} &= 0.61x\left(1-\frac{x+0.8y}{K_{R}}\right) \\
+\frac{\mathrm{d}y}{\mathrm{d}t} &= 0.82y\left(\frac{31}{41} - \frac{y+0.09x}{K_{G}}\right)
+\end{aligned}
+$$
+
 
 # Appendix
 
