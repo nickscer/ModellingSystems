@@ -96,7 +96,7 @@ and finally $\alpha_{RG}$ and $\alpha_{GR}$ represent the competition coefients.
 
 ${N}\mkern -8.2mu\textcolor{red}{{B}}$ This model is based on the logistic growth model ($\frac{\mathrm{d}x}{\mathrm{d}t} = rx ( 1 - \frac{x}{K} )$ ), with the addition of competition between the two species as they compete for the same natural resources. 
 
-We have selected $r_{R}=0.61$, $r_{G}=0.82$ directly from [^13](Spatial spread of the grey squirrel in Britain, 1989). We have also estimated $\alpha_{RG}$ and $\alpha_{GR}$ with refrence to [^10](Spatial spread of the grey squirrel in Britain, 1989) 'We expect that the competition c1, i.e. red against grey should have a small value' thus we chose $\alpha_{GR}=0.09$ and $\alpha_{RG}=0.8$. We also chose $K_{G}=3\cdot10^6$, $K_{R}=2.5\cdot10^6$ - using the carrying capacities discussed earlier. 
+We have selected $r_{R}=0.61$, $r_{G}=0.82$ directly from ${[^13]}$(Spatial spread of the grey squirrel in Britain, 1989). We have also estimated $\alpha_{RG}$ and $\alpha_{GR}$ with refrence to ${[^13]}$(Spatial spread of the grey squirrel in Britain, 1989) 'We expect that the competition $c_{1}$, i.e. red against grey should have a small value' thus we chose $\alpha_{GR}=0.09$. Additionally, we estimated $\alpha_{RG}=0.8$ because in sympatric populations grey squirrels have significantly higher energetic demands %^{[14]}%(Competition between Eurasian Red and Introduced Eastern Grey Squirrels: The Energetic Significance of BodyMass Differences, 2001) thus $\alpha_{RG}$ >> $\alpha_{GR}$ as both species compete for similar resources and the grey squirrels' ability to consume resources at higher rates causes a much higher negative effect on the red squirrel population growth rate. We also chose $K_{G}=3\cdot10^6$, $K_{R}=2.5\cdot10^6$ using the carrying capacities discussed in the introduction. 
 
 ## Stability of the model
 
@@ -568,9 +568,11 @@ plt.show()
 
 11. Recognition of damage by grey squirrels and ban in 1930. Available at: https://www.britishredsquirrel.org/grey-squirrels/
 
-12. Biology LibreTexts. (2022). 15.5: Quantifying Competition Using the Lotka-Volterra Model. [online] Available at: https://bio.libretexts.org/Courses/Gettysburg_College/01%3A_Ecology_for_All/15%3A_Competition/15.05%3A_Quantifying_Competition_Using_the_Lotka-Volterra_Model.
+12. Brouwer, N., Connuck, H., Dubniczki, H., Gownaris, N., Howard, A., Olmsted, C., Wetzel, D., Whittinghill, K., Wilson, A. and Zallek, T. (2022). 15.5: Quantifying Competition Using the Lotka-Volterra Model. [online] Biology LibreTexts. Available at: https://bio.libretexts.org/Courses/Gettysburg_College/01%3A_Ecology_for_All/15%3A_Competition/15.05%3A_Quantifying_Competition_Using_the_Lotka-Volterra_Model.
 
 13. Okubo, A., Maini, P.K., Williamson, H. and Murray, J.D. (n.d.). Proceedings of the Royal Society of London. Series B, Biological Sciences. [online] The Royal Society, pp.115–117. Available at: https://people.maths.ox.ac.uk/maini/PKM%20publications/14.pdf.
+
+14. Bryce, J.M., Speakman, J.R., Johnson, P.J. and Macdonald, D.W. (2001). Competition between Eurasian Red and Introduced Eastern Grey Squirrels: The Energetic Significance of BodyMass Differences. Proceedings: Biological Sciences, [online] 268(1477), pp.1731–1736. doi:https://doi.org/10.2307/3068105.
 
 
 
