@@ -10,8 +10,6 @@ geometry: margin=2cm
 
 *University of Reading*  
 
-![Red squirrel attacking a grey squirrel](attachments/going_nuts.jpg)
-
 ## Abstract
 
 Add a brief abstract with a description and conclusion here ...
@@ -142,10 +140,10 @@ At the equilibrium point $(K_{R},0)$, we have the Jacobian matrix
 
 $$ 
 J(K_{R},0) = \begin{bmatrix} -0.61 & -0.488 \\
-0 & 0.82 - \frac{0.073K_{R}}{K_{G}}\end{bmatrix} 
+0 & 0.82 - \frac{0.0738K_{R}}{K_{G}}\end{bmatrix} 
 $$
 
-Since $J(K_{R},0)$ is an upper triangular matrix, the eigenvalues are directly the diagonal elements $\lambda_{1} = -0.61$ and $\lambda_{2} = 0.82 - \frac{0.073K_{R}}{K_{G}}$. Since these eignevalues are real numbers with $\lambda_{1} < 0 < \lambda_{2}$, the corresponding fixed point is an unstable saddlepoint.
+Since $J(K_{R},0)$ is an upper triangular matrix, the eigenvalues are directly the diagonal elements $\lambda_{1} = -0.61$ and $\lambda_{2} = 0.82 - \frac{0.0738K_{R}}{K_{G}}$. Since these eignevalues are real numbers with $\lambda_{1} < 0 < \lambda_{2}$, the corresponding fixed point is an unstable saddlepoint.
 This means...
 
 At the equilibrium point $(0,K_{G})$, we have the Jacobian matrix
@@ -158,7 +156,7 @@ $$
 Since $J(0,K_{G})$ is a lower triangular matrix, the eigenvalues are directly the diagonal elements $\lambda_{1} = 0.61 - \frac{0.488K_{G}}{K_{R}}$ and $\lambda_{2} = -0.82$. Since these eignevalues are real numbers with $\lambda_{2} < 0 < \lambda_{1}$, the corresponding fixed point is an unstable saddlepoint.
 This means...
 
-Finally at the equilibrium point $\left(\frac{K_{R}-0.8K_{G}}{0.928}, \frac{K_{G}-0.09K_{R}}{0.928}\right) \ approx (107758, 2990301)$ \textit{taking the floor of these values since the populations of x and y are whole numbers}, we have the Jacobian matrix
+Finally at the equilibrium point $\left(\frac{K_{R}-0.8K_{G}}{0.928}, \frac{K_{G}-0.09K_{R}}{0.928}\right) \approx (107758, 2990301)$ _taking the floor of these values since the populations of x and y are whole numbers_, we have the Jacobian matrix
 
 $$ 
 J\left(\frac{K_{R}-0.8K_{G}}{0.928},\frac{K_{G}-0.09K_{R}}{0.928}\right) = \begin{bmatrix} \frac{0.488K_{G} - 0.61K_{R}}{0.928K_{R}} & \frac{0.3904K_{G} - 0.488K_{R}}{0.928K_{R}} \\
@@ -346,8 +344,18 @@ $$
 \end{aligned}
 $$
 
-Calculating the nullclines as before (calculations in notes), we have the equilibrium points $(0,0)$, $(K_{R}, 0)$, $(0, \frac{31}{41}K_{G})$ and $(\frac{K_{R}-\frac{124}{205}K_{G}}{0.928}, \frac{\frac{31}{41}K_{G}-0.09K_{R}}{0.928})$. We calculate the Jacobians and analyse the stability - the results are highlighted below.
+Calculating the nullclines as before, we have the equilibrium points $(0,0)$, $(K_{R}, 0)$, $(0, \frac{31}{41}K_{G})$ and $(\frac{K_{R}-\frac{124}{205}K_{G}}{0.928}, \frac{\frac{31}{41}K_{G}-0.09K_{R}}{0.928})$. We then calculate the Jacobians to analyse the stability - the results are highlighted below.
 
+\begin{table}[]
+\begin{tabular}{lll}
+\hline
+\multicolumn{1}{|l|}{equilibrium points}                                                 & \multicolumn{1}{l|}{eigenvalues}                               & \multicolumn{1}{l|}{stability}            \\ \hline
+\multicolumn{1}{|l|}{$(0,0)$}                                                            & \multicolumn{1}{l|}{$\lambda_{1} = 0.61, \lambda_{2}=0.62$}    & \multicolumn{1}{l|}{unstable source}      \\ \hline
+\multicolumn{1}{|l|}{$(K_{R}, 0)$}                                                       & \multicolumn{1}{l|}{$\lambda_{1} = -0.61, \lambda_{2}=0.5585$} & \multicolumn{1}{l|}{unstable saddlepoint} \\ \hline
+\multicolumn{1}{|l|}{$(0, \frac{31}{41}K_{G}$}                                           & \multicolumn{1}{l|}{$\lambda_{1} = 0.0244, \lambda_{2}=-1.03$} & \multicolumn{1}{l|}{unstable saddlepoint} \\ \hline
+$(\frac{K_{R}-\frac{124}{205}K_{G}}{0.928}, \frac{\frac{31}{41}K_{G}-0.09K_{R}}{0.928})$ & $\lambda_{1} = -0.162, \lambda_{2}=-0.620$                     & asymptotically stable sink point         
+\end{tabular}
+\end{table}
 
 # Appendix
 
