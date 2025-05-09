@@ -346,7 +346,7 @@ $$
 \end{aligned}
 $$
 
-Calculating the nullclines as before (calculations in notes), we have the equilibrium points $(0,0)$, $(K_{R}, 0)$, $(0, \frac{31K_{G}}{41})$ and $(\frac{K_{R}-0.8(\frac{31K_{G}}{41})}{0.928}, \frac{\frac{31K_{G}}{41}-0.09K_{R}}{0.928})$. We calculate the Jacobians and analyse the stability - the results are highlighted below.
+Calculating the nullclines as before (calculations in notes), we have the equilibrium points $(0,0)$, $(K_{R}, 0)$, $(0, \frac{31}{41}K_{G})$ and $(\frac{K_{R}-\frac{124}{205}K_{G}}{0.928}, \frac{\frac{31}{41}K_{G}-0.09K_{R}}{0.928})$. We calculate the Jacobians and analyse the stability - the results are highlighted below.
 
 
 # Appendix
