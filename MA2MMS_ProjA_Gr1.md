@@ -94,7 +94,7 @@ and finally $\alpha_{RG}$ and $\alpha_{GR}$ represent the competition coefients.
 
 ${N}\mkern -8.2mu\textcolor{red}{{B}}$ This model is based on the logistic growth model ($\frac{\mathrm{d}x}{\mathrm{d}t} = rx ( 1 - \frac{x}{K} )$ ), with the addition of competition between the two species as they compete for the same natural resources. 
 
-We have selected $r_{R}=0.61$, $r_{G}=0.82$ directly from $^{[13]}$(Spatial spread of the grey squirrel in Britain, 1989). We have also estimated $\alpha_{RG}$ and $\alpha_{GR}$ with refrence to $^{[13]}$(Spatial spread of the grey squirrel in Britain, 1989) 'We expect that the competition $c_{1}$, i.e. red against grey should have a small value' thus we chose $\alpha_{GR}=0.09$. Additionally, we estimated $\alpha_{RG}=0.8$ because in sympatric populations grey squirrels have significantly 'greater energetic demands' $^{[14]}$(Competition between Eurasian Red and Introduced Eastern Grey Squirrels: The Energetic Significance of BodyMass Differences, 2001) thus $\alpha_{RG}$ >> $\alpha_{GR}$ as both species compete for similar resources and the grey squirrels' ability to consume resources at higher rates causes a much higher negative effect on the red squirrel population growth rate. We also chose $K_{G}=3\cdot10^6$, $K_{R}=2.5\cdot10^6$ using the carrying capacities discussed in the introduction. 
+We have selected $r_{R}=0.61$, $r_{G}=0.82$ directly from $^{[13]}$(Spatial spread of the grey squirrel in Britain, 1989). We have also estimated $\alpha_{RG}$ and $\alpha_{GR}$ with refrence to $^{[13]}$(Spatial spread of the grey squirrel in Britain, 1989) 'We expect that the competition $c_{1}$, i.e. red against grey should have a small value' thus we chose $\alpha_{GR}=0.09$. We selected $\alpha_{RG}=0.8$ because in sympatric populations grey squirrels have significantly 'greater energetic demands' $^{[14]}$(Competition between Eurasian Red and Introduced Eastern Grey Squirrels: The Energetic Significance of BodyMass Differences, 2001), thus $\alpha_{RG}$ >> $\alpha_{GR}$ as both species compete for similar resources and the grey squirrels' ability to consume resources at higher rates causes a much higher negative effect on the red squirrel population growth rate. We also chose $K_{G}=3\cdot10^6$, $K_{R}=2.5\cdot10^6$ using the carrying capacities discussed in the introduction. 
 
 ## Stability of the model
 
@@ -109,19 +109,17 @@ $$
 
 where $K_{G} = 3 \cdot 10^{6}$ and $K_{R} = 2.5 \cdot 10^{6}$
 
-To find the stability of the model, we have to find the equilibria of the system of equations and examine the stability of these points:
+To find the stability of the model, we have to find the equilibria of the system of equations and examine the stability of these points. We do this by finding the x and y nullclines of the system - curves in the phase plane where $\frac{\mathrm{d}x}{\mathrm{d}t} = 0$ and $\frac{\mathrm{d}y}{\mathrm{d}t} = 0$ respectively. The intersection of these curves gives the equilibrium points since both rates of changes are simultaneously equal to zero, meaning both populations aren't varying at that specific moment in time.
 
-The x-nullclines are found to be $x = 0$ or $x = K_{R} - 0.8y$ by setting $\frac{\mathrm{d}x}{\mathrm{d}t} = 0$.
+The x-nullclines are found to be $x = 0$ or $x = K_{R} - 0.8y$; and the y-nullclines are found to be $y = 0$ or $y = K_{G} - 0.09x$.
 
-The y-nullclines are found to be $y = 0$ or $y = K_{G} - 0.09x$ by setting $\frac{\mathrm{d}y}{\mathrm{d}t} = 0$.
-
-The equilibrium points are found from the intersections of the x and y nullclines, and are given to be: 
+The intersections of the x and y nullclines, and are given to be: 
 - $(0,0)$, the origin point where both populations are extinct;
 - $(K_{R},0)$, the red squirrel population is at their carrying capacity while the grey squirrel population is extinct
 - $(K_{G},0)$, the grey squirrel population is at their carrying capacity while the red squirrel population is extinct
 - $(\frac{K_{R}-0.8K_{G}}{0.928},\frac{K_{G}-0.09K_{R}}{0.928})$, both populations can co-exist.
 
-Now we calculate the Jacobian matrix of the system to linearize the system of equations around each equilibrium point to find the behaviour and tradjectories of nearby points.
+Now we calculate the Jacobian matrix of the system to linearize the system of equations around each equilibrium point so we can find the behaviour and tradjectories of nearby points, hence finding the stability of the equibria.
 The Jacobian matrix is given by:
 
 $$ 
@@ -347,15 +345,15 @@ $$
 \end{aligned}
 $$
 
-Calculating the nullclines as before, we have the equilibrium points $(0,0)$, $(K_{R}, 0)$, $(0, \frac{31}{41}K_{G}) \approx (0, 2268292)$ and $(\frac{K_{R}-\frac{124}{205}K_{G}}{0.928}, \frac{\frac{31}{41}K_{G}-0.09K_{R}}{0.928}) \approx (738540, 2201824)$. We then calculate the Jacobians to analyse the stability - the results are highlighted below.
+Calculating the nullclines as before, we have the equilibrium points $(0,0)$, $(K_{R}, 0)$, $(0, \frac{31}{41}K_{G}) \approx (0, 2268292)$ and $(\frac{K_{R}-\frac{124}{205}K_{G}}{0.928}, \frac{\frac{31}{41}K_{G}-0.09K_{R}}{0.928}) \approx (738540, 2201824)$. We then calculate the Jacobians and their corresponding eigenvalues to analyse the stability - the results are highlighted below.
 
 
 | Equilibrium Points                          | Eigenvalues                        | Stability                     |
 |---------------------------------------------|------------------------------------|-------------------------------|
-| $(0,0)$                                       | λ₁ = 0.61, λ₂ = 0.62              | Unstable source               |
-| $(2500000, 0)$                                    | λ₁ = -0.61, λ₂ = 0.5585           | Unstable saddle point         |
-| $(0, \frac{31}{41}K_{G})$                              | λ₁ = 0.0244, λ₂ = -1.03           | Unstable saddle point         |
-| $(\frac{K_{R}-\frac{124}{205}K_{G}}{0.928}, \frac{\frac{31}{41}K_{G}-0.09K_{R}}{0.928})$  | λ₁ $\approx$ -0.162, λ₂ $\approx$ -0.620          | Asymptotically stable sink point |
+| $(0,0)$                                       | $\lambda_{1} = 0.61$, $\lambda_{2} = 0.62$              | Unstable source               |
+| $(2500000, 0)$                                    | $\lambda_{1} = -0.61$, $\lambda_{2} = 0.5585$           | Unstable saddle point         |
+| $(0, \frac{31}{41}K_{G})$                              | $\lambda_{1} = 0.0244$, $\lambda_{2} = -1.03$           | Unstable saddle point         |
+| $(\frac{K_{R}-\frac{124}{205}K_{G}}{0.928}, \frac{\frac{31}{41}K_{G}-0.09K_{R}}{0.928})$  | $\lambda_{1} \approx -0.162$, $\lambda_{2} \approx -0.620$          | Asymptotically stable sink point |
 
 # Appendix
 
