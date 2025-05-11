@@ -4,7 +4,7 @@ geometry: margin=2cm
 [comment]: # (This is how you can make comments without affecting the output file or preview, the above section is the YAML btw, it is not rendered either but rather sets custom global markdown formatting for pdf/html output)
 [comment]: # (Use `pandoc test.txt -o test.pdf` in the zsh terminal for compilation)
 
-# Modelling Squirrel Population Dynamics 
+# MA2MMS modelling written project Group 1 - Modelling Biological/Ecological Systems
 
 *Nick Scerbacenco, Keisha Markey Patel and Henry Davis*
 
