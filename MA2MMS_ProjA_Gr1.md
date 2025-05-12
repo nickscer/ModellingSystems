@@ -12,7 +12,11 @@ geometry: margin=2cm
 
 ## Abstract
 
-Add a brief abstract with a description and conclusion here ...
+This study models the population dynamics of red and grey squirrels in the UK, focusing on their competitive interactions. Using the Lotka-Volterra competition model and the 4th-order Runge-Kutta method, we analyze population stability and long-term behavior. 
+
+The findings indicate that grey squirrels negatively impact red squirrel populations through competition and disease, with grey squirrels dominating in most areas. However, implementing a harvesting strategy for grey squirrels could significantly aid red squirrel recovery. 
+
+These insights underscore the need for targeted control measures and habitat management to support the conservation of native red squirrels.
 
 ## Table of Contents
 
