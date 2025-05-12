@@ -18,24 +18,29 @@ The findings indicate that grey squirrels negatively impact red squirrel populat
 
 These insights underscore the need for targeted control measures and habitat management to support the conservation of native red squirrels.
 
-## Table of Contents
+## Table of contents
 
-1. [Description of the Ecological System](#description-of-the-ecological-system)
+1. [Description of the ecological system](#description-of-the-ecological-system)
 2. [Introduction](#introduction)
 3. [Model selection](#model-selection)
-	1. [Choosing Coefficients](#choosing-coefficients)
-5. [Stability of the Model](#stability-of-the-model)
-	1. [Phase Space](#phase-space)
-7. [Numerical Solution](#numerical-solution)
+	1. [Choosing coefficients](#choosing-coefficients)
+5. [Stability of the model](#stability-of-the-model)
+	1. [Phase space](#phase-space)
+7. [Numerical solution](#numerical-solution)
 	1. [Bifurcation](#Bifurcation)
 8. [Predictions](#predictions)
 9. [Possible improvements and sustainability](#possible-improvements-and-sustainability)
-	1. [Testing Improved Models](#testing-improved-models)
+	1. [Testing improved models](#testing-improved-models)
 	2. [Stability of the improved model](#stability-of-the-improved-model)
-8. [Appendix](#appendix)  
+8. [Appendix](#appendix)
+	1. [Notes on stability](#notes-on-stability)
+	2. [Notes on Runge-Kutta](#notes-on-runge-kutta)
+	3. [Python code](#python-code)
+		1. [4th-order Runge-Kutta method](#4th-order-runge-kutta-method)
+		2. [Visualising harvesting effects](#visualising-harvesting-effects)
 	1. [Bibliography](#bibliography) 
 
-# Description of the Ecological System
+# Description of the ecological system
 
 This report outlines the relationship between the red squirrel and the grey squirrel in the UK. The two species have a very tense relationship due to competition and displacement which has affected their individual populations. We will look at the different numbers of each and format solvable equations for the each of the populations of the two species. As time has gone on, the population of grey squirrels has increased while the population of red squirrels has decreased. First, we need to look at the kind of relationship that the pair have and the varied biotic and abiotic factors that affect their population sizes. While red and grey squirrels do not directly compete against each other, they compete in terms of food resources and habitats. 
 
@@ -49,7 +54,7 @@ Currently, the grey squirrel is the dominant species, while the red squirrel pop
 
 Looking into the history of the introduction of both of the species, we can start to compare the numbers and substitute them into the Lotka-Volterra Competition model. The introduction of the grey squirrel in England was in 1876 and continued to be released until the 1920’s when the destruction of the red squirrel population was noticed and it soon became illegal to release a grey squirrel into the wild$^{[6]}$ (British Red Squirrel, n.d.). Red squirrels, however, are native to the UK and lived in the UK prior to the grey squirrel for around 10,000 years$^{[7]}$ (The Wildlife Trusts, 2020). It is estimated that at the time of the introduction of grey squirrels, the red squirrel population stood at roughly 3,500,000 and has decreased to 140,000 in the past years, while the grey squirrel population has increased to approximately 2,520,000 recorded in 2009$^{[8]}$ (Aebischer, Davey and Kingdon, 2011). We have taken the carrying capacity of grey squirrels to be 3,000,000 and used this to find that the carrying capacity for red squirrels is 2,500,000$^{[7]}$ (The Wildlife Trusts, 2020).
 
-## Model Selection 
+## Model selection 
 
 Our aim is modelling *global* populations of red and grey squirrels over time. We begin by considering the *generic* *Lotka-Volterra* system s.t. 
 
@@ -81,7 +86,7 @@ ${N}\mkern -8.2mu\textcolor{red}{{B}}$ This form will prove to be convenient whe
 
 For now we introduce a new form of our model with the carrying capacities $K_{R}$ and $K_{G}$ explicitly present to aid analysis of stability.      
 
-### Choosing Coefficients
+### Choosing coefficients
  
 Using the *generic* *Lotka-Volterra* Competitive model in a *refined form*$^{[12]}$(Brouwer et al., 2022)
 
@@ -104,7 +109,7 @@ ${N}\mkern -8.2mu\textcolor{red}{{B}}$ This model is based on the logistic growt
 
 We have selected $r_{R}=0.61$, $r_{G}=0.82$ directly from $^{[13]}$(Okubo et al., n.d., pp.115–117). We have also estimated $\alpha_{RG}$ and $\alpha_{GR}$ with refrence to $^{[13]}$(Okubo et al., n.d., pp.115–117) 'We expect that the competition $c_{1}$, i.e. red against grey should have a small value' thus we chose $\alpha_{GR}=0.09$. We selected $\alpha_{RG}=0.8$ because in sympatric populations grey squirrels have significantly 'greater energetic demands' $^{[14]}$(Bryce et al., 2001), thus $\alpha_{RG}$ >> $\alpha_{GR}$ as both species compete for similar resources and the grey squirrels' ability to consume resources at higher rates causes a much higher negative effect on the red squirrel population growth rate. We also chose $K_{G}=3\cdot10^6$, $K_{R}=2.5\cdot10^6$ using the carrying capacities discussed in the introduction. 
 
-# Stability of the Model
+# Stability of the model
 
 We have the coupled differential equations
 
@@ -128,6 +133,9 @@ The intersections of the x and y nullclines, and are given to be:
 - $(\frac{K_{R}-0.8K_{G}}{0.928},\frac{K_{G}-0.09K_{R}}{0.928})$, both populations can co-exist.
 
 Now we calculate the Jacobian matrix of the system to linearize the system of equations around each equilibrium point so we can find the behaviour and tradjectories of nearby points, hence finding the stability of the equibria.
+
+${N}\mkern -8.2mu\textcolor{red}{{B}}$ The Jacobian matrix formula can be found in the appendix [Notes on stability](#notes-on-stability)
+
 The Jacobian matrix is given by:
 
 $$ 
@@ -184,7 +192,7 @@ Where:
 
 Since these eigenvalues are real, negative numbers, ($\lambda_{1} \approx -0.0186$ and $\lambda_{2} \approx -0.2287$) the corresponding fixed point is an asymptotically stable sink point. This means all tradjectories starting from positive initial populations - that do not lie on the saddlepoints' stable manifolds, will converge to this equilibria point over time causing both squirrel populations to coexist with eachother.
 
-## Phase Space 
+## Phase space 
 
 The phase space plot displays the trajectory ending at our sink point as expected. 
 We also plotted a phase portrait with vectors visualising the flow towards the sink point as we start with different ICs close to it. 
@@ -199,7 +207,7 @@ ${N}\mkern -8.2mu\textcolor{red}{{B}}$ Changing the ICs would implicitly change 
 
 \pagebreak
 
-# Numerical Solution
+# Numerical solution
 
 For the purposes of constructing our numerical algorithm, we return to our generic model in its original form. So we must calculate the coefficients $r_{1},r_{2},a_{11},a_{12},a_{21},a_{22}$ for our populations $x$ and $y$ of red and grey squirrels respectively. 
 
@@ -311,7 +319,7 @@ where $H$ is a negative constant and represents the overall effect of culling an
 
 ${N}\mkern -8.2mu\textcolor{red}{{B}}$ Red squirrels are much better at avoiding pine martens relative to grey squirrels.
 
-## Testing Improved Models
+## Testing improved models
 
 We proceed by choosing a value of $H$ that would result in populations of 140 thousand red squirrels and 2.5 million greys squirrels in 2020s.
 We do so through a *heuristic approach* where we plot the trajectories for the populations over time for different values of $H$. We try out values $-0.2, -0.1, -0.05, -0.03, -0.01$ for $H$ and examine the resulting trajectories. We also plot the empirically estimated populations as a target line. 
@@ -365,7 +373,7 @@ Calculating the nullclines as before, we have the equilibrium points $(0,0)$, $(
 
 # Appendix
 
-## Notes on Stability 
+## Notes on stability 
 
 Jacobian formula
 
@@ -389,7 +397,7 @@ $$
 
 ## Python code 
 
-### 4th Order Runge-Kutta method 
+### 4th-order Runge-Kutta method 
 
 ```python 
 import numpy as np
