@@ -340,7 +340,7 @@ As we can see the higher the magnitude of $H$ the bigger the red squirrel popula
 
 We thereby choose the value of $H$ to be $-0.2$ because that would result in a steady red squirrel population of around 740 thousand which is a significant improvement from a population of 110 thousand in our last model. 
 
-***This demonstrates that if a harvesting of $H=-0.2$ can be practically achieved then we would expect the population of red squirrels to increase by 600 thousand over time.*** 
+***This demonstrates that if a harvesting of $H=-0.2$ can be practically achieved then we would expect the population of red squirrels to increase by 600 thousand over time.***
 
 ## Stability of the improved model
 
@@ -370,6 +370,14 @@ Calculating the nullclines as before, we have the equilibrium points $(0,0)$, $(
 | $(2500000, 0)$                                    | $\lambda_{1} = -0.61$, $\lambda_{2} = 0.5585$           | Unstable saddle point         |
 | $(0, \frac{31}{41}K_{G})$                              | $\lambda_{1} = 0.0244$, $\lambda_{2} = -1.03$           | Unstable saddle point         |
 | $(\frac{K_{R}-\frac{124}{205}K_{G}}{0.928}, \frac{\frac{31}{41}K_{G}-0.09K_{R}}{0.928})$  | $\lambda_{1} \approx -0.162$, $\lambda_{2} \approx -0.620$          | Asymptotically stable sink point |
+
+From the table we can clearly see as predicted, taking $H = -0.2$, gives us a co-existance point at $(738540, 2201824)$.
+
+# Conclusion
+
+This study modeled the population dynamics of red and grey squirrels in the UK, illustrating the competitive dominance of grey squirrels and their impact on red squirrel populations. By incorporating a harvesting strategy into the Lotka-Volterra model, the results showed that reducing the number of grey squirrels could increase red squirrel populations by over 600,000.
+
+The findings emphasize the importance of targeted control measures, such as harvesting and habitat management, to support red squirrel conservation. These insights provide actionable strategies for sustainable species management and highlight the value of mathematical modeling in addressing ecological challenges.
 
 # Appendix
 
