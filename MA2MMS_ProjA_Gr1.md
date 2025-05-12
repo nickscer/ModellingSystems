@@ -20,15 +20,19 @@ These insights underscore the need for targeted control measures and habitat man
 
 ## Table of Contents
 
-1. [Description of the Ecological System](#description-of-the-ecological-system)  
-   2. [Introduction](#introduction)
-   3. [Model selection](#model-selection)
-	   1. [Choosing Coefficients](#choosing-coefficients)
-4. [Stability of the model](#stability-of-the-model)
-5. [Numerical Solution](#numerical-solution)
-	1. [Local Truncation Error](#local-truncation-error)
-	2. [Potential Bifurcation](#potential-bifurcation)
-6. [Appendix](#appendix)  
+1. [Description of the Ecological System](#description-of-the-ecological-system)
+2. [Introduction](#introduction)
+3. [Model selection](#model-selection)
+	1. [Choosing Coefficients](#choosing-coefficients)
+5. [Stability of the Model](#stability-of-the-model)
+	1. [Phase Space](#phase-space)
+7. [Numerical Solution](#numerical-solution)
+	1. [Bifurcation](#Bifurcation)
+8. [Predictions](#predictions)
+9. [Possible improvements and sustainability](#possible-improvements-and-sustainability)
+	1. [Testing Improved Models](#testing-improved-models)
+	2. [Stability of the improved model](#stability-of-the-improved-model)
+8. [Appendix](#appendix)  
 	1. [Bibliography](#bibliography) 
 
 # Description of the Ecological System
@@ -100,7 +104,7 @@ ${N}\mkern -8.2mu\textcolor{red}{{B}}$ This model is based on the logistic growt
 
 We have selected $r_{R}=0.61$, $r_{G}=0.82$ directly from $^{[13]}$(Okubo et al., n.d., pp.115–117). We have also estimated $\alpha_{RG}$ and $\alpha_{GR}$ with refrence to $^{[13]}$(Okubo et al., n.d., pp.115–117) 'We expect that the competition $c_{1}$, i.e. red against grey should have a small value' thus we chose $\alpha_{GR}=0.09$. We selected $\alpha_{RG}=0.8$ because in sympatric populations grey squirrels have significantly 'greater energetic demands' $^{[14]}$(Bryce et al., 2001), thus $\alpha_{RG}$ >> $\alpha_{GR}$ as both species compete for similar resources and the grey squirrels' ability to consume resources at higher rates causes a much higher negative effect on the red squirrel population growth rate. We also chose $K_{G}=3\cdot10^6$, $K_{R}=2.5\cdot10^6$ using the carrying capacities discussed in the introduction. 
 
-## Stability of the model
+# Stability of the Model
 
 We have the coupled differential equations
 
@@ -179,6 +183,21 @@ Where:
 - $\mu = (0.488K_{G} - 0.61K_{R})(0.738 K_{R} - 0.82K_{G}) -(0.3904K_{G} - 0.488K_{R})(0.006642K_{R} - 0.0738K_{G})$.
 
 Since these eigenvalues are real, negative numbers, ($\lambda_{1} \approx -0.0186$ and $\lambda_{2} \approx -0.2287$) the corresponding fixed point is an asymptotically stable sink point. This means all tradjectories starting from positive initial populations - that do not lie on the saddlepoints' stable manifolds, will converge to this equilibria point over time causing both squirrel populations to coexist with eachother.
+
+## Phase Space 
+
+The phase space plot displays the trajectory ending at our sink point as expected. 
+We also plotted a phase portrait with vectors visualising the flow towards the sink point as we start with different ICs close to it. 
+
+>
+
+![Phase space portraits with marked stable sink point](attachments/Figure_2.png)
+
+>
+
+${N}\mkern -8.2mu\textcolor{red}{{B}}$ Changing the ICs would implicitly change all following approximations, however as we have shown analytically, the system would eventually settle to a steady state for *all* realistic ICs .
+
+\pagebreak
 
 # Numerical Solution
 
@@ -267,21 +286,6 @@ The stable squirrel populations found analytically are $(\frac{K_{R}-0.8K_{G}}{0
 
 We can see that the grey squirrel population steeply increased in size between 1940 and 1960 which reflects how grey squirrels completely outcompeted red squirrels in most regions in England and established a permanent population. 
 
-## Phase space 
-
-The phase space plot displays the trajectory ending at our sink point as expected. 
-We also plotted a phase portrait with vectors visualising the flow towards the sink point as we start with different ICs close to it. 
-
->
-
-![Phase space portraits with marked stable sink point](attachments/Figure_2.png)
-
->
-
-${N}\mkern -8.2mu\textcolor{red}{{B}}$ Changing the ICs would implicitly change all following approximations, however as we have shown analytically, the system would eventually settle to a steady state for *all* realistic ICs .
-
-\pagebreak
-
 # Possible improvements and sustainability 
 
 The model presented above is quite good and predicts that the populations of red and grey squirrels today would stand at roughly 110 thousand and 3 million which is surprisingly close to the empirical estimations of 140 thousand and 2.5 million. The model slightly overestimated the population of grey squirrels and underestimated that of red squirrels.
@@ -307,7 +311,7 @@ where $H$ is a negative constant and represents the overall effect of culling an
 
 ${N}\mkern -8.2mu\textcolor{red}{{B}}$ Red squirrels are much better at avoiding pine martens relative to grey squirrels.
 
-## Testing improved models
+## Testing Improved Models
 
 We proceed by choosing a value of $H$ that would result in populations of 140 thousand red squirrels and 2.5 million greys squirrels in 2020s.
 We do so through a *heuristic approach* where we plot the trajectories for the populations over time for different values of $H$. We try out values $-0.2, -0.1, -0.05, -0.03, -0.01$ for $H$ and examine the resulting trajectories. We also plot the empirically estimated populations as a target line. 
