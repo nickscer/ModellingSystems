@@ -199,13 +199,12 @@ We also plotted a phase portrait with vectors visualising the flow towards the s
 
 >
 
-![Phase space portraits with marked stable sink point](attachments/Figure_2.png)
+![Phase space portraits with marked equilibrium points](attachments/Figure_2.png)
 
 >
 
 ${N}\mkern -8.2mu\textcolor{red}{{B}}$ Changing the ICs would implicitly change all following approximations, however as we have shown analytically, the system would eventually settle to a steady state for *all* realistic ICs .
 
-\pagebreak
 
 # Numerical solution
 
@@ -350,11 +349,11 @@ $$
 \begin{aligned}
 \frac{\mathrm{d}x}{\mathrm{d}t} &= r_{R}x\left(1-\frac{x+\alpha_{RG}y}{K_{R}}\right) \\
 \frac{\mathrm{d}y}{\mathrm{d}t} &= r_{G}y\left(1-\frac{y+\alpha_{GR}x}{K_{G}}\right) + Hy 
-\end{aligned} \qquad \longrightarrow \qquad
+\end{aligned} \quad \longrightarrow \quad
 \begin{aligned}
 \frac{\mathrm{d}x}{\mathrm{d}t} &= r_{R}x\left(1-\frac{x+\alpha_{RG}y}{K_{R}}\right) \\
 \frac{\mathrm{d}y}{\mathrm{d}t} &= r_{G}y\left(1 + \frac{H}{r_{G}} - \frac{y+\alpha_{GR}x}{K_{G}}\right)
-\end{aligned} \qquad \longrightarrow \qquad
+\end{aligned} \quad \longrightarrow \quad
 \begin{aligned}
 \frac{\mathrm{d}x}{\mathrm{d}t} &= 0.61x\left(1-\frac{x+0.8y}{K_{R}}\right) \\
 \frac{\mathrm{d}y}{\mathrm{d}t} &= 0.82y\left(\frac{31}{41} - \frac{y+0.09x}{K_{G}}\right)
@@ -362,6 +361,8 @@ $$
 $$
 
 Calculating the nullclines as before, we have the equilibrium points $(0,0)$, $(K_{R}, 0)$, $(0, \frac{31}{41}K_{G}) \approx (0, 2268292)$ and $(\frac{K_{R}-\frac{124}{205}K_{G}}{0.928}, \frac{\frac{31}{41}K_{G}-0.09K_{R}}{0.928}) \approx (738540, 2201824)$. We then calculate the Jacobians and their corresponding eigenvalues to analyse the stability - the results are highlighted below.
+
+
 
 
 | Equilibrium Points                          | Eigenvalues                        | Stability                     |
@@ -373,12 +374,23 @@ Calculating the nullclines as before, we have the equilibrium points $(0,0)$, $(
 
 From the table we can clearly see as predicted, taking $H = -0.2$, gives us a co-existance point at $(738540, 2201824)$.
 
+> 
+
+![Phase space portraits with marked equilibrium points](attachments/Figure_4.png)
+
+>
+
+\pagebreak
+
+${N}\mkern -8.2mu\textcolor{red}{{B}}$ The code used for figure 1 was also used to generate figure 4 by adding a `-0.2` harvesting to the `squirrely` function and the `V` vector field equation.   
+
 # Conclusion
 
 Throughout this study, we have looked at the population dynamics of the red and grey squirrels in the UK. We have clearly illustrated the competitive dominance of the grey squirrel against the red squirrel and further looked at the impact that the numbers of grey squirrels have on the red squirrel population. The two share a very tense relationship and it is noticeable that the population of grey squirrels has a direct impact on the population of red squirrels. It is undoubtable that as the numbers of grey squirrels increases, the number of red squirrels decrease, but a variations of different schemes have been put in place to aid the growth of the red squirrel population in the UK. After incorporating a harvesting modelling scheme into the Lotka-Volterra model which reflects the many approaches that are being taken to increase the population of the red squirrel and the results showed us some more information on this increase. We can see that by reducing the number of grey squirrels in the UK, the red squirrel population has the potential to grow by over 600,000 individuals. 
 
 Our findings have emphasised the importance of these targeted control measures, including culling and habitat management to support the red squirrel conservation. These insights have provided actionable strategies for sustainable species management and highlight the value of mathematical modelling in the addressing of ecological changes in the environment. This goes to show that as much as putting these different plans into place, it is imperative that the numbers are studied to see if they are having a positive, negative effect or any impact at all. We can clearly see that the conservation methods that are being used for red and grey squirrels in having a positive impact on the red squirrel population and humanly managing the numbers of grey squirrels in the UK. 
 
+\pagebreak
 
 # Appendix
 
@@ -477,10 +489,6 @@ plt.show()
 x_vals = np.linspace(107758 - 50000, 107758 + 50000, 20)  # Red squirrel range
 y_vals = np.linspace(2990301 - 500000, 2990301 + 500000, 20)  # Grey squirrel range
 X, Y = np.meshgrid(x_vals, y_vals)
-
-# Compute the vector field
-U = X * (r1 + a11 * X + a12 * Y)  # dx/dt
-V = Y * (r2 + a21 * X + a22 * Y)  # dy/dt
 
 # Add a new subplot for the phase portrait with vectors using quiver
 # Define a grid covering the entire trajectory range
