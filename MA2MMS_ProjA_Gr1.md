@@ -4,7 +4,7 @@ geometry: margin=2cm
 [comment]: # (This is how you can make comments without affecting the output file or preview, the above section is the YAML btw, it is not rendered either but rather sets custom global markdown formatting for pdf/html output)
 [comment]: # (Use `pandoc test.txt -o test.pdf` in the zsh terminal for compilation)
 
-# MA2MMS modelling written project Group 1 - Modelling Biological/Ecological Systems
+# MA2MMS modelling written project Group 1; Modelling Biological/Ecological Systems
 
 *Nick Scerbacenco, Keisha Markey Patel and Henry Davis*
 
@@ -12,7 +12,7 @@ geometry: margin=2cm
 
 ## Abstract
 
-This study models the population dynamics of red and grey squirrels in the UK, focusing on their competitive interactions. Using the Lotka-Volterra competition model and the 4th-order Runge-Kutta method, we analyze population stability and long-term behavior. 
+This study models the population dynamics of red and grey squirrels in the UK, focusing on their competitive interactions. Using the Lotka-Volterra competition model and the 4th-order Runge-Kutta method, we analyse population stability and long-term behavior. 
 
 The findings indicate that grey squirrels negatively impact red squirrel populations through competition and disease, with grey squirrels dominating in most areas. However, implementing a harvesting strategy for grey squirrels could significantly aid red squirrel recovery. 
 
@@ -43,17 +43,19 @@ These insights underscore the need for targeted control measures and habitat man
 
 # Description of the ecological system
 
-This report outlines the relationship between the red squirrel and the grey squirrel in the UK. The two species have a very tense relationship due to competition and displacement which has affected their individual populations. We will look at the different numbers of each and format solvable equations for the each of the populations of the two species. As time has gone on, the population of grey squirrels has increased while the population of red squirrels has decreased. First, we need to look at the kind of relationship that the pair have and the varied biotic and abiotic factors that affect their population sizes. While red and grey squirrels do not directly compete against each other, they compete in terms of food resources and habitats. 
+This report examines the relationship between red squirrels and grey squirrels in the UK. The two species have a tense relationship due to competition and displacement, which have significantly impacted their populations. We will analyse the population sizes of each species and develop a system of equations to describe these populations. Over time, the number of grey squirrels has increased, while the population of red squirrels has decreased. 
+
+To understand this dynamic, we will explore the nature of their relationship and the various biotic and abiotic factors that influence their population sizes. Although red and grey squirrels do not directly compete with one another, they compete for food resources and habitats. 
 
 # Introduction
 
-Grey squirrels were introduced to the UK in 19th century and over time have outcompeted red squirrels in their habitats. This is due to their larger builds, their adaptability, and immunity from certain diseases, meaning that the grey squirrel can outcompete the red squirrel without direct harm. The grey squirrel primarily outcompetes the red squirrel through the monopolisation of food *resources*$^{[2]}$ (Wildlife Online, n.d.), leaving the red squirrel with a limited supply. It is undoubtable that the grey squirrel has populated much of the urban environment while the red squirrel tends to reside in more rural areas. This is a good representation of the grey squirrels’ adaptability, their ability to fit into the environment that they find and even go to the extent of consuming the different foods available *there*$^{[2]}$ (Wildlife Online, n.d.), including that of a more urban area. 
+Grey squirrels were introduced to the UK in the 19th century and over time have outcompeted red squirrels in their habitats. This is due to their larger builds, their adaptability, and immunity from certain diseases, meaning that the grey squirrel can outcompete the red squirrel without direct harm. The grey squirrel primarily outcompetes the red squirrel through the monopolisation of food *resources*$^{[2]}$ (Wildlife Online, n.d.), leaving the red squirrel with a limited supply. It is undoubtable that the grey squirrel has populated much of the urban environment, while the red squirrel tends to reside in more rural areas. This is a good representation of the grey squirrels’ adaptability, their ability to fit into the environment they encounter, and their tendency to consume the various foods available to *them*$^{[2]}$ (Wildlife Online, n.d.), including that of a more urban area. 
 
-Grey squirrels currently populate the UK in many places, carrying diseases such as squirrel pox, which although is not very harmful to them, it is fatal if passed on to a red *squirrel*$^{[1]}$ (Red Squirrel Survival Trust, n.d.). This, in turn, decreases the number of red squirrels while the population of the grey squirrels is only marginally decreased. Alongside this, they are significantly larger than the red squirrel, making them the more likely survivor when in combat with competitors or predators, such as the pine marten. Due to the red squirrel's sensitive immune system, they have on average a lower life expectancy than that of the red squirrel. The red squirrel typically lives up to three years$^{[1]}$ (Red Squirrel Survival Trust, n.d.), while the grey squirrel usually lives up to nine years in the *wild*$^{[4]}$ (Wytham Woods, n.d.). Both species have been known to live up to ten or even fifteen years old, however, the contributions of the outside world, especially the different diseases they face, lowers this significantly. 
+Grey squirrels currently populate the UK in many places, carrying diseases such as squirrel pox — which, although not very harmful to them, is fatal if passed on to a red *squirrel*.$^{[1]}$ (Red Squirrel Survival Trust, n.d.). This, in turn, decreases the number of red squirrels while the population of the grey squirrels is only marginally decreased. Alongside this, they are significantly larger than the red squirrel, making them the more likely survivor when in combat with competitors or predators, such as the pine marten. Due to the red squirrel's sensitive immune system, they have on average, a lower life expectancy than grey squirrels. The red squirrel typically lives up to three years$^{[1]}$ (Red Squirrel Survival Trust, n.d.), while the grey squirrel usually lives up to nine years in the *wild*$^{[4]}$ (Wytham Woods, n.d.). Both species have been known to live up to ten — or even fifteen—years; however, the contributions of the outside world, especially the various diseases they face, lower this significantly.
 
-Currently, the grey squirrel is the dominant species, while the red squirrel population is declining. However, the population of the red squirrel is slowly rising as the population of the pine marten increases. The pine marten is the natural predator to the grey squirrel, which has a “strong negative” $^{[3]}$ (British Red Squirrel, n.d.) impact on their numbers, allowing the red squirrel to benefit and thrive as there is less competition for the red squirrel. After being pushed to near extinction, the red squirrel finds peaceful habitat in places less abundant with grey squirrels, meaning their numbers can slowly increase. Evidence was found to suggest that rather than the grey squirrel being hunted by the pine marten to decrease their numbers, the grey squirrel started to migrate to areas less populated with the pine marten. The red squirrel, in turn, benefitted from this, as they were given more land and area to populate without being disturbed by the grey squirrel and their numbers stared to increase. Furthermore, the culling of grey squirrels in legal in the UK as a way of controlling their population size and allowing the population of the red squirrel to increase $^{[5]}$ (British Red Squirrel, n.d.). This includes trapping, shooting, fertility control and more. 
+Currently, the grey squirrel is the dominant species, while the red squirrel population is declining. However, the population of the red squirrel is slowly rising as the population of the pine marten increases. The pine marten is the natural predator to the grey squirrel, which has a “strong negative” $^{[3]}$ (British Red Squirrel, n.d.) impact on their numbers, allowing the red squirrel to benefit and thrive as there is less competition for the red squirrel. After being pushed to near extinction, the red squirrel finds a peaceful habitat in places where grey squirrels are less abundant, meaning that its numbers can slowly increase. Evidence was found to suggest that, rather than the grey squirrel being hunted by the pine marten to decrease its numbers, the grey squirrel started to migrate to areas that were less populated with the pine marten. The red squirrel, in turn, benefitted from this, as they were given more land and area to populate without being disturbed by the grey squirrel and their numbers started to increase. Furthermore, the culling of grey squirrels is legal in the UK as a way of controlling their population size and allowing the population of the red squirrel to increase $^{[5]}$ (British Red Squirrel, n.d.). This includes trapping, shooting, fertility control and more. 
 
-Looking into the history of the introduction of both of the species, we can start to compare the numbers and substitute them into the Lotka-Volterra Competition model. The introduction of the grey squirrel in England was in 1876 and continued to be released until the 1920’s when the destruction of the red squirrel population was noticed and it soon became illegal to release a grey squirrel into the wild$^{[6]}$ (British Red Squirrel, n.d.). Red squirrels, however, are native to the UK and lived in the UK prior to the grey squirrel for around 10,000 years$^{[7]}$ (The Wildlife Trusts, 2020). It is estimated that at the time of the introduction of grey squirrels, the red squirrel population stood at roughly 3,500,000 and has decreased to 140,000 in the past years, while the grey squirrel population has increased to approximately 2,520,000 recorded in 2009$^{[8]}$ (Aebischer, Davey and Kingdon, 2011). We have taken the carrying capacity of grey squirrels to be 3,000,000 and used this to find that the carrying capacity for red squirrels is 2,500,000$^{[7]}$ (The Wildlife Trusts, 2020).
+Looking into the history of the introduction of both of the species, we can start to compare the numbers and substitute them into the Lotka-Volterra Competition model. The introduction of the grey squirrel in England was in 1876 and continued to be released until the 1920s when the destruction of the red squirrel population was noticed and it soon became illegal to release a grey squirrel into the wild$^{[6]}$ (British Red Squirrel, n.d.). Red squirrels, however, are native to the UK and lived in the UK prior to the grey squirrel for around 10,000 years$^{[7]}$ (The Wildlife Trusts, 2020). It is estimated that at the time of the introduction of grey squirrels, the red squirrel population stood at roughly 3,500,000 and has decreased to 140,000 in the past years, while the grey squirrel population has increased to approximately 2,520,000 recorded in 2009$^{[8]}$ (Aebischer, Davey and Kingdon, 2011). We have taken the carrying capacity of grey squirrels to be 3,000,000 and used this to find that the carrying capacity for red squirrels is 2,500,000$^{[7]}$ (The Wildlife Trusts, 2020).
 
 # Model selection 
 
@@ -72,8 +74,8 @@ $$
 
 where $x$ and $y$ would represent the populations of red and grey squirrels respectively,
 
-- $r_{1}$ - idealistic growth rate of red squirrels 
-- $r_{2}$ - idealistic growth rate of grey squirrels 
+- $r_{1}$ - intrinsic growth rate of red squirrels 
+- $r_{2}$ - intrinsic growth rate of grey squirrels 
 - $a_{11}$ - measure of limitation on red squirrels
 - $a_{22}$ - measure of limitation on grey squirrels 
 - $a_{12}$ - measure of competition towards red squirrels i.e. the effect of grey squirrels on red squirrels
@@ -103,12 +105,12 @@ $$
 
 where $x(t)$ and $y(t)$ represent the population of red and grey squirrels at a given time $t$,
 $r_{R}$ and $r_{G}$ represent the intrinsic growth rates of red and grey squirrels respectively,
-$K_{R}$ and $K_{G}$ represent the carrying capcity of red and grey squirrels,
-and finally $\alpha_{RG}$ and $\alpha_{GR}$ represent the competition coefients.
+$K_{R}$ and $K_{G}$ represent the carrying capacity of red and grey squirrels respectively,
+and finally $\alpha_{RG}$ and $\alpha_{GR}$ represent the competition coefficients.
 
 ${N}\mkern -8.2mu\textcolor{red}{{B}}$ This model is based on the logistic growth model ($\frac{\mathrm{d}x}{\mathrm{d}t} = rx ( 1 - \frac{x}{K} )$ ), with the addition of competition between the two species as they compete for the same natural resources. 
 
-We have selected $r_{R}=0.61$, $r_{G}=0.82$ directly from $^{[13]}$(Okubo et al., n.d., pp.115–117). We have also estimated $\alpha_{RG}$ and $\alpha_{GR}$ with refrence to $^{[13]}$(Okubo et al., n.d., pp.115–117) 'We expect that the competition $c_{1}$, i.e. red against grey should have a small value' thus we chose $\alpha_{GR}=0.09$. We selected $\alpha_{RG}=0.8$ because in sympatric populations grey squirrels have significantly 'greater energetic demands' $^{[14]}$(Bryce et al., 2001), thus $\alpha_{RG}$ >> $\alpha_{GR}$ as both species compete for similar resources and the grey squirrels' ability to consume resources at higher rates causes a much higher negative effect on the red squirrel population growth rate. We also chose $K_{G}=3\cdot10^6$, $K_{R}=2.5\cdot10^6$ using the carrying capacities discussed in the introduction. 
+We have selected $r_{R}=0.61$, $r_{G}=0.82$ directly from $^{[13]}$(Okubo et al., n.d., pp.115–117). We have also estimated $\alpha_{RG}$ and $\alpha_{GR}$ with reference to $^{[13]}$(Okubo et al., n.d., pp.115–117) 'We expect that the competition $c_{1}$, i.e. red against grey should have a small value' thus we chose $\alpha_{GR}=0.09$. We selected $\alpha_{RG}=0.8$ because in sympatric populations grey squirrels have significantly 'greater energetic demands' $^{[14]}$(Bryce et al., 2001), thus $\alpha_{RG}$ >> $\alpha_{GR}$ as both species compete for similar resources and the grey squirrels' ability to consume resources at higher rates causes a much higher negative effect on the red squirrel population growth rate. We also chose $K_{G}=3\cdot10^6$, $K_{R}=2.5\cdot10^6$ using the carrying capacities discussed in the introduction. 
 
 # Stability of the model
 
@@ -131,9 +133,9 @@ The intersections of the x and y nullclines, and are given to be:
 - $(0,0)$, the origin point where both populations are extinct;
 - $(K_{R},0)$, the red squirrel population is at their carrying capacity while the grey squirrel population is extinct
 - $(K_{G},0)$, the grey squirrel population is at their carrying capacity while the red squirrel population is extinct
-- $(\frac{K_{R}-0.8K_{G}}{0.928},\frac{K_{G}-0.09K_{R}}{0.928})$, both populations can co-exist.
+- $(\frac{K_{R}-0.8K_{G}}{0.928},\frac{K_{G}-0.09K_{R}}{0.928})$, both populations can coexist.
 
-Now we calculate the Jacobian matrix of the system to linearize the system of equations around each equilibrium point so we can find the behaviour and tradjectories of nearby points, hence finding the stability of the equibria.
+Now, we calculate the Jacobian matrix of the system to linearize the equations around each equilibrium point, so that we can determine the behaviour and trajectories of nearby points — and therefore assess the stability of the equilibria.
 
 ${N}\mkern -8.2mu\textcolor{red}{{B}}$ The Jacobian matrix formula can be found in the appendix [Notes on stability](#notes-on-stability)
 
@@ -144,36 +146,35 @@ J(x,y) = \begin{bmatrix} 0.61 - \frac{1.22}{K_{R}}x - \frac{0.488}{K_{R}}y & -\f
 -\frac{0.0738}{K_{G}}y & 0.82 - \frac{0.18}{K_{G}}y - \frac{0.0738}{K_{G}}x \end{bmatrix} 
 $$
 
-At the equilibrium point $(0,0)$, we have the Jacobian matrix
+At the equilibrium point $(0,0)$, we derive the Jacobian matrix, which is given by:
 
 $$ 
 J(0,0) = \begin{bmatrix} 0.61 & 0 \\
 0 & 0.82 \end{bmatrix} 
 $$
 
-Since $J(0,0)$ is a diagonal matrix, the eigenvalues are directly the diagonal elements $\lambda_{1} = 0.61$ and $\lambda_{2} = 0.82$. Since these eigenvalues are non-positive real numbers, the corresponding fixed point is an unstable source. This means that all nearby trajectories move away from the point - small introductions of either populations will cause the system to move away from extinction towards positive populations of squirrels.
+Since $J(0,0)$ is a diagonal matrix, the eigenvalues are directly the diagonal elements: $\lambda_{1} = 0.61$ and $\lambda_{2} = 0.82$. Since these eigenvalues are non-positive real numbers, the corresponding fixed point is an unstable source. This means that all nearby trajectories move away from the point - small introductions of either populations will cause the system to move away from extinction towards positive populations of squirrels.
 
-At the equilibrium point $(K_{R},0)$, we have the Jacobian matrix
-
+At the equilibrium point $(K_{R},0)$, we compute the Jacobian matrix, which is given by:
 $$ 
 J(K_{R},0) = \begin{bmatrix} -0.61 & -0.488 \\
 0 & 0.82 - \frac{0.0738K_{R}}{K_{G}}\end{bmatrix} 
 $$
 
-Since $J(K_{R},0)$ is an upper triangular matrix, the eigenvalues are directly the diagonal elements $\lambda_{1} = -0.61$ and $\lambda_{2} = 0.82 - \frac{0.0738K_{R}}{K_{G}} = 0.7585$. Since these eignevalues are real numbers with $\lambda_{1} < 0 < \lambda_{2}$, the corresponding fixed point is an unstable saddlepoint.
+Since $J(K_{R},0)$ is an upper triangular matrix, the eigenvalues are directly the diagonal elements: $\lambda_{1} = -0.61$ and $\lambda_{2} = 0.82 - \frac{0.0738K_{R}}{K_{G}} = 0.7585$. Since these eignevalues are real numbers with $\lambda_{1} < 0 < \lambda_{2}$, the corresponding fixed point is an unstable saddlepoint.
 
-Also, at the equilibrium point $(0,K_{G})$, we have the Jacobian matrix
+Also, at the equilibrium point $(0,K_{G})$, we derive the Jacobian matrix:
 
 $$ 
 J(0,K_{G}) = \begin{bmatrix} 0.61 - \frac{0.488K_{G}}{K_{R}} & 0 \\
 -0.0738 & -0.82 \end{bmatrix} 
 $$
 
-Since $J(0,K_{G})$ is a lower triangular matrix, the eigenvalues are directly the diagonal elements $\lambda_{1} = 0.61 - \frac{0.488K_{G}}{K_{R}} = 0.0244$ and $\lambda_{2} = -0.82$. Since these eignevalues are real numbers with $\lambda_{2} < 0 < \lambda_{1}$, the corresponding fixed point is an unstable saddlepoint.
+Since $J(0,K_{G})$ is a lower triangular matrix, the eigenvalues are directly the diagonal elements: $\lambda_{1} = 0.61 - \frac{0.488K_{G}}{K_{R}} = 0.0244$ and $\lambda_{2} = -0.82$. Since these eignevalues are real numbers with $\lambda_{2} < 0 < \lambda_{1}$, the corresponding fixed point is an unstable saddlepoint.
 
 Therefore at each saddlepoint $(K_{R},0)$ and $(0,K_{G})$ populations lying on the stable manifold (an eigendirection tangent to the eigenvector formed from the negative eigenvalue in the linearized system) will approach red/grey squirrel dominace respectively. While all other points move away aproaching either coexistance or grey/red squirrel dominance respectively.
 
-Finally at the equilibrium point $\left(\frac{K_{R}-0.8K_{G}}{0.928}, \frac{K_{G}-0.09K_{R}}{0.928}\right) \approx (107758, 2990301)$ _taking the floor of these values since the populations of x and y are whole numbers_, we have the Jacobian matrix
+Finally at the equilibrium point: $\left(\frac{K_{R}-0.8K_{G}}{0.928}, \frac{K_{G}-0.09K_{R}}{0.928}\right) \approx (107758, 2990301)$ _taking the floor of these values since the populations of x and y must be whole numbers_, we obtain the Jacobian matrix, which is given by:
 
 $$ 
 J\left(\frac{K_{R}-0.8K_{G}}{0.928},\frac{K_{G}-0.09K_{R}}{0.928}\right) = \begin{bmatrix} \frac{0.488K_{G} - 0.61K_{R}}{0.928K_{R}} & \frac{0.3904K_{G} - 0.488K_{R}}{0.928K_{R}} \\
@@ -300,7 +301,7 @@ The model presented above is quite good and predicts that the populations of red
 
 To enable us to have a more exact system for the populations of both species, we would need to take into consideration the decline in populations as much as the increase in them. For example, the culling of grey squirrels and the death rate of red squirrels from diseases. As mentioned before, it is legal to cull grey squirrels in the UK by means of trapping, shooting and more. It is estimated that “tens of thousands” of grey squirrels are killed each year through culling$^{[9]}$ (Viva!, 2023). The decline of the squirrel population is due to many varied reasons, trauma, road accidents, disease, and predation. However, the decline in numbers of the red squirrel is smaller than the grey squirrel. We can use these facts in an adapted model that also incorporates a harvesting coefficient. Here, the coefficient of the red squirrel harvesting is smaller than that of the grey squirrel. This creates a more accurate model for the populations of both of the animals.
 
-Looking into the future of the populations of grey and red squirrels, the control of the grey squirrel numbers alongside the conservation of red squirrels could mean that the red squirrel can thrive once more. Many routes are currently being taken to allow this to happen, making the populations of both more sustainable for the environment. If the combination of culling, habitat control and fertilisation can proceed with the protection and conservation of red squirrels, an equilibrium of both population sizes can be reached. It is very unlikely that both types of animals will ever be able to coesxist in the same habitat as each other, however, this could enstore a more stable population size for both. 
+Looking into the future of the populations of grey and red squirrels, the control of the grey squirrel numbers alongside the conservation of red squirrels could mean that the red squirrel can thrive once more. Many routes are currently being taken to allow this to happen, making the populations of both more sustainable for the environment. If the combination of culling, habitat control and fertilisation can proceed with the protection and conservation of red squirrels, an equilibrium of both population sizes can be reached. It is very unlikely that both types of animals will ever be able to coexist in the same habitat as each other, however, this could ensure a more stable population size for both. 
 
 To make the model more *realistic* we improve it by adding a harvesting term $Hy$ of the grey squirrels
 
@@ -373,7 +374,7 @@ Calculating the nullclines as before, we have the equilibrium points $(0,0)$, $(
 | $(0, \frac{31}{41}K_{G})$                              | $\lambda_{1} = 0.0244$, $\lambda_{2} = -1.03$           | Unstable saddle point         |
 | $(\frac{K_{R}-\frac{124}{205}K_{G}}{0.928}, \frac{\frac{31}{41}K_{G}-0.09K_{R}}{0.928})$  | $\lambda_{1} \approx -0.162$, $\lambda_{2} \approx -0.620$          | Asymptotically stable sink point |
 
-From the table we can clearly see as predicted, taking $H = -0.2$, gives us a co-existance point at $(738540, 2201824)$.
+From the table we can clearly see as predicted, taking $H = -0.2$, gives us a coexistance point at $(738540, 2201824)$.
 
 > 
 
@@ -387,7 +388,7 @@ ${N}\mkern -8.2mu\textcolor{red}{{B}}$ The code used for figure 1 was also used 
 
 # Conclusion
 
-Throughout this study, we have looked at the population dynamics of the red and grey squirrels in the UK. We have clearly illustrated the competitive dominance of the grey squirrel against the red squirrel and further looked at the impact that the numbers of grey squirrels have on the red squirrel population. The two share a very tense relationship and it is noticeable that the population of grey squirrels has a direct impact on the population of red squirrels. It is undoubtable that as the numbers of grey squirrels increases, the number of red squirrels decrease, but a variations of different schemes have been put in place to aid the growth of the red squirrel population in the UK. After incorporating a harvesting modelling scheme into the Lotka-Volterra model which reflects the many approaches that are being taken to increase the population of the red squirrel and the results showed us some more information on this increase. We can see that by reducing the number of grey squirrels in the UK, the red squirrel population has the potential to grow by over 600,000 individuals. 
+Throughout this study, we have looked at the population dynamics of the red and grey squirrels in the UK. We have clearly illustrated the competitive dominance of the grey squirrel against the red squirrel and further looked at the impact that the numbers of grey squirrels have on the red squirrel population. The two share a very tense relationship and it is noticeable that the population of grey squirrels has a direct impact on the population of red squirrels. It is undoubtable that as the number of grey squirrels increases, the number of red squirrels decreases, but a variation of different schemes have been put in place to aid the growth of the red squirrel population in the UK. After incorporating a harvesting modelling scheme into the Lotka-Volterra model which reflects the many approaches that are being taken to increase the population of the red squirrel, and the results showed us some more information on this increase. We can see that by reducing the number of grey squirrels in the UK, the red squirrel population has the potential to grow by over 600,000 individuals. 
 
 Our findings have emphasised the importance of these targeted control measures, including culling and habitat management to support the red squirrel conservation. These insights have provided actionable strategies for sustainable species management and highlight the value of mathematical modelling in the addressing of ecological changes in the environment. This goes to show that as much as putting these different plans into place, it is imperative that the numbers are studied to see if they are having a positive, negative effect or any impact at all. We can clearly see that the conservation methods that are being used for red and grey squirrels in having a positive impact on the red squirrel population and humanly managing the numbers of grey squirrels in the UK. 
 
@@ -401,12 +402,12 @@ Jacobian formula
 
 $$
 J(R,G) =\begin{bmatrix}
-\frac{\partial{F}}{\partial{R}} & \frac{\partial{F}}{\partial{G}} \\
-\frac{\partial{E}}{\partial{R}} & \frac{\partial{E}}{\partial{G}}
+\frac{\partial{F}}{\partial{x}} & \frac{\partial{F}}{\partial{y}} \\
+\frac{\partial{E}}{\partial{x}} & \frac{\partial{E}}{\partial{y}}
 \end{bmatrix}
 $$
 
-Where $F(R,G) = \frac{\mathrm{d}R}{\mathrm{d}t}$ and $E(R,G) = \frac{\mathrm{d}G}{\mathrm{d}t}$
+Where $F(x,y) = \frac{\mathrm{d}x}{\mathrm{d}t}$ and $E(x,y) = \frac{\mathrm{d}y}{\mathrm{d}t}$
 
 ## Notes on Runge-Kutta
 
