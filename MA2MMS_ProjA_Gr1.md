@@ -318,6 +318,7 @@ $$
 $$
 
 where $H$ is a negative constant and represents the overall effect of culling and uneven survival odds, compared to red squirrels in regions populated with pine martens. 
+
 ${N}\mkern -8.2mu\textcolor{red}{{B}}$ Red squirrels are much better at avoiding pine martens relative to grey squirrels.
 
 ## Testing improved models
