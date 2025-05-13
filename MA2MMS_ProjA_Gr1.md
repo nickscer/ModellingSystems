@@ -615,15 +615,15 @@ plt.show()
 
 9. Viva!. (2023). Viva! – Squirrel Culling in the UK. Available at: https://viva.org.uk/animals/other-animals/squirrels/#:~:text=There%20are%20no%20public%20records,like%20the%20culling%20of%20badgers
 
-10. Wikipedia. (2020). Bifurcation theory. [online] Available at: https://en.wikipedia.org/wiki/Bifurcation_theory.
+10. Wikipedia. (2020). Bifurcation theory. [online] Available at: https://en.wikipedia.org/wiki/Bifurcation_theory
 
-11. British Red Squirrel. (n.d.). Grey Squirrels. [online] Available at: https://www.britishredsquirrel.org/grey-squirrels/.
+11. British Red Squirrel. (n.d.). Grey Squirrels. [online] Available at: https://www.britishredsquirrel.org/grey-squirrels/
 
-12. Brouwer, N., Connuck, H., Dubniczki, H., Gownaris, N., Howard, A., Olmsted, C., Wetzel, D., Whittinghill, K., Wilson, A. and Zallek, T. (2022). 15.5: Quantifying Competition Using the Lotka-Volterra Model. [online] Biology LibreTexts. Available at: https://bio.libretexts.org/Courses/Gettysburg_College/01%3A_Ecology_for_All/15%3A_Competition/15.05%3A_Quantifying_Competition_Using_the_Lotka-Volterra_Model.
+12. Brouwer, N., Connuck, H., Dubniczki, H., Gownaris, N., Howard, A., Olmsted, C., Wetzel, D., Whittinghill, K., Wilson, A. and Zallek, T. (2022). 15.5: Quantifying Competition Using the Lotka-Volterra Model. [online] Biology LibreTexts. Available at: https://bio.libretexts.org/Courses/Gettysburg_College/01%3A_Ecology_for_All/15%3A_Competition/15.05%3A_Quantifying_Competition_Using_the_Lotka-Volterra_Model
 
-13. Okubo, A., Maini, P.K., Williamson, H. and Murray, J.D. (n.d.). Proceedings of the Royal Society of London. Series B, Biological Sciences. [online] The Royal Society, pp.115–117. Available at: https://people.maths.ox.ac.uk/maini/PKM%20publications/14.pdf.
+13. Okubo, A., Maini, P.K., Williamson, H. and Murray, J.D. (n.d.). Proceedings of the Royal Society of London. Series B, Biological Sciences. [online] The Royal Society, pp.115–117. Available at: https://people.maths.ox.ac.uk/maini/PKM%20publications/14.pdf
 
-14. Bryce, J.M., Speakman, J.R., Johnson, P.J. and Macdonald, D.W. (2001). Competition between Eurasian Red and Introduced Eastern Grey Squirrels: The Energetic Significance of BodyMass Differences. Proceedings: Biological Sciences, [online] 268(1477), pp.1731–1736. doi:https://doi.org/10.2307/3068105.
+14. Bryce, J.M., Speakman, J.R., Johnson, P.J. and Macdonald, D.W. (2001). Competition between Eurasian Red and Introduced Eastern Grey Squirrels: The Energetic Significance of BodyMass Differences. Proceedings: Biological Sciences, [online] 268(1477), pp.1731–1736. doi:https://doi.org/10.2307/3068105
 
 
 
