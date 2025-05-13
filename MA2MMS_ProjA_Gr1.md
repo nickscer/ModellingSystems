@@ -138,7 +138,6 @@ The intersections of the x and y nullclines, and are given to be:
 - $(\frac{K_{R}-0.8K_{G}}{0.928},\frac{K_{G}-0.09K_{R}}{0.928})$, both populations can coexist.
 
 Next, we calculate the Jacobian matrix of the system to linearize the equations around each equilibrium point. This allows us to determine the behavior and trajectories of nearby points - and therefore assess the stability of the equilibria
-
 ${N}\mkern -8.2mu\textcolor{red}{{B}}$ The Jacobian matrix formula can be found in the appendix [Notes on stability](#notes-on-stability).
 
 The Jacobian matrix is given by:
@@ -260,10 +259,9 @@ a_{22} &= -2.7\dot{3} \cdot 10^{-7}
 $$
 
 $\textcolor{red}{!}$ The $a_{22}$ is a recurring decimal marked $\dot{3}$. In the actual implementation, 8 decimal points will be used to minimise the *roundoff error*.  
+${N}\mkern -8.2mu\textcolor{red}{{B}}$ We chose RK4 as it is the most optimal explicit method for its number of $k$ *stages*.
 
 We proceeded to plot the populations of red and grey squirrels in discrete time using the *4th order Runge-Kutta method* (RK4) which is a robust general-purpose numerical method with a $\mathcal{O}(h^5)$ *Local Truncation Error*.
-
-${N}\mkern -8.2mu\textcolor{red}{{B}}$ We chose RK4 as it is the most optimal explicit method for its number of $k$ *stages*.
 
 We avoided the use of "*black boxes*" and fully implemented the RK4 method in python, please refer to the *[appendix](#python-code)* for the whole code, the general logic behind it is passing the `squirrely`  function into the `rk4` function which uses `k` correctors that are then weighed to produce the next timestep $U^{n+1}$ which is sorted in the $n+1$th column of the array `u`.  
 ${N}\mkern -8.2mu\textcolor{red}{{B}}$ The first row and second rows of `u` correspond to the populations of red squirrels and grey squirrels respectively.   
@@ -320,7 +318,6 @@ $$
 $$
 
 where $H$ is a negative constant and represents the overall effect of culling and uneven survival odds, compared to red squirrels in regions populated with pine martens. 
-
 ${N}\mkern -8.2mu\textcolor{red}{{B}}$ Red squirrels are much better at avoiding pine martens relative to grey squirrels.
 
 ## Testing improved models
