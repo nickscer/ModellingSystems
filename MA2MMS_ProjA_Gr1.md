@@ -60,7 +60,7 @@ Looking into the history of the introduction of both of the species, we can star
 
 # Model selection 
 
-Our aim is modelling *global* populations of red and grey squirrels over time. We begin by considering the *generic* *Lotka-Volterra* system s.t. 
+Our aim is modelling *global* populations of red and grey squirrels over time. We begin by considering the *generic* *Lotka-Volterra* system: 
 
 $$
 \overset{\text{Generic Model}}{
@@ -111,7 +111,7 @@ and finally $\alpha_{RG}$ and $\alpha_{GR}$ represent the competition coefficien
 
 ${N}\mkern -8.2mu\textcolor{red}{{B}}$ This model is based on the logistic growth model ($\frac{\mathrm{d}x}{\mathrm{d}t} = rx ( 1 - \frac{x}{K} )$ ), with the addition of competition between the two species as they compete for the same natural resources. 
 
-We have selected $r_{R}=0.61$, $r_{G}=0.82$ directly from $^{[13]}$(Okubo et al., n.d., pp.115–117). We have also estimated $\alpha_{RG}$ and $\alpha_{GR}$ with reference to $^{[13]}$(Okubo et al., n.d., pp.115–117) 'We expect that the competition $c_{1}$, i.e. red against grey should have a small value' thus we chose $\alpha_{GR}=0.09$. We selected $\alpha_{RG}=0.8$ because in sympatric populations grey squirrels have significantly 'greater energetic demands' $^{[14]}$(Bryce et al., 2001), thus $\alpha_{RG}$ >> $\alpha_{GR}$ as both species compete for similar resources and the grey squirrels' ability to consume resources at higher rates causes a much higher negative effect on the red squirrel population growth rate. We also chose $K_{G}=3\cdot10^6$, $K_{R}=2.5\cdot10^6$ using the carrying capacities discussed in the introduction. 
+We have selected $r_{R}=0.61$, $r_{G}=0.82$ directly *from*$^{[13]}$(Okubo et al., n.d., pp.115–117). We have also estimated $\alpha_{RG}$ and $\alpha_{GR}$ with reference *to*$^{[13]}$(Okubo et al., n.d., pp.115–117) 'We expect that the competition $c_{1}$, i.e. red against grey should have a small value' thus we chose $\alpha_{GR}=0.09$. We selected $\alpha_{RG}=0.8$ because in sympatric populations grey squirrels have significantly 'greater energetic *demands'*$^{[14]}$(Bryce et al., 2001), thus $\alpha_{RG}$ >> $\alpha_{GR}$ as both species compete for similar resources and the grey squirrels' ability to consume resources at higher rates causes a much higher negative effect on the red squirrel population growth rate. We also chose $K_{G}=3\cdot10^6$, $K_{R}=2.5\cdot10^6$ using the carrying capacities discussed in the introduction. 
 
 # Stability of the model
 
@@ -224,7 +224,7 @@ $$
 \end{aligned}
 $$
 
-We expand the equations and compare coefficients for $x = R$ and $y=R$ s.t. 
+We expand the equations and compare coefficients: 
 
 $$
 \begin{aligned}
@@ -281,7 +281,7 @@ It is well known that the *4th Runge-Kutta* method may yield *spurious bifurcati
 
 # Predictions
 
-We set the ICs to be 3500000 red squirrels and 10000 grey squirrels which should roughly reflect the squirrel population in 1930 which is the year when importing and releasing grey squirrels became illegal$^{[11]}$. 
+We set the ICs to be 3500000 red squirrels and 10000 grey squirrels which should roughly reflect the squirrel population in 1930 which is the year when importing and releasing grey squirrels became *illegal*$^{[11]}$(British Red Squirrel, n.d.). 
 
 - The 3.5 million red squirrel population IC is reasonable as that was the rough estimate of the red squirrels prior to competition with grey squirrels as described in the introduction. 
 - The 10 thousand grey squirrel population in 1930 is a rough estimate of how the population increased from marginal imports throughout the UK from 1870s to 1930.
@@ -300,7 +300,7 @@ We can see that the grey squirrel population steeply increased in size between 1
 
 The model presented above is quite good and predicts that the populations of red and grey squirrels today would stand at roughly 110 thousand and 3 million which is surprisingly close to the empirical estimations of 140 thousand and 2.5 million. The model slightly overestimated the population of grey squirrels and underestimated that of red squirrels.
 
-To enable us to have a more exact system for the populations of both species, we would need to take into consideration the decline in populations as much as the increase in them. For example, the culling of grey squirrels and the death rate of red squirrels from diseases. As mentioned before, it is legal to cull grey squirrels in the UK by means of trapping, shooting and more. It is estimated that “tens of thousands” of grey squirrels are killed each year through culling$^{[9]}$ (Viva!, 2023). The decline of the squirrel population is due to many varied reasons, trauma, road accidents, disease, and predation. However, the decline in numbers of the red squirrel is smaller than the grey squirrel. We can use these facts in an adapted model that also incorporates a harvesting coefficient. Here, the coefficient of the red squirrel harvesting is smaller than that of the grey squirrel. This creates a more accurate model for the populations of both of the animals.
+To enable us to have a more exact system for the populations of both species, we would need to take into consideration the decline in populations as much as the increase in them. For example, the culling of grey squirrels and the death rate of red squirrels from diseases. As mentioned before, it is legal to cull grey squirrels in the UK by means of trapping, shooting and more. It is estimated that “tens of thousands” of grey squirrels are killed each year through *culling*$^{[9]}$ (Viva!, 2023). The decline of the squirrel population is due to many varied reasons, trauma, road accidents, disease, and predation. However, the decline in numbers of the red squirrel is smaller than the grey squirrel. We can use these facts in an adapted model that also incorporates a harvesting coefficient. Here, the coefficient of the red squirrel harvesting is smaller than that of the grey squirrel. This creates a more accurate model for the populations of both of the animals.
 
 Looking into the future of the populations of grey and red squirrels, the control of the grey squirrel numbers alongside the conservation of red squirrels could mean that the red squirrel can thrive once more. Many routes are currently being taken to allow this to happen, making the populations of both more sustainable for the environment. If the combination of culling, habitat control and fertilisation can proceed with the protection and conservation of red squirrels, an equilibrium of both population sizes can be reached. It is very unlikely that both types of animals will ever be able to coexist in the same habitat as each other, however, this could ensure a more stable population size for both. 
 
@@ -618,7 +618,7 @@ plt.show()
 
 10. Bifurcation theory. Available at: https://en.wikipedia.org/wiki/Bifurcation_theory
 
-11. Recognition of damage by grey squirrels and ban in 1930. Available at: https://www.britishredsquirrel.org/grey-squirrels/
+11. British Red Squirrel. (n.d.). Grey Squirrels. [online] Available at: https://www.britishredsquirrel.org/grey-squirrels/.
 
 12. Brouwer, N., Connuck, H., Dubniczki, H., Gownaris, N., Howard, A., Olmsted, C., Wetzel, D., Whittinghill, K., Wilson, A. and Zallek, T. (2022). 15.5: Quantifying Competition Using the Lotka-Volterra Model. [online] Biology LibreTexts. Available at: https://bio.libretexts.org/Courses/Gettysburg_College/01%3A_Ecology_for_All/15%3A_Competition/15.05%3A_Quantifying_Competition_Using_the_Lotka-Volterra_Model.
 
