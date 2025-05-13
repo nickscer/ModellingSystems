@@ -50,7 +50,7 @@ To understand this dynamic, we will explore the nature of their relationship and
 
 # Introduction
 
-Grey squirrels were introduced to the UK in the 19th century and over time have outcompeted red squirrels in their habitats. This is due to their larger builds, their adaptability, and immunity from certain diseases, meaning that the grey squirrel can outcompete the red squirrel without direct harm. The grey squirrel primarily outcompetes the red squirrel through the monopolisation of food resources$^{[2]}$ (Wildlife Online, n.d.), leaving the red squirrel with a limited supply. It is undoubtable that the grey squirrel has populated much of the urban environment, while the red squirrel tends to reside in more rural areas. This is a good representation of the grey squirrels’ adaptability, their ability to fit into the environment they encounter, and their tendency to consume the various foods available to them$^{[2]}$ (Wildlife Online, n.d.), including that of a more urban area. 
+Grey squirrels were introduced to the UK in the 19th century and over time have outcompeted red squirrels in their habitats. This is due to their larger builds, their adaptability, and their immunity from certain diseases, meaning that the grey squirrel can outcompete the red squirrel without direct harm. The grey squirrel primarily outcompetes the red squirrel through the monopolisation of food resources$^{[2]}$ (Wildlife Online, n.d.), leaving the red squirrel with a limited supply. It is undoubtable that the grey squirrel has populated much of the urban environment, while the red squirrel tends to reside in more rural areas. This is a good representation of the grey squirrels’ adaptability, their ability to fit into the environment they encounter, and their tendency to consume the various foods available to them$^{[2]}$ (Wildlife Online, n.d.), including that of a more urban area. 
 
 Grey squirrels currently populate the UK in many places, carrying diseases such as squirrel pox — which, although not very harmful to them, is fatal if passed on to a red squirrel$^{[1]}$ (Red Squirrel Survival Trust, n.d.). This, in turn, decreases the number of red squirrels while the population of the grey squirrels is only marginally decreased. Alongside this, they are significantly larger than the red squirrel, making them the more likely survivor when in combat with competitors or predators, such as the pine marten. Due to the red squirrel's sensitive immune system, they have on average, a lower life expectancy than grey squirrels. The red squirrel typically lives up to three years$^{[1]}$ (Red Squirrel Survival Trust, n.d.), while the grey squirrel usually lives up to nine years in the wild$^{[4]}$ (Wytham Woods, n.d.). Both species have been known to live up to ten — or even fifteen—years; however, the contributions of the outside world, especially the various diseases they face, lower this significantly.
 
@@ -136,7 +136,7 @@ The intersections of the x and y nullclines, and are given to be:
 - $(K_{G},0)$, the grey squirrel population is at their carrying capacity while the red squirrel population is extinct
 - $(\frac{K_{R}-0.8K_{G}}{0.928},\frac{K_{G}-0.09K_{R}}{0.928})$, both populations can coexist.
 
-Now, we calculate the Jacobian matrix of the system to linearize the equations around each equilibrium point, so that we can determine the behaviour and trajectories of nearby points — and therefore assess the stability of the equilibria.
+Next, we calculate the Jacobian matrix of the system to linearize the equations around each equilibrium point. This allows us to determine the behavior and trajectories of nearby points - and therefore assess the stability of the equilibria
 
 ${N}\mkern -8.2mu\textcolor{red}{{B}}$ The Jacobian matrix formula can be found in the appendix [Notes on stability](#notes-on-stability)
 
@@ -429,11 +429,11 @@ import matplotlib.pyplot as plt
 
 # Parameters
 r1 = 0.61   # idealistic growth rate of red squirrel 
-r2 = 0.82   # idealistic growth rate of grey squirrel (higher cuz greys breed faster)
+r2 = 0.82   # idealistic growth rate of grey squirrel (higher as greys breed faster)
 '''(a11 higher cuz native habitat and ability to avoid predators like pine martens)'''
 a11 = -2.44 * 10 ** -7    # limitation for red squirrel  i.e. yields carrying capacity along with r1  
-a12 = -1.952 * 10 ** -7   # competition towards red squirrel  i.e. how much grey squirrel hurts red squirrel (higher cuz SQPV and size)
-a21 = -2.46 * 10 ** -8    # competition towards grey squirrel i.e. how much red squirrel hurts grey squirrel 
+a12 = -1.952 * 10 ** -7   # competition towards red squirrel  i.e. how much grey squirrel effects red squirrel (higher as SQPV and size)
+a21 = -2.46 * 10 ** -8    # competition towards grey squirrel i.e. how much red squirrel effects grey squirrel 
 a22 = -2.73333333 * 10 ** -7   # limitation for grey squirrel i.e. yields carrying capacity along with r2 
 u0 = [3500000, 1000] # ICs
 # Equilibria at [107758, 2990301]
