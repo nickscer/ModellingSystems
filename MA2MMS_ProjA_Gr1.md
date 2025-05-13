@@ -13,7 +13,7 @@ geometry: margin=2cm
 
 ## Abstract
 
-This study models the population dynamics of red and grey squirrels in the UK, focusing on their competitive interactions. Using the Lotka-Volterra competition model and the 4th-order Runge-Kutta method, we analyse population stability and long-term behavior. 
+This study models the population dynamics of red and grey squirrels in the UK, focusing on their competitive interactions. Using the Lotka-Volterra competition model and the 4th-order Runge-Kutta method, we analysed population stability and long-term behaviour. 
 
 The findings indicate that grey squirrels negatively impact red squirrel populations through competition and disease, with grey squirrels dominating in most areas. However, implementing a harvesting strategy for grey squirrels could significantly aid red squirrel recovery. 
 
@@ -73,7 +73,7 @@ $$
 }
 $$
 
-where $x$ and $y$ would represent the populations of red and grey squirrels respectively,
+Where $x$ and $y$ would represent the populations of red and grey squirrels respectively,
 
 - $r_{1}$ - intrinsic growth rate of red squirrels 
 - $r_{2}$ - intrinsic growth rate of grey squirrels 
@@ -115,7 +115,7 @@ We have selected $r_{R}=0.61$, $r_{G}=0.82$ directly from$^{[13]}$(Okubo et al.,
 
 # Stability of the model
 
-We have the coupled differential equations
+We have the coupled differential equations:
 
 $$ 
 \frac{\mathrm{d}x}{\mathrm{d}t} = 0.61x\left(1-\frac{x+0.8y}{K_{R}}\right) 
@@ -124,13 +124,14 @@ $$
 \frac{\mathrm{d}y}{\mathrm{d}t} = 0.82y\left(1-\frac{y+0.09x}{K_{G}}\right) 
 $$
 
-where $K_{G} = 3 \cdot 10^{6}$ and $K_{R} = 2.5 \cdot 10^{6}$
+Where $K_{G} = 3 \cdot 10^{6}$ and $K_{R} = 2.5 \cdot 10^{6}$.
 
 To find the stability of the model, we have to find the equilibria of the system of equations and examine the stability of these points. We do this by finding the x and y nullclines of the system - curves in the phase plane where $\frac{\mathrm{d}x}{\mathrm{d}t} = 0$ and $\frac{\mathrm{d}y}{\mathrm{d}t} = 0$ respectively. The intersection of these curves gives the equilibrium points since both rates of changes are simultaneously equal to zero, meaning both populations aren't varying at that specific moment in time.
 
 The x-nullclines are found to be $x = 0$ or $x = K_{R} - 0.8y$; and the y-nullclines are found to be $y = 0$ or $y = K_{G} - 0.09x$.
 
 The intersections of the x and y nullclines, and are given to be: 
+
 - $(0,0)$, the origin point where both populations are extinct;
 - $(K_{R},0)$, the red squirrel population is at their carrying capacity while the grey squirrel population is extinct
 - $(K_{G},0)$, the grey squirrel population is at their carrying capacity while the red squirrel population is extinct
@@ -138,7 +139,7 @@ The intersections of the x and y nullclines, and are given to be:
 
 Next, we calculate the Jacobian matrix of the system to linearize the equations around each equilibrium point. This allows us to determine the behavior and trajectories of nearby points - and therefore assess the stability of the equilibria
 
-${N}\mkern -8.2mu\textcolor{red}{{B}}$ The Jacobian matrix formula can be found in the appendix [Notes on stability](#notes-on-stability)
+${N}\mkern -8.2mu\textcolor{red}{{B}}$ The Jacobian matrix formula can be found in the appendix [Notes on stability](#notes-on-stability).
 
 The Jacobian matrix is given by:
 
@@ -190,10 +191,11 @@ $$
 $$
 
 Where: 
+
 - $\phi = 0.488K_{G}^2 + 0.738K_{R}^2 - 1.43K_{R}K_{G}$; 
 - $\mu = (0.488K_{G} - 0.61K_{R})(0.738 K_{R} - 0.82K_{G}) -(0.3904K_{G} - 0.488K_{R})(0.006642K_{R} - 0.0738K_{G})$.
 
-Since these eigenvalues are real, negative numbers, ($\lambda_{1} \approx -0.0186$ and $\lambda_{2} \approx -0.2287$) the corresponding fixed point is an asymptotically stable sink point. This means all tradjectories starting from positive initial populations - that do not lie on the saddlepoints' stable manifolds, will converge to this equilibria point over time causing both squirrel populations to coexist with eachother.
+Since these eigenvalues are real, negative numbers, ($\lambda_{1} \approx -0.0186$ and $\lambda_{2} \approx -0.2287$) the corresponding fixed point is an asymptotically stable sink point. This means all tradjectories starting from positive initial populations - that do not lie on the saddlepoints' stable manifolds, will converge to this equilibria point over time causing both squirrel populations to coexist with each other.
 
 ## Phase space 
 
@@ -260,6 +262,7 @@ $$
 $\textcolor{red}{!}$ The $a_{22}$ is a recurring decimal marked $\dot{3}$. In the actual implementation, 8 decimal points will be used to minimise the *roundoff error*.  
 
 We proceeded to plot the populations of red and grey squirrels in discrete time using the *4th order Runge-Kutta method* (RK4) which is a robust general-purpose numerical method with a $\mathcal{O}(h^5)$ *Local Truncation Error*.
+
 ${N}\mkern -8.2mu\textcolor{red}{{B}}$ We chose RK4 as it is the most optimal explicit method for its number of $k$ *stages*.
 
 We avoided the use of "*black boxes*" and fully implemented the RK4 method in python, please refer to the *[appendix](#python-code)* for the whole code, the general logic behind it is passing the `squirrely`  function into the `rk4` function which uses `k` correctors that are then weighed to produce the next timestep $U^{n+1}$ which is sorted in the $n+1$th column of the array `u`.  
@@ -281,7 +284,7 @@ It is well known that the *4th Runge-Kutta* method may yield *spurious bifurcati
 
 # Predictions
 
-We set the ICs to be 3500000 red squirrels and 10000 grey squirrels which should roughly reflect the squirrel population in 1930 which is the year when importing and releasing grey squirrels became illegal$^{[11]}$(British Red Squirrel, n.d.). 
+We set the ICs to be 3,500,000 red squirrels and 10,000 grey squirrels which should roughly reflect the squirrel population in 1930 which is the year when importing and releasing grey squirrels became illegal$^{[11]}$(British Red Squirrel, n.d.). 
 
 - The 3.5 million red squirrel population IC is reasonable as that was the rough estimate of the red squirrels prior to competition with grey squirrels as described in the introduction. 
 - The 10 thousand grey squirrel population in 1930 is a rough estimate of how the population increased from marginal imports throughout the UK from 1870s to 1930.
@@ -294,16 +297,16 @@ The stable squirrel populations found analytically are $(\frac{K_{R}-0.8K_{G}}{0
 
 >
 
-We can see that the grey squirrel population steeply increased in size between 1940 and 1960 which reflects how grey squirrels completely outcompeted red squirrels in most regions in England and established a permanent population. 
+We can see that the grey squirrel population steeply increased in size between 1940 and 1960, which reflects how grey squirrels outcompeted red squirrels in most regions in England, and established a permanent population. 
 
 # Possible improvements and sustainability 
 
-The model presented above is quite good and predicts that the populations of red and grey squirrels today would stand at roughly 110 thousand and 3 million which is surprisingly close to the empirical estimations of 140 thousand and 2.5 million. The model slightly overestimated the population of grey squirrels and underestimated that of red squirrels.
+The model presented above is quite good and predicts that the populations of red and grey squirrels today would stand at roughly 110 thousand and 3 million, which is surprisingly close to the empirical estimations of 140 thousand and 2.5 million. The model slightly overestimated the population of grey squirrels and underestimated that of red squirrels.
 
 To enable us to have a more exact system for the populations of both species, we would need to take into consideration the decline in populations as much as the increase in them. For example, the culling of grey squirrels and the death rate of red squirrels from diseases. As mentioned before, it is legal to cull grey squirrels in the UK by means of trapping, shooting and more. It is estimated that “tens of thousands” of grey squirrels are killed each year through culling$^{[9]}$ (Viva!, 2023). The decline of the squirrel population is due to many varied reasons, trauma, road accidents, disease, and predation. However, the decline in numbers of the red squirrel is smaller than the grey squirrel. We can use these facts in an adapted model that also incorporates a harvesting coefficient. Here, the coefficient of the red squirrel harvesting is smaller than that of the grey squirrel. This creates a more accurate model for the populations of both of the animals.
 Looking into the future of the populations of grey and red squirrels, the control of the grey squirrel numbers alongside the conservation of red squirrels could mean that the red squirrel can thrive once more. Many routes are currently being taken to allow this to happen, making the populations of both more sustainable for the environment. If the combination of culling, habitat control and fertilisation can proceed with the protection and conservation of red squirrels, an equilibrium of both population sizes can be reached. It is very unlikely that both types of animals will ever be able to coexist in the same habitat as each other, however, this could ensure a more stable population size for both. 
 
-To make the model more *realistic* we improve it by adding a harvesting term $Hy$ of the grey squirrels
+To make the model more *realistic* we improve it by adding a harvesting term $Hy$ of the grey squirrels,
 
 $$
 \overset{\text{Improved Model}}{
@@ -316,7 +319,7 @@ $$
 }
 $$
 
-where $H$ is a negative constant and represents the overall effect of culling and uneven survival odds compared to red squirrels in regions populated with pine martens. 
+where $H$ is a negative constant and represents the overall effect of culling and uneven survival odds, compared to red squirrels in regions populated with pine martens. 
 
 ${N}\mkern -8.2mu\textcolor{red}{{B}}$ Red squirrels are much better at avoiding pine martens relative to grey squirrels.
 
@@ -333,7 +336,7 @@ We do so through a *heuristic approach* where we plot the trajectories for the p
 
 ${N}\mkern -8.2mu\textcolor{red}{{B}}$ The code for the script that plots multiple trajectories for different values for harvesting shown above can be found in the *[appendix](#visualising-harvesting-effects)*.
 
-$\textcolor{red}{!}$ From the plots we can see that the *target line* lies between the $H$ values of $-0.1$ and $-0.2$ for the grey population and at around $H=-0.01$ for the Red population. This hints at us that the model with harvesting is not entirely appropriate to *exactly* coincide with the empirical estimates because there is no real value $H$ we can pick that is both $-0.1<H<-0.2$ and $H<0.01$. 
+$\textcolor{red}{!}$ From the plots we can see that the *target line* lies between the $H$ values of $-0.1$ and $-0.2$ for the grey population and at around $H=-0.01$ for the Red population. This hints to us that the model with harvesting is not entirely appropriate to *exactly* coincide with the empirical estimates because there is no real value $H$ we can pick that is both $-0.1<H<-0.2$ and $H<0.01$. 
 This is however expected as there is great variance in the empirical reports for squirrel populations. 
 The improved models with harvesting are all within close proximity to empirical findings. 
 
@@ -384,13 +387,13 @@ From the table we can clearly see as predicted, taking $H = -0.2$, gives us a co
 
 >
 
-${N}\mkern -8.2mu\textcolor{red}{{B}}$ The code used for figure 1 was also used to generate figure 4 by adding a `-0.2` harvesting to the `squirrely` function and the `V` vector field equation.   
+${N}\mkern -8.2mu\textcolor{red}{{B}}$ The code used for figure 1 was also used to generate figure 4, by adding a `-0.2` harvesting to the `squirrely` function and the `V` vector field equation.   
 
 # Conclusion
 
 Throughout this study, we have looked at the population dynamics of the red and grey squirrels in the UK. We have clearly illustrated the competitive dominance of the grey squirrel against the red squirrel and further looked at the impact that the numbers of grey squirrels have on the red squirrel population. The two share a very tense relationship and it is noticeable that the population of grey squirrels has a direct impact on the population of red squirrels. It is undoubtable that as the number of grey squirrels increases, the number of red squirrels decreases, but a variation of different schemes have been put in place to aid the growth of the red squirrel population in the UK. After incorporating a harvesting modelling scheme into the Lotka-Volterra model which reflects the many approaches that are being taken to increase the population of the red squirrel, and the results showed us some more information on this increase. We can see that by reducing the number of grey squirrels in the UK, the red squirrel population has the potential to grow by over 600,000 individuals. 
 
-Our findings have emphasised the importance of these targeted control measures, including culling and habitat management to support the red squirrel conservation. These insights have provided actionable strategies for sustainable species management and highlight the value of mathematical modelling in the addressing of ecological changes in the environment. This goes to show that as much as putting these different plans into place, it is imperative that the numbers are studied to see if they are having a positive, negative effect or any impact at all. We can clearly see that the conservation methods that are being used for red and grey squirrels in having a positive impact on the red squirrel population and humanly managing the numbers of grey squirrels in the UK. 
+Our findings have emphasised the importance of these targeted control measures, including culling and habitat management to support the red squirrel conservation. These insights have provided actionable strategies for sustainable species management, and highlight the value of mathematical modelling in the addressing of ecological changes in the environment. This goes to show that as much as putting these different plans into place, it is imperative that the numbers are studied to see if they are having a positive, negative effect or any impact at all. We can clearly see that the conservation methods that are being used for red and grey squirrels in having a positive impact on the red squirrel population and humanly managing the numbers of grey squirrels in the UK. 
 
 \pagebreak
 
