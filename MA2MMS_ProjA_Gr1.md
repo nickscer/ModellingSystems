@@ -24,15 +24,16 @@ These insights underscore the need for targeted control measures and habitat man
 2. [Introduction](#introduction)
 3. [Model selection](#model-selection)
 	1. [Choosing coefficients](#choosing-coefficients)
-5. [Stability of the model](#stability-of-the-model)
+4. [Stability of the model](#stability-of-the-model)
 	1. [Phase space](#phase-space)
-7. [Numerical solution](#numerical-solution)
+5. [Numerical solution](#numerical-solution)
 	1. [Bifurcation](#Bifurcation)
-8. [Predictions](#predictions)
-9. [Possible improvements and sustainability](#possible-improvements-and-sustainability)
+6. [Predictions](#predictions)
+7. [Possible improvements and sustainability](#possible-improvements-and-sustainability)
 	1. [Testing improved models](#testing-improved-models)
 	2. [Stability of the improved model](#stability-of-the-improved-model)
-8. [Appendix](#appendix)
+8. [Conclusion](#conclusion)
+9. [Appendix](#appendix)
 	1. [Notes on stability](#notes-on-stability)
 	2. [Notes on Runge-Kutta](#notes-on-runge-kutta)
 	3. [Python code](#python-code)
@@ -44,7 +45,7 @@ These insights underscore the need for targeted control measures and habitat man
 
 This report outlines the relationship between the red squirrel and the grey squirrel in the UK. The two species have a very tense relationship due to competition and displacement which has affected their individual populations. We will look at the different numbers of each and format solvable equations for the each of the populations of the two species. As time has gone on, the population of grey squirrels has increased while the population of red squirrels has decreased. First, we need to look at the kind of relationship that the pair have and the varied biotic and abiotic factors that affect their population sizes. While red and grey squirrels do not directly compete against each other, they compete in terms of food resources and habitats. 
 
-## Introduction
+# Introduction
 
 Grey squirrels were introduced to the UK in 19th century and over time have outcompeted red squirrels in their habitats. This is due to their larger builds, their adaptability, and immunity from certain diseases, meaning that the grey squirrel can outcompete the red squirrel without direct harm. The grey squirrel primarily outcompetes the red squirrel through the monopolisation of food *resources*$^{[2]}$ (Wildlife Online, n.d.), leaving the red squirrel with a limited supply. It is undoubtable that the grey squirrel has populated much of the urban environment while the red squirrel tends to reside in more rural areas. This is a good representation of the grey squirrels’ adaptability, their ability to fit into the environment that they find and even go to the extent of consuming the different foods available *there*$^{[2]}$ (Wildlife Online, n.d.), including that of a more urban area. 
 
@@ -54,7 +55,7 @@ Currently, the grey squirrel is the dominant species, while the red squirrel pop
 
 Looking into the history of the introduction of both of the species, we can start to compare the numbers and substitute them into the Lotka-Volterra Competition model. The introduction of the grey squirrel in England was in 1876 and continued to be released until the 1920’s when the destruction of the red squirrel population was noticed and it soon became illegal to release a grey squirrel into the wild$^{[6]}$ (British Red Squirrel, n.d.). Red squirrels, however, are native to the UK and lived in the UK prior to the grey squirrel for around 10,000 years$^{[7]}$ (The Wildlife Trusts, 2020). It is estimated that at the time of the introduction of grey squirrels, the red squirrel population stood at roughly 3,500,000 and has decreased to 140,000 in the past years, while the grey squirrel population has increased to approximately 2,520,000 recorded in 2009$^{[8]}$ (Aebischer, Davey and Kingdon, 2011). We have taken the carrying capacity of grey squirrels to be 3,000,000 and used this to find that the carrying capacity for red squirrels is 2,500,000$^{[7]}$ (The Wildlife Trusts, 2020).
 
-## Model selection 
+# Model selection 
 
 Our aim is modelling *global* populations of red and grey squirrels over time. We begin by considering the *generic* *Lotka-Volterra* system s.t. 
 
