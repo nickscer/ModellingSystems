@@ -4,7 +4,7 @@ geometry: margin=2cm
 [comment]: # (This is how you can make comments without affecting the output file or preview, the above section is the YAML btw, it is not rendered either but rather sets custom global markdown formatting for pdf/html output)
 [comment]: # (Use `pandoc test.txt -o test.pdf` in the zsh terminal for compilation)
 
-# MA2MMS modelling written project Group 1; 
+# MA2MMS modelling written project Group 1 
 # Modelling Biological/Ecological Systems
 
 *Nick Scerbacenco, Keisha Markey Patel and Henry Davis*
@@ -301,7 +301,6 @@ We can see that the grey squirrel population steeply increased in size between 1
 The model presented above is quite good and predicts that the populations of red and grey squirrels today would stand at roughly 110 thousand and 3 million which is surprisingly close to the empirical estimations of 140 thousand and 2.5 million. The model slightly overestimated the population of grey squirrels and underestimated that of red squirrels.
 
 To enable us to have a more exact system for the populations of both species, we would need to take into consideration the decline in populations as much as the increase in them. For example, the culling of grey squirrels and the death rate of red squirrels from diseases. As mentioned before, it is legal to cull grey squirrels in the UK by means of trapping, shooting and more. It is estimated that “tens of thousands” of grey squirrels are killed each year through culling$^{[9]}$ (Viva!, 2023). The decline of the squirrel population is due to many varied reasons, trauma, road accidents, disease, and predation. However, the decline in numbers of the red squirrel is smaller than the grey squirrel. We can use these facts in an adapted model that also incorporates a harvesting coefficient. Here, the coefficient of the red squirrel harvesting is smaller than that of the grey squirrel. This creates a more accurate model for the populations of both of the animals.
-
 Looking into the future of the populations of grey and red squirrels, the control of the grey squirrel numbers alongside the conservation of red squirrels could mean that the red squirrel can thrive once more. Many routes are currently being taken to allow this to happen, making the populations of both more sustainable for the environment. If the combination of culling, habitat control and fertilisation can proceed with the protection and conservation of red squirrels, an equilibrium of both population sizes can be reached. It is very unlikely that both types of animals will ever be able to coexist in the same habitat as each other, however, this could ensure a more stable population size for both. 
 
 To make the model more *realistic* we improve it by adding a harvesting term $Hy$ of the grey squirrels
@@ -335,7 +334,7 @@ We do so through a *heuristic approach* where we plot the trajectories for the p
 ${N}\mkern -8.2mu\textcolor{red}{{B}}$ The code for the script that plots multiple trajectories for different values for harvesting shown above can be found in the *[appendix](#visualising-harvesting-effects)*.
 
 $\textcolor{red}{!}$ From the plots we can see that the *target line* lies between the $H$ values of $-0.1$ and $-0.2$ for the grey population and at around $H=-0.01$ for the Red population. This hints at us that the model with harvesting is not entirely appropriate to *exactly* coincide with the empirical estimates because there is no real value $H$ we can pick that is both $-0.1<H<-0.2$ and $H<0.01$. 
-This is however expected as there is great variance in the empirical reports for squirrel population. 
+This is however expected as there is great variance in the empirical reports for squirrel populations. 
 The improved models with harvesting are all within close proximity to empirical findings. 
 
 As we can see the higher the magnitude of $H$ the bigger the red squirrel population which is as  expected. 
@@ -377,13 +376,13 @@ Calculating the nullclines as before, we have the equilibrium points $(0,0)$, $(
 
 From the table we can clearly see as predicted, taking $H = -0.2$, gives us a coexistance point at $(738540, 2201824)$.
 
+\pagebreak
+
 > 
 
 ![Phase space portraits with marked equilibrium points](attachments/Figure_4.png)
 
 >
-
-\pagebreak
 
 ${N}\mkern -8.2mu\textcolor{red}{{B}}$ The code used for figure 1 was also used to generate figure 4 by adding a `-0.2` harvesting to the `squirrely` function and the `V` vector field equation.   
 
